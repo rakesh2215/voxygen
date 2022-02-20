@@ -1,0 +1,25 @@
+Start testing: Feb 12 09:16 UTC
+----------------------------------------------------------
+1/1 Testing: veridoc_coverage
+1/1 Test: veridoc_coverage
+Command: "/home/ubuntu/voxygen/verilog-doc/build/coverage/bin/veridoc" "-c" "./build/debug/bin/assets/veridoc.cfg" "-F" "./build/debug/bin/assets/test_manifest.txt" "-v"
+Directory: ../
+"veridoc_coverage" start time: Feb 12 09:16 UTC
+Output:
+----------------------------------------------------------
+ERROR: Could not open config file path: ./build/debug/bin/assets/veridoc.cfg
+Usage: ./veridoc <options> <input files>
+Options:
+-v, --verbose              - Be verbose with status information.
+-c <file>, --config <file> - Set the configuration file path.   
+-F <file>, --files  <file> - Input file manifest list.          
+
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"veridoc_coverage" end time: Feb 12 09:16 UTC
+"veridoc_coverage" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Feb 12 09:16 UTC

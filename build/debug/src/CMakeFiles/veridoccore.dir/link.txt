@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../lib/libveridoccore.a  CMakeFiles/veridoccore.dir/veridoc-config.c.o CMakeFiles/veridoccore.dir/veridoc-parsing.c.o CMakeFiles/veridoccore.dir/veridoc-manifest.c.o CMakeFiles/veridoccore.dir/veridoc-page-factory.c.o CMakeFiles/veridoccore.dir/veridoc-json.c.o
+/usr/bin/ranlib ../lib/libveridoccore.a
