@@ -1,0 +1,1 @@
+/usr/bin/cc -g -O0 -Wall -W  -O3 -DNDEBUG -rdynamic CMakeFiles/parser.dir/main.o  -o ../../../bin/parser  ../../../lib/libverilogparser.a 

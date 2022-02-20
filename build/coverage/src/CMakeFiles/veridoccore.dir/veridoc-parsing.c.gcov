@@ -1,0 +1,114 @@
+        -:    0:Source:/home/ubuntu/voxygen/verilog-doc/src/veridoc-parsing.c
+        -:    0:Graph:/home/ubuntu/voxygen/verilog-doc/build/coverage/src/CMakeFiles/veridoccore.dir/veridoc-parsing.gcno
+        -:    0:Data:/home/ubuntu/voxygen/verilog-doc/build/coverage/src/CMakeFiles/veridoccore.dir/veridoc-parsing.gcda
+        -:    0:Runs:1
+        -:    1:/*!
+        -:    2:@file veridoc-parsing.c
+        -:    3:@brief Contains data structures and functions for parsing verilog files.
+        -:    4:*/
+        -:    5:
+        -:    6:#include "veridoc-parsing.h"
+        -:    7:
+        -:    8:/*!
+        -:    9:@brief Responsible for setting up the verilog-parser preprocessor
+        -:   10:@param [in] manifest - The set of files to parse and directories to search.
+        -:   11:@details This function uses the yy_preproc global variable (exposed by the
+        -:   12:verilog-parser library) and adds to its internal list of directories to
+        -:   13:search for include files.
+        -:   14:*/
+    #####:   15:void veridoc_parse_init_include_paths(
+        -:   16:    veridoc_manifest * manifest,
+        -:   17:    veridoc_config   * config
+        -:   18:){
+        -:   19:    int d;
+        -:   20:    // iterate over the directories
+    #####:   21:    for(d = 0; d < manifest -> directory_count; d++)
+        -:   22:    {
+        -:   23:        // add to the search paths.
+    #####:   24:        ast_list_append(yy_preproc -> search_dirs,
+    #####:   25:            manifest -> directories[d].path);
+    #####:   26:        printf("Added '%s' to search path.\n", 
+    #####:   27:            manifest -> directories[d].path);
+        -:   28:    }
+        -:   29:    
+        -:   30:    // iterate over the paths in the config 
+    #####:   31:    for(d = 0; d < config -> v_includes -> items ; d++)
+        -:   32:    {
+        -:   33:        // add to the search paths.
+    #####:   34:        ast_list_append(yy_preproc -> search_dirs,
+        -:   35:            ast_list_get(config -> v_includes,d));
+    #####:   36:        printf("Added '%s' to search path.\n", 
+    #####:   37:            (char*)ast_list_get(config -> v_includes,d));
+        -:   38:    }
+    #####:   39:}
+        -:   40:
+        -:   41:/*!
+        -:   42:@brief Responsible for iterating over the files in the manifest and adding them
+        -:   43:to the source tree.
+        -:   44:@param [in] manifest - The set of files to parse and directories to search.
+        -:   45:*/
+    #####:   46:void veridoc_parse_manifest_files(
+        -:   47:    veridoc_manifest * manifest
+        -:   48:){
+        -:   49:    int f;
+    #####:   50:    for(f = 0; f < manifest -> file_count; f++)
+        -:   51:    {
+    #####:   52:        veridoc_manifest_file * record = &manifest -> files[f];
+        -:   53:
+    #####:   54:        FILE * fh = fopen(record -> path,"r");
+        -:   55:
+    #####:   56:        if(fh)
+        -:   57:        {
+    #####:   58:            verilog_preprocessor_set_file(yy_preproc, record -> path);
+    #####:   59:            int result = verilog_parse_file(fh);
+        -:   60:            
+    #####:   61:            record -> parsed        = BOOL_TRUE;
+    #####:   62:            if(result == 0) {
+    #####:   63:                record -> parse_success = BOOL_TRUE;
+        -:   64:            } else {
+    #####:   65:                record -> parse_success = BOOL_FALSE;
+        -:   66:            }
+        -:   67:
+    #####:   68:            fclose(fh);
+        -:   69:        }
+        -:   70:        else
+        -:   71:        {
+    #####:   72:            record -> parsed        = BOOL_FALSE;
+    #####:   73:            record -> parse_success = BOOL_FALSE;
+        -:   74:        }
+        -:   75:
+    #####:   76:        printf("%d / %d - %d %d - %s\n", f, manifest -> file_count,
+    #####:   77:            record -> parsed, record -> parse_success, record -> path);
+        -:   78:        
+        -:   79:    }
+    #####:   80:}
+        -:   81:
+        -:   82:/*!
+        -:   83:@brief Responsible for parsing each file in the manifest, and building the
+        -:   84:internal source tree.
+        -:   85:@param [in] manifest - The set of files to parse and directories to search.
+        -:   86:@returns The parsed source tree object. 
+        -:   87:*/
+    #####:   88:verilog_source_tree * veridoc_parse_input_source(
+        -:   89:    veridoc_manifest * manifest,
+        -:   90:    veridoc_config   * config
+        -:   91:){
+        -:   92:    // First, we must initialise the parser library
+    #####:   93:    verilog_parser_init();
+        -:   94:
+        -:   95:    // Next, we need to set up the include paths for the pre-processor.
+    #####:   96:    veridoc_parse_init_include_paths(manifest,config);
+        -:   97:
+        -:   98:    // Now we can do the parsing!
+    #####:   99:    veridoc_parse_manifest_files(manifest);
+        -:  100:
+        -:  101:    // The value to be returned is a global variable exposed by the
+        -:  102:    // parser library.
+    #####:  103:    verilog_source_tree * tr = yy_verilog_source_tree;
+        -:  104:
+        -:  105:    // Resolve all of the module names.
+    #####:  106:    printf("Resolving Modules...\n");
+    #####:  107:    verilog_resolve_modules(tr);
+        -:  108:
+    #####:  109:    return tr;
+        -:  110:}

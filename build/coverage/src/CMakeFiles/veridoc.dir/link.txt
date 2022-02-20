@@ -1,0 +1,1 @@
+/usr/bin/cc -g -O0 -Wall -W -fprofile-arcs -ftest-coverage -DVERIDOC_COVERAGE_ON  -fprofile-arcs -ftest-coverage -rdynamic CMakeFiles/veridoc.dir/main.o  -o ../bin/veridoc  ../lib/libverilogparser.a ../lib/libveridoccore.a ../lib/libverilogparser.a 

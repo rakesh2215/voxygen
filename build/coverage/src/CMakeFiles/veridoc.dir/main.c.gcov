@@ -1,0 +1,155 @@
+        -:    0:Source:/home/ubuntu/voxygen/verilog-doc/src/main.c
+        -:    0:Graph:/home/ubuntu/voxygen/verilog-doc/build/coverage/src/CMakeFiles/veridoc.dir/main.gcno
+        -:    0:Data:/home/ubuntu/voxygen/verilog-doc/build/coverage/src/CMakeFiles/veridoc.dir/main.gcda
+        -:    0:Runs:1
+        -:    1:/*!
+        -:    2:@file main.c
+        -:    3:@brief Contains the main entry point of the program.
+        -:    4:*/
+        -:    5:
+        -:    6:#include <stdio.h>
+        -:    7:#include <stdlib.h>
+        -:    8:#include <string.h>
+        -:    9:
+        -:   10:#include "veridoc.h"
+        -:   11:
+        -:   12:/*!
+        -:   13:@brief Prints the help text and exists, depending on the parameters.
+        -:   14:*/
+        1:   15:void print_help(boolean and_exit)
+        -:   16:{
+        1:   17:printf("Usage: ./veridoc <options> <input files>\n"); 
+        1:   18:printf("Options:\n");
+        1:   19:printf("-v, --verbose              - Be verbose with status information.\n");
+        1:   20:printf("-c <file>, --config <file> - Set the configuration file path.   \n");
+        1:   21:printf("-F <file>, --files  <file> - Input file manifest list.          \n");
+        1:   22:printf("\n");
+        -:   23:
+        1:   24:    if(and_exit){
+        1:   25:        exit(0);
+        -:   26:    }
+    #####:   27:}
+        -:   28:
+        -:   29:/*!
+        -:   30:@brief Responsible for parsing all of the command line arguments.
+        -:   31:@returns A shell_args pointer
+        -:   32:*/
+        1:   33:shell_args * parse_args(int argc, char ** argv)
+        -:   34:{
+        1:   35:    if(argc == 1)
+        -:   36:    {
+    #####:   37:        print_help(BOOL_TRUE);
+        -:   38:    }
+        -:   39:
+        1:   40:    shell_args * tr = calloc(1,sizeof(shell_args));
+        -:   41:
+        -:   42:    int i;  // Iterate over argv
+        4:   43:    for(i = 1; i < argc; i++)
+        -:   44:    {
+        3:   45:        if(strcmp("-v", argv[i]) == 0 ||
+        2:   46:           strcmp("--verbose", argv[i]) == 0)
+        -:   47:        {
+        1:   48:            tr -> verbose = BOOL_TRUE;
+        -:   49:        }
+        2:   50:        else if((strcmp("-c", argv[i]) == 0        ||
+        2:   51:                 strcmp("--config", argv[i]) == 0) &&
+        -:   52:                 i <= argc-1)
+        -:   53:        {
+        1:   54:            i++;
+        1:   55:            tr -> config_path = argv[i];
+        -:   56:        }
+       1*:   57:        else if((strcmp("-F", argv[i]) == 0        ||
+       1*:   58:                 strcmp("--files", argv[i]) == 0) &&
+        -:   59:                 i <= argc-1)
+        -:   60:        {
+        1:   61:            i++;
+        1:   62:            tr -> manifest_path= argv[i];
+        -:   63:        }
+        -:   64:    }
+        -:   65:
+        1:   66:    return tr;
+        -:   67:}
+        -:   68:
+        1:   69:int main(int argc, char ** argv)
+        -:   70:{
+        -:   71:    // Parse any command line arguments.
+        1:   72:    shell_args     * args   = parse_args(argc,argv);
+        -:   73:
+        1:   74:    if(!args -> config_path){
+    #####:   75:        print_help(BOOL_TRUE);
+        -:   76:    }
+        -:   77:    
+        1:   78:    veridoc_config * config = veridoc_config_parse(
+        -:   79:        args -> config_path,
+        -:   80:        argv[0]
+        -:   81:    );
+        -:   82:    
+        -:   83:    // Check the config file was laoded correctly.
+        1:   84:    if(!config){
+        1:   85:        print_help(BOOL_TRUE);
+        -:   86:    }
+        -:   87:    
+        -:   88:    // Has the manifest path been specified?
+    #####:   89:    if(args -> manifest_path)
+        -:   90:    {
+    #####:   91:        if(config -> v_manifest){
+    #####:   92:            free(config -> v_manifest);
+        -:   93:        }
+    #####:   94:        config -> v_manifest = args -> manifest_path;
+        -:   95:    }
+    #####:   96:    else if(!config -> v_manifest)
+        -:   97:    {
+        -:   98:        // If not, set it to a default value.
+    #####:   99:        config -> v_manifest = "Veridoc.cfg\0";
+        -:  100:    }
+        -:  101:
+    #####:  102:    veridoc_manifest * manifest = veridoc_manifest_parse(config -> v_manifest);
+        -:  103:
+        -:  104:    // Check that the manifest was loaded correctly.
+    #####:  105:    if(!manifest)
+        -:  106:    {
+    #####:  107:        printf("ERROR: Could not load or parse the manifest file: %s\n",
+        -:  108:            config -> v_manifest);
+    #####:  109:        veridoc_config_free(config);
+    #####:  110:        return 0;
+        -:  111:    }
+        -:  112:    
+        -:  113:    // Print out some status information.
+    #####:  114:    if(args -> verbose){
+    #####:  115:        printf("Exe Path:      %s\n", argv[0]);
+    #####:  116:        printf("Config Path:   %s\n", args -> config_path);
+    #####:  117:        printf("File Manifest: %s\n", config -> v_manifest);
+    #####:  118:        printf("Project:       %s\n", config -> v_project);
+    #####:  119:        printf("Author:        %s\n", config -> v_author );
+    #####:  120:        printf("Version:       %s\n", config -> v_version);
+    #####:  121:        printf("Assets Path:   %s\n", config -> v_assets_dir);
+    #####:  122:        printf("Input Files:   %d\n", manifest -> file_count);
+    #####:  123:        printf("Output To:     %s\n", config-> v_output);
+    #####:  124:        printf("Include Paths:\n");
+        -:  125:
+        -:  126:        unsigned int i;
+    #####:  127:        for(i = 0; i < config -> v_includes -> items; i++)
+        -:  128:        {
+    #####:  129:            printf("\t'%s'\n", (char*)ast_list_get(config -> v_includes, i));
+        -:  130:        }
+        -:  131:
+    #####:  132:        printf("\n");
+    #####:  133:        printf("Starting parsing...\n");
+        -:  134:    }
+        -:  135:    
+        -:  136:    // Read in all of the source files.
+    #####:  137:    verilog_source_tree * source = veridoc_parse_input_source(manifest,config);
+        -:  138:    
+        -:  139:    // Build the output documentation.
+    #####:  140:    veridoc_pf_build(manifest, config, source);
+        -:  141:
+        -:  142:    // Copy the asset files from their source locations to the output dir.
+    #####:  143:    veridoc_pf_copy_assets(config);
+        -:  144:    
+        -:  145:    // Free everything
+    #####:  146:    veridoc_config_free(config);
+    #####:  147:    veridoc_manifest_free(manifest);
+        -:  148:    
+    #####:  149:    printf("Veridoc Completed Successfully.\n");
+    #####:  150:    return 0;
+        -:  151:}

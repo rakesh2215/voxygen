@@ -1,0 +1,39 @@
+/*!
+
+@defgroup veridoc-configs Veridoc Configuration Files
+@ingroup veridoc-documentation
+
+@tableofcontents
+
+@brief This page describes how veridoc configuration files are structured,
+loaded and interpreted.
+
+@section veridoc-configs-file-format File Format
+
+Veridoc config files are simple key, value pairs, separated by linebreaks.
+They take the form `key = value`. Where a the 'value' supplied is a string,
+leading and trailing spaces will be stripped from the value, and no quote
+marks are needed. An example file might look like this:
+
+    project    = RISC-V Microarchitecture Documentation
+    author     = Ben
+    version    = 1.4.1a
+    manifest   = /work/riscv/core/design/manifest.txt
+    output     = ./veridoc-out/
+    top_module = sparc
+    assets_dir = ./assets/
+
+
+Comments can be added by making the *first* character of a line a hash "#".
+Comments are not allowed to begin part way through a line.
+
+@section veridoc-configs-representation Data Structure
+
+A config file is represented in memory by the @ref veridoc_config structure.
+The files are parsed into memory by the @ref veridoc_config_parse function.
+
+@section veridoc-configs-fields Data Fields
+
+@see veridoc_config
+
+*/

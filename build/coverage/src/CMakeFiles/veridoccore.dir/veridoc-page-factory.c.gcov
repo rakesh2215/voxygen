@@ -1,0 +1,674 @@
+        -:    0:Source:/home/ubuntu/voxygen/verilog-doc/src/veridoc-page-factory.c
+        -:    0:Graph:/home/ubuntu/voxygen/verilog-doc/build/coverage/src/CMakeFiles/veridoccore.dir/veridoc-page-factory.gcno
+        -:    0:Data:/home/ubuntu/voxygen/verilog-doc/build/coverage/src/CMakeFiles/veridoccore.dir/veridoc-page-factory.gcda
+        -:    0:Runs:1
+        -:    1:/*!
+        -:    2:@file veridoc-page-factory.c
+        -:    3:@brief Defines functions and structures responsible for building the
+        -:    4:documentation pages.
+        -:    5:*/
+        -:    6:
+        -:    7:#include <stdio.h>
+        -:    8:#include <stdlib.h>
+        -:    9:#include <string.h>
+        -:   10:#include <assert.h>
+        -:   11:
+        -:   12:#include <sys/types.h>
+        -:   13:#include <sys/stat.h>
+        -:   14:#include <unistd.h>
+        -:   15:
+        -:   16:#include "veridoc-page-factory.h"
+        -:   17:
+        -:   18:/*!
+        -:   19:@brief Responsible for copying all template asset files to the output folder.
+        -:   20:*/
+    #####:   21:void veridoc_pf_copy_assets(
+        -:   22:    veridoc_config      * config
+        -:   23:){
+        -:   24:    char * to_copy[4];
+    #####:   25:    to_copy[0] = "module.html";
+    #####:   26:    to_copy[1] = "list.html";
+    #####:   27:    to_copy[2] = "script.js";
+    #####:   28:    to_copy[3] = "style.css";
+        -:   29:
+    #####:   30:    size_t src_len = strlen(config -> v_assets_dir);
+    #####:   31:    size_t tgt_len = strlen(config -> v_output);
+        -:   32:
+    #####:   33:    int i = 0;
+    #####:   34:    for(i = 0; i < 4; i++)
+        -:   35:    {
+    #####:   36:        char * src_path = calloc(src_len + strlen(to_copy[i])+1,sizeof(char));
+    #####:   37:        strcat(src_path, config -> v_assets_dir);
+    #####:   38:        strcat(src_path, to_copy[i]);
+    #####:   39:        char * tgt_path = calloc(tgt_len + strlen(to_copy[i])+1,sizeof(char));
+    #####:   40:        strcat(tgt_path, config -> v_output);
+    #####:   41:        strcat(tgt_path, to_copy[i]);
+        -:   42:
+    #####:   43:        FILE * source = fopen(src_path,"r");
+    #####:   44:        FILE * target = fopen(tgt_path,"w");
+        -:   45:
+    #####:   46:        if(!source)
+        -:   47:        {
+    #####:   48:            printf("ERROR: Could not source template file: '%s'\n", src_path);
+        -:   49:        }
+    #####:   50:        else if(!target)
+        -:   51:        {
+    #####:   52:            printf("ERROR: Could not open target file: '%s'\n", tgt_path);
+        -:   53:        }
+        -:   54:        else
+        -:   55:        {
+    #####:   56:            printf("Copying '%s' -> '%s'\n", src_path, tgt_path);
+        -:   57:            char ch;
+    #####:   58:            while((ch = fgetc(source)) != EOF){
+    #####:   59:                fputc(ch,target);
+        -:   60:            }
+        -:   61:        }
+        -:   62:
+    #####:   63:        free(src_path);
+    #####:   64:        free(tgt_path);
+    #####:   65:        fclose(source);
+    #####:   66:        fclose(target);
+        -:   67:    }
+    #####:   68:}
+        -:   69:
+        -:   70:/*!
+        -:   71:@brief Sets up the output folder.
+        -:   72:@returns True if all goes well, false otherwise.
+        -:   73:*/
+    #####:   74:boolean veridoc_pf_setup_output_folder(
+        -:   75:    veridoc_config * config
+        -:   76:){
+    #####:   77:    struct stat status = {0};
+        -:   78:
+    #####:   79:    if (stat(config -> v_output, &status) == -1) {
+    #####:   80:        int result = mkdir(config -> v_output, 0700);
+        -:   81:        
+    #####:   82:        if(result == 0){
+    #####:   83:            return BOOL_TRUE;
+        -:   84:        }
+        -:   85:        else{
+    #####:   86:            return BOOL_FALSE;
+        -:   87:        }
+        -:   88:    }
+    #####:   89:    return BOOL_TRUE;
+        -:   90:}
+        -:   91:
+        -:   92:
+        -:   93:/*!
+        -:   94:@brief Responsible for exporting the list of parsed files to a json data file.
+        -:   95:@param [in] manifest - The list of files.
+        -:   96:@param [in] destination - The JSON file to write to.
+        -:   97:@returns Void
+        -:   98:*/
+    #####:   99:void veridoc_pf_export_file_list_json(
+        -:  100:    veridoc_manifest * manifest,
+        -:  101:    json_file        * fh
+        -:  102:){
+    #####:  103:    json_object * top = json_new_object();
+    #####:  104:    json_object_add_string(top,"listType","file-manifest");
+    #####:  105:    json_object_add_string(top,"listTitle","List of documented files.");
+    #####:  106:    json_object_add_string(top,"listNotes","This is the list of all files specified as input to Veridoc, along with their parse status.");
+        -:  107:
+    #####:  108:    json_object * list = json_new_object();
+        -:  109:
+        -:  110:    unsigned int i;
+    #####:  111:    for(i = 0; i < manifest -> file_count; i ++){
+    #####:  112:        veridoc_manifest_file f = manifest -> files[i];
+    #####:  113:        json_object * toadd = json_new_object();
+        -:  114:
+    #####:  115:        json_object_add_string(toadd, "path", f.path);
+    #####:  116:        json_object_add_int(toadd, "parsed", f.parsed);
+    #####:  117:        json_object_add_int(toadd, "success", f.parse_success);
+        -:  118:
+    #####:  119:        json_object_add_object(list, "", toadd);
+        -:  120:    }
+        -:  121:
+    #####:  122:    json_object_add_list(top,"listData", list);
+    #####:  123:    json_emit_object(fh, top, "veridocFileList", 0);
+    #####:  124:}
+        -:  125:
+        -:  126:
+        -:  127:/*!
+        -:  128:@brief Responsible for emitting the list of modules for the project.
+        -:  129:*/
+    #####:  130:void veridoc_pf_export_module_list_json(
+        -:  131:    verilog_source_tree * source,
+        -:  132:    json_file        * fh
+        -:  133:){
+        -:  134:    
+    #####:  135:    json_object * top = json_new_object();
+    #####:  136:    json_object_add_string(top,"listType","module-manifest");
+    #####:  137:    json_object_add_string(top,"listTitle","List of documented modules.");
+    #####:  138:    json_object_add_string(top,"listNotes","This is the list of all hardware modules declared in the source code.");
+        -:  139:
+    #####:  140:    json_object * list = json_new_object();
+        -:  141:    unsigned int i;
+        -:  142:
+    #####:  143:    for(i = 0; i < source -> modules -> items; i ++)
+        -:  144:    {
+    #####:  145:        ast_module_declaration * module = ast_list_get(source -> modules,i);
+    #####:  146:        char * identifier = ast_identifier_tostring(module -> identifier);
+        -:  147:        
+    #####:  148:        json_object * toadd = json_new_object();
+        -:  149:
+    #####:  150:        json_object_add_string(toadd, "id", identifier);
+    #####:  151:        json_object_add_string(toadd, "brief", "None");
+    #####:  152:        json_object_add_string(toadd, "file", module -> meta.file);
+    #####:  153:        json_object_add_int   (toadd, "line", module -> meta.line);
+        -:  154:
+    #####:  155:        json_object_add_object(list, "", toadd);
+        -:  156:    }
+        -:  157:    
+    #####:  158:    json_object_add_list(top,"listData", list);
+    #####:  159:    json_emit_object(fh, top, "veridocModuleList", 0);
+        -:  160:
+    #####:  161:}
+        -:  162:
+        -:  163:
+        -:  164:/*!
+        -:  165:@brief Responsible for emitting the verilog module hierarchy as JSON.
+        -:  166:@param [in] top_module - The top level module / root of the hierarchy.
+        -:  167:@param [in] source - The parsed source tree
+        -:  168:*/
+    #####:  169:json_object * veridoc_pf_export_hierarchy_json(
+        -:  170:    ast_module_declaration  * top_module,
+        -:  171:    json_file               * destination,
+        -:  172:    unsigned int              depth
+        -:  173:){
+        -:  174:    
+    #####:  175:    if(depth == 0)
+        -:  176:    {
+    #####:  177:        json_object * top = json_new_object();
+    #####:  178:        json_object_add_string(top,"listType","module-hierarchy");
+    #####:  179:        json_object_add_string(top,"listTitle","Module Hierarchy.");
+    #####:  180:        json_object_add_string(top,"listNotes","This is the module inheritance hierarchy for the project.");
+        -:  181:
+    #####:  182:        json_object * listdata = json_new_object();
+    #####:  183:        json_object * module   = json_new_object();
+        -:  184:        
+    #####:  185:        char * top_id = ast_identifier_tostring(top_module->identifier);
+        -:  186:
+    #####:  187:        json_object_add_string(module, "id",   top_id);
+    #####:  188:        json_object_add_string(module, "file", top_module -> meta.file);
+    #####:  189:        json_object_add_int   (module, "line", top_module -> meta.line);
+    #####:  190:        json_object_add_int   (module, "depth", depth);
+        -:  191:
+        -:  192:        // Recurse down the list of children.
+    #####:  193:        json_object * children = veridoc_pf_export_hierarchy_json(
+        -:  194:            top_module, destination, depth+1);
+    #####:  195:        json_object_add_list(module,"children", children);
+        -:  196:
+    #####:  197:        json_object_add_object(listdata, "", module);
+    #####:  198:        json_object_add_list(top,"listData",listdata);
+    #####:  199:        json_emit_object(destination, top, "veridocModuleHierarchy", 0);
+    #####:  200:        return;
+        -:  201:    }
+        -:  202:    else
+        -:  203:    {
+        -:  204:
+    #####:  205:        ast_list    * children = verilog_module_get_children(top_module);
+    #####:  206:        json_object * tr       = json_new_object();
+        -:  207:
+        -:  208:        unsigned int m;
+    #####:  209:        for(m = 0; m < children -> items; m++)
+        -:  210:        {
+    #####:  211:            ast_module_instantiation * child = ast_list_get(children, m);
+        -:  212:            char * child_id;
+        -:  213:            json_object * child_list;
+    #####:  214:            json_object * child_obj = json_new_object();;
+        -:  215:
+    #####:  216:            if(child -> resolved){
+    #####:  217:                 child_id = ast_identifier_tostring(
+    #####:  218:                    child->declaration->identifier);
+        -:  219:            } else {
+    #####:  220:                 child_id = ast_identifier_tostring(child->module_identifer);
+        -:  221:            }
+        -:  222:
+    #####:  223:            json_object_add_string(child_obj, "id", child_id);
+    #####:  224:            json_object_add_string(child_obj, "file", child -> meta.file);
+    #####:  225:            json_object_add_int   (child_obj, "line", child -> meta.line);
+    #####:  226:            json_object_add_int   (child_obj, "depth", depth);
+        -:  227:            
+    #####:  228:            if(child -> resolved){
+    #####:  229:                child_list = veridoc_pf_export_hierarchy_json(
+        -:  230:                child -> declaration, destination, depth + 1);
+        -:  231:            } else {
+    #####:  232:                child_list = json_new_object();
+        -:  233:            }
+        -:  234:
+    #####:  235:            json_object_add_list(child_obj,"children", child_list);
+    #####:  236:            json_object_add_object(tr,"",child_obj);
+        -:  237:        }
+        -:  238:
+    #####:  239:        return tr;
+        -:  240:    }
+        -:  241:}
+        -:  242:
+        -:  243:
+        -:  244://! Creates a uniform filename for a module's JSON data structure.
+    #####:  245:char * veridoc_pf_module_filename(
+        -:  246:    veridoc_config         * config,
+        -:  247:    ast_module_declaration * module
+        -:  248:){
+        -:  249:    char * file_name;
+    #####:  250:    char * module_id = ast_identifier_tostring(module -> identifier);
+        -:  251:    
+    #####:  252:    size_t len = strlen(module_id) + strlen(config -> v_output) + 14;
+        -:  253:
+    #####:  254:    file_name = calloc(len, sizeof(char));
+    #####:  255:    strcat(file_name, config -> v_output);
+    #####:  256:    strcat(file_name, "/module_");
+    #####:  257:    strcat(file_name, module_id);
+    #####:  258:    strcat(file_name, ".json");
+        -:  259:
+    #####:  260:    free(module_id);
+    #####:  261:    return file_name;
+        -:  262:}
+        -:  263:
+        -:  264:/*!
+        -:  265:@brief Responsible for creating a json_object node which describes all of the
+        -:  266:IO ports for the supplied module.
+        -:  267:*/
+    #####:  268:json_object * veridoc_pf_export_module_ports_json(
+        -:  269:    ast_module_declaration * module
+        -:  270:){
+        -:  271:    unsigned int i_p;
+    #####:  272:    json_object * m_ports = json_new_object();
+        -:  273:
+    #####:  274:    for(i_p = 0; i_p < module -> module_ports -> items; i_p ++){
+    #####:  275:        json_object * toadd = json_new_object();
+    #####:  276:        ast_port_declaration * port =ast_list_get(module -> module_ports,i_p);
+        -:  277:
+    #####:  278:        char * port_id = ast_identifier_tostring(
+    #####:  279:            ast_list_get(port -> port_names,0));
+    #####:  280:        char * p_type = "?";
+    #####:  281:        char * port_range = "?:?";
+        -:  282:        char * p_dir;
+        -:  283:
+    #####:  284:        if(port -> is_reg) p_type = "reg";
+    #####:  285:        else if(port -> is_variable) p_type = "var";
+    #####:  286:        else p_type = "wire";
+        -:  287:
+    #####:  288:        switch(port -> direction){
+    #####:  289:            case PORT_INPUT:
+    #####:  290:                p_dir = "Input"; break;
+    #####:  291:            case PORT_INOUT:
+    #####:  292:                p_dir = "Inout"; break;
+    #####:  293:            case PORT_OUTPUT:
+    #####:  294:                p_dir = "Output"; break;
+    #####:  295:            default:
+    #####:  296:                p_dir = "Unknown"; break;
+        -:  297:        }
+        -:  298:        
+    #####:  299:        json_object_add_string(toadd,"name", port_id);
+    #####:  300:        json_object_add_string(toadd,"type", p_type);
+    #####:  301:        json_object_add_string(toadd,"range", port_range);
+    #####:  302:        json_object_add_string(toadd,"direction", p_dir);
+        -:  303:        
+    #####:  304:        json_object_add_object(m_ports,"",toadd);
+        -:  305:    }
+    #####:  306:    return m_ports;
+        -:  307:}
+        -:  308:
+        -:  309:/*!
+        -:  310:@brief Responsible for creating a json_object node which describes all of the
+        -:  311:module parameters for the supplied module.
+        -:  312:*/
+    #####:  313:json_object * veridoc_pf_export_module_params_json(
+        -:  314:    ast_module_declaration * module
+        -:  315:){
+        -:  316:    unsigned int i;
+    #####:  317:    json_object * m_params = json_new_object();
+        -:  318:    
+    #####:  319:    for(i=0; i<module -> module_parameters->items;i++)
+        -:  320:    {
+        -:  321:        ast_parameter_declarations * param =
+    #####:  322:                                ast_list_get(module -> module_parameters,i);
+        -:  323:        
+        -:  324:        unsigned int j;
+    #####:  325:        for(j=0; j < param -> assignments -> items; j ++)
+        -:  326:        {
+    #####:  327:            json_object * toadd = json_new_object();
+    #####:  328:            ast_single_assignment*assign = ast_list_get(param->assignments,j);
+    #####:  329:            ast_lvalue * lv = assign -> lval;
+        -:  330:            
+    #####:  331:            if(lv -> type == PARAM_ID){
+    #####:  332:                char * pname = ast_identifier_tostring(lv->data.identifier);
+    #####:  333:                char * pval  = ast_expression_tostring(assign -> expression);
+        -:  334:
+    #####:  335:                json_object_add_string(toadd, "name",pname);
+    #####:  336:                json_object_add_string(toadd, "default",pval);
+    #####:  337:                json_object_add_string(toadd, "brief","None");
+        -:  338:                
+    #####:  339:                json_object_add_object(m_params,"",toadd);
+        -:  340:            }
+        -:  341:        }
+        -:  342:    }
+        -:  343:
+    #####:  344:    return m_params;
+        -:  345:}
+        -:  346:
+        -:  347:/*! @brief Iterates over a list of ast_var_declaration and adds a json 
+        -:  348: representation to the supplied add_to list object.
+        -:  349:@bug Sometimes td=ast_list_get(to_itter,i) returns NULL.
+        -:  350:*/
+    #####:  351:json_object * veridoc_pf_itter_vardecs(
+        -:  352:    char        * decType, //!< Value for the JSON "type" property
+        -:  353:    ast_list    * to_itter, //!< A list of ast_var_declaration* objects.
+        -:  354:    json_object ** add_to    //!< Something to add the json objects to.
+        -:  355:){
+        -:  356:    unsigned int i;
+        -:  357:    unsigned int j;
+    #####:  358:    for(i=0; i< to_itter -> items;i++)
+        -:  359:    {
+    #####:  360:        ast_var_declaration * td = ast_list_get(to_itter,i);
+    #####:  361:        if(td == NULL){continue;}
+        -:  362:
+    #####:  363:        json_object * toadd = json_new_object();
+        -:  364:                
+    #####:  365:        char * name      = ast_identifier_tostring(td -> identifier);
+        -:  366:
+    #####:  367:        json_object_add_string(toadd,"name",name);
+    #####:  368:        json_object_add_string(toadd,"type",decType);
+    #####:  369:        json_object_add_string(toadd,"file", td -> meta.file);
+    #####:  370:        json_object_add_int   (toadd,"line", td -> meta.line);
+    #####:  371:        json_object_add_string(toadd,"brief", "None");
+        -:  372:
+    #####:  373:        json_object_add_object(*add_to, "", toadd);
+        -:  374:    }
+        -:  375:    
+    #####:  376:    return *add_to;
+        -:  377:}
+        -:  378:
+        -:  379:/*! @brief Iterates over a list of ast_var_declaration and adds a json 
+        -:  380:representation to the supplied add_to list object.
+        -:  381:@bug Sometimes td=ast_list_get(to_itter,i) returns NULL.
+        -:  382:*/
+    #####:  383:json_object * veridoc_pf_itter_netdecs(
+        -:  384:    ast_list    * to_itter, //!< A list of ast_net_declaration* objects.
+        -:  385:    json_object ** add_to    //!< Something to add the json objects to.
+        -:  386:){
+        -:  387:    unsigned int i;
+    #####:  388:    for(i=0; i< to_itter -> items;i++)
+        -:  389:    {
+    #####:  390:        ast_net_declaration * td = ast_list_get(to_itter,i);
+    #####:  391:        if(td == NULL){continue;}
+        -:  392:
+    #####:  393:        json_object * toadd = json_new_object();
+        -:  394:                
+    #####:  395:        char * name      = ast_identifier_tostring(td -> identifier);
+    #####:  396:        char * range     = "?";
+    #####:  397:        char * nettype   = "?";
+        -:  398:
+    #####:  399:        json_object_add_string(toadd,"name",name);
+    #####:  400:        json_object_add_string(toadd,"type","net");
+    #####:  401:        json_object_add_string(toadd,"nettype",nettype);
+    #####:  402:        json_object_add_string(toadd,"range",range);
+    #####:  403:        json_object_add_int   (toadd,"vectored",td -> vectored);
+    #####:  404:        json_object_add_int   (toadd,"scalared",td -> scalared);
+    #####:  405:        json_object_add_int   (toadd,"signed",td -> is_signed);
+    #####:  406:        json_object_add_string(toadd,"file", td -> meta.file);
+    #####:  407:        json_object_add_int   (toadd,"line", td -> meta.line);
+    #####:  408:        json_object_add_string(toadd,"brief", "None");
+        -:  409:
+    #####:  410:        json_object_add_object(*add_to, "", toadd);
+        -:  411:    }
+        -:  412:    
+    #####:  413:    return *add_to;
+        -:  414:}
+        -:  415:
+        -:  416:/*! @brief Iterates over a list of ast_reg_declaration and adds a json 
+        -:  417:representation to the supplied add_to list object.
+        -:  418:@bug Sometimes td=ast_list_get(to_itter,i) returns NULL.
+        -:  419:*/
+    #####:  420:json_object * veridoc_pf_itter_regdecs(
+        -:  421:    ast_list    * to_itter, //!< A list of ast_reg_declaration* objects.
+        -:  422:    json_object ** add_to    //!< Something to add the json objects to.
+        -:  423:){
+        -:  424:    unsigned int i;
+    #####:  425:    for(i=0; i< to_itter -> items;i++)
+        -:  426:    {
+    #####:  427:        ast_reg_declaration * td = ast_list_get(to_itter,i);
+    #####:  428:        if(td == NULL){printf("\tskip\n");continue;}
+        -:  429:
+    #####:  430:        json_object * toadd = json_new_object();
+        -:  431:                
+    #####:  432:        char * name      = ast_identifier_tostring(td -> identifier);
+    #####:  433:        char * range     = "?";
+    #####:  434:        char * nettype   = "?";
+        -:  435:
+    #####:  436:        json_object_add_string(toadd,"name",name);
+    #####:  437:        json_object_add_string(toadd,"type","reg");
+    #####:  438:        json_object_add_string(toadd,"range",range);
+    #####:  439:        json_object_add_int   (toadd,"signed",td -> is_signed);
+    #####:  440:        json_object_add_string(toadd,"file", td -> meta.file);
+    #####:  441:        json_object_add_int   (toadd,"line", td -> meta.line);
+        -:  442:
+    #####:  443:        json_object_add_object(*add_to, "", toadd);
+        -:  444:    }
+        -:  445:    
+    #####:  446:    return *add_to;
+        -:  447:}
+        -:  448:
+        -:  449:/*!
+        -:  450:@brief Responsible for creating a json_object node which describes all of the
+        -:  451:module nets and variables for the supplied module.
+        -:  452:@details Looks through:
+        -:  453:module -> genvar_declarations
+        -:  454:module -> integer_declarations
+        -:  455:module -> net_declarations
+        -:  456:module -> real_declarations
+        -:  457:module -> realtime_declarations
+        -:  458:module -> reg_declarations
+        -:  459:module -> time_declarations
+        -:  460:*/
+    #####:  461:json_object * veridoc_pf_export_module_vars_json(
+        -:  462:    ast_module_declaration * module
+        -:  463:){
+    #####:  464:    json_object * m_tr= json_new_object();
+        -:  465:    
+    #####:  466:    json_object * nets = json_new_object();
+    #####:  467:    json_object * regs = json_new_object();
+    #####:  468:    json_object * vars = json_new_object();
+        -:  469:    
+    #####:  470:    veridoc_pf_itter_netdecs(module -> net_declarations,&nets);
+    #####:  471:    veridoc_pf_itter_regdecs(module -> reg_declarations,&regs);
+    #####:  472:    veridoc_pf_itter_vardecs("genvar",module -> genvar_declarations,&vars);
+    #####:  473:    veridoc_pf_itter_vardecs("integer",module->integer_declarations,&vars);
+    #####:  474:    veridoc_pf_itter_vardecs("real",module->real_declarations,&vars);
+    #####:  475:    veridoc_pf_itter_vardecs("realtime",module->realtime_declarations,&vars);
+    #####:  476:    veridoc_pf_itter_vardecs("time",module -> time_declarations,&vars);
+        -:  477:
+    #####:  478:    json_object_add_list(m_tr, "nets", nets);
+    #####:  479:    json_object_add_list(m_tr, "regs", regs);
+    #####:  480:    json_object_add_list(m_tr, "vars", vars);
+        -:  481:
+    #####:  482:    return m_tr;
+        -:  483:}
+        -:  484:
+        -:  485:/*!
+        -:  486:@brief Responsible for creating a json_object node which describes all of the
+        -:  487:instanced child modules for the supplied module.
+        -:  488:*/
+    #####:  489:json_object * veridoc_pf_export_module_children_json(
+        -:  490:    ast_module_declaration * module
+        -:  491:){
+        -:  492:    unsigned int i_m;
+    #####:  493:    json_object * m_children = json_new_object();
+        -:  494:
+    #####:  495:    for(i_m = 0; i_m < module -> module_instantiations -> items; i_m++)
+        -:  496:    {
+    #####:  497:        json_object * toadd = json_new_object();
+    #####:  498:        ast_module_instantiation * inst = ast_list_get(
+        -:  499:            module -> module_instantiations, i_m);
+        -:  500:        
+        -:  501:        char * child_id;
+    #####:  502:        if(inst -> resolved){
+    #####:  503:            child_id = ast_identifier_tostring(inst->declaration->identifier);
+        -:  504:        } else {
+    #####:  505:            child_id = ast_identifier_tostring(inst->module_identifer);
+        -:  506:        }
+        -:  507:
+    #####:  508:        json_object_add_string(toadd, "moduleName", child_id);
+        -:  509:        
+    #####:  510:        json_object_add_object(m_children, "", toadd);
+        -:  511:    }
+    #####:  512:    return m_children;
+        -:  513:}
+        -:  514:
+        -:  515:/*!
+        -:  516:@brief Iterates over all process blocks (initial, always, triggered) and
+        -:  517:returns a JSON data structure representing them.
+        -:  518:@todo Complete this after re-factoring the always block code in the parser
+        -:  519:library.
+        -:  520:*/
+    #####:  521:json_object * veridoc_pf_export_module_blocks_json(
+        -:  522:    ast_module_declaration * module
+        -:  523:){
+    #####:  524:    json_object * tr = json_new_object();
+        -:  525:
+        -:  526:    // We must loop over both module -> always_blocks and 
+        -:  527:    // module -> initial_blocks
+        -:  528:
+        -:  529:    unsigned int i;
+    #####:  530:    for(i = 0; i < module -> always_blocks; i++)
+        -:  531:    {
+    #####:  532:        ast_statement * block = ast_list_get(module -> always_blocks, i);
+    #####:  533:        if(block -> type != STM_BLOCK){ continue; }
+        -:  534:
+    #####:  535:        json_object * toadd = json_new_object();
+        -:  536:        
+        -:  537:        // Do nothing here while the code for expressing statement blocks is
+        -:  538:        // refactored.
+        -:  539:
+    #####:  540:        json_object_add_object(tr,"",toadd);
+        -:  541:    }
+        -:  542:    
+    #####:  543:    return tr;
+        -:  544:}
+        -:  545:
+        -:  546:/*!
+        -:  547:@brief Function responsible for exporting information on a module as JSON.
+        -:  548:@param [in] config - The veridoc config being adhered to.
+        -:  549:@param [in] module - The module to document.
+        -:  550:*/
+    #####:  551:void veridoc_pf_export_module_json(
+        -:  552:    veridoc_config         * config,
+        -:  553:    ast_module_declaration * module
+        -:  554:){
+        -:  555:    // Where are we going to put all the JSON data?
+    #####:  556:    char * output_file_name = veridoc_pf_module_filename(config,module);
+    #####:  557:    json_file * fh          = json_new_file(output_file_name);
+    #####:  558:    json_object * top = json_new_object();
+        -:  559:
+    #####:  560:    char * module_name = ast_identifier_tostring(module->identifier);
+        -:  561:
+        -:  562:    // Set the standard module properties.
+    #####:  563:    json_object_add_string(top, "moduleName",  module_name);
+    #####:  564:    json_object_add_string(top, "moduleFile",  module -> meta.file);
+    #####:  565:    json_object_add_int   (top, "moduleLine",  module -> meta.line);
+    #####:  566:    json_object_add_string(top, "moduleBrief", "None");
+        -:  567:
+        -:  568:    // Add the list of ports
+    #####:  569:    json_object * module_ports = veridoc_pf_export_module_ports_json(module);
+    #####:  570:    json_object_add_list(top, "ports", module_ports);
+        -:  571:
+        -:  572:    // Add the list of child modules.
+    #####:  573:    json_object * module_kids = veridoc_pf_export_module_children_json(module);
+    #####:  574:    json_object_add_list(top, "children", module_kids);
+        -:  575:
+        -:  576:    // Add the list of module parameters
+    #####:  577:    json_object * module_params = veridoc_pf_export_module_params_json(module);
+    #####:  578:    json_object_add_list(top, "parameters", module_params);
+        -:  579:
+        -:  580:    // Add the list of internal variable & net declarations
+    #####:  581:    json_object * module_vars  = veridoc_pf_export_module_vars_json(module);
+    #####:  582:    json_object_add_object(top, "declarations", module_vars);
+        -:  583:
+        -:  584:    // Add the list of internal tasks & functions
+    #####:  585:    json_object * module_funcs  = NULL;
+        -:  586:
+        -:  587:    // Add the list of internal process blocks (initial & others)
+    #####:  588:    json_object * module_blocks = NULL;
+        -:  589:
+        -:  590:    // Emit and finish up.
+    #####:  591:    json_emit_object(fh,top,"veridocModuleInformation",0);
+    #####:  592:    fprintf(fh->fh,"\n\nveridoc_render_module();\n");
+    #####:  593:    json_close_file(fh);
+    #####:  594:}
+        -:  595:
+        -:  596:
+        -:  597:/*!
+        -:  598:@brief concatenates the config->v_output and supplied filename into a single
+        -:  599:file path and returns it.
+        -:  600:*/
+    #####:  601:char * veridoc_pf_jsonfilename(
+        -:  602:    veridoc_config          * config,
+        -:  603:    char                    * filename
+        -:  604:){
+    #####:  605:    size_t len = strlen(config -> v_output) + strlen(filename) + 1;
+    #####:  606:    char * json_file = calloc(len, sizeof(char));
+    #####:  607:    strcat(json_file, config -> v_output);
+    #####:  608:    strcat(json_file, filename);
+    #####:  609:    return json_file;
+        -:  610:}
+        -:  611:
+        -:  612:
+        -:  613:/*!
+        -:  614:@brief Top level function for exporting the whole parsed data set to html.
+        -:  615:@param [in] manifest - The list of files parsed.
+        -:  616:@param [in] config - Configuration options for the output.
+        -:  617:@param [in] source - The parsed source tree
+        -:  618:*/
+    #####:  619:void veridoc_pf_build(
+        -:  620:    veridoc_manifest    * manifest,
+        -:  621:    veridoc_config      * config,
+        -:  622:    verilog_source_tree * source
+        -:  623:){
+        -:  624:    // Make sure we can find the module supposedly at the hierarchy root.
+    #####:  625:    ast_module_declaration * top_module = verilog_find_module_declaration(
+        -:  626:        source,
+        -:  627:        ast_new_identifier(config -> v_top_module, 0)
+        -:  628:    );
+        -:  629:
+        -:  630:
+        -:  631:    // First, we need to setup the output directory.
+    #####:  632:    veridoc_pf_setup_output_folder(config);
+        -:  633:    
+    #####:  634:    char * json_file_p =veridoc_pf_jsonfilename(config, "file_list.js");
+    #####:  635:    char * module_file =veridoc_pf_jsonfilename(config, "module_list.js");
+    #####:  636:    char * module_hier =veridoc_pf_jsonfilename(config,"module_hierarchy.js");
+        -:  637:    
+    #####:  638:    json_file * json_file_h   = json_new_file(json_file_p);
+    #####:  639:    json_file * module_file_h = json_new_file(module_file);
+    #####:  640:    json_file * module_hier_h = json_new_file(module_hier);
+        -:  641:
+    #####:  642:    veridoc_pf_export_file_list_json(manifest,json_file_h);
+    #####:  643:    veridoc_pf_export_module_list_json(source,module_file_h);
+        -:  644:    
+    #####:  645:    if(!top_module){
+    #####:  646:        printf("ERROR: Could not find the top module '%s' in the source.\n",
+        -:  647:            config -> v_top_module);
+    #####:  648:        printf("\tThe module hierarchy page will not work.\n");
+        -:  649:    } else {
+    #####:  650:        veridoc_pf_export_hierarchy_json(top_module, module_hier_h, 0);
+        -:  651:    }
+        -:  652:    
+    #####:  653:    free(json_file_p);
+    #####:  654:    free(module_file);
+    #####:  655:    free(module_hier);
+        -:  656:
+    #####:  657:    json_close_file(json_file_h);
+    #####:  658:    json_close_file(module_file_h);
+    #####:  659:    json_close_file(module_hier_h);
+        -:  660:
+        -:  661:    // Next, export the individual module pages.
+    #####:  662:    printf("Exporting Module Documentation: ");
+        -:  663:    int m;
+    #####:  664:    for(m = 0; m < source -> modules -> items; m++)
+        -:  665:    {
+    #####:  666:        ast_module_declaration * module = ast_list_get(source->modules, m);
+    #####:  667:        veridoc_pf_export_module_json(config, module);
+        -:  668:    }
+    #####:  669:    printf("\n");
+    #####:  670:}
