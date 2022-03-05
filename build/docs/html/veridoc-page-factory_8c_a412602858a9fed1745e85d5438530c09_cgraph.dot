@@ -1,0 +1,66 @@
+digraph "veridoc_pf_build"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="veridoc_pf_build",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Top level function for exporting the whole parsed data set to html."];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="json_close_file",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$veridoc-json_8c.html#a00ba6552cc3489a9295599663efc7b46",tooltip="Frees the memory allocated to a json_file construct."];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="json_new_file",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$veridoc-json_8c.html#a83b8b1dd20a6bd47fe9172f5026254f9",tooltip="Creates a new json file handle."];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="veridoc_pf_export_file\l_list_json",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$veridoc-page-factory_8c.html#a6956049cd18ad1768041780017314421",tooltip="Responsible for exporting the list of parsed files to a json data file."];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="json_emit_object",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$veridoc-json_8c.html#a3391f98f67a214a642a896dbd820e54c",tooltip="emits the supplied object into the supplied file, with an optional variable name."];
+  Node5 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="json_new_object",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$veridoc-json_8c.html#a43402de49eed0e4a4fdaecc80c1a3f94",tooltip="Creates and returns a pointer to a new json object."];
+  Node4 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="json_object_add_int",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$veridoc-json_8c.html#a133c50c4571adad2f30153a36bde5362",tooltip="Adds an integer and associated key to the supplied object."];
+  Node7 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="json_new_kvp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$veridoc-json_8c.html#a3c2f8d3989d7cef137743f614c7aeb3b",tooltip="Creates and returns a new KVP object with the supplied key and datatype."];
+  Node4 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="json_object_add_list",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$veridoc-json_8c.html#a8d92f19436c40317f0e7bd88f8ebe5e3",tooltip="Adds a list and associated key to the supplied object."];
+  Node9 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="json_object_add_object",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$veridoc-json_8c.html#a43b658cca5b726bf9a86ee40c298251b",tooltip="Adds a object and associated key to the supplied object."];
+  Node10 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="json_object_add_string",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$veridoc-json_8c.html#ae11286d855148fbc1e2dde557d86bf94",tooltip="Adds a string and associated key to the supplied object."];
+  Node11 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="veridoc_pf_export_hierarchy_json",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$veridoc-page-factory_8c.html#a71777a55af066c57239bf7fc3106303c",tooltip="Responsible for emitting the verilog module hierarchy as JSON."];
+  Node12 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node13 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="veridoc_pf_export_module_json",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$veridoc-page-factory_8c.html#a2d1c65ce0ed78b7c99c091136ac58f07",tooltip="Function responsible for exporting information on a module as JSON."];
+  Node13 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 -> Node14 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="veridoc_pf_module_filename",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$veridoc-page-factory_8c.html#a28d1cef365b4e4d6d2e0ff11dd03df27",tooltip="Creates a uniform filename for a module's JSON data structure."];
+  Node1 -> Node15 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="veridoc_pf_export_module\l_list_json",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$veridoc-page-factory_8c.html#abbc42a7dfb4d87fa21b792660cd47eda",tooltip="Responsible for emitting the list of modules for the project."];
+  Node15 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node16 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node16 [label="veridoc_pf_jsonfilename",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$veridoc-page-factory_8c.html#a24cd55c3db68113bfd8d96471671703d",tooltip="concatenates the config->v_output and supplied filename into a single file path and returns it."];
+  Node1 -> Node17 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node17 [label="veridoc_pf_setup_output\l_folder",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$veridoc-page-factory_8c.html#a3b9f01dc2c3213b45f1d05b0b3899264",tooltip="Sets up the output folder."];
+}

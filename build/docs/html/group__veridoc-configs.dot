@@ -1,0 +1,9 @@
+digraph "Veridoc Configuration Files"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=box];
+  rankdir=LR;
+  Node2 [label="Documentation",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__veridoc-documentation.html",tooltip="Top level group for all pages documenting veridoc, but which do not relate specifically to code."];
+  Node1 [label="Veridoc Configuration\l Files",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="This page describes how veridoc configuration files are structured, loaded and interpreted."];
+  Node2->Node1 [shape=plaintext, dir="back", style="solid"];
+}

@@ -1,0 +1,12 @@
+digraph "json_emit_object"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="json_emit_object",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="emits the supplied object into the supplied file, with an optional variable name."];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="json_emit_object",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$veridoc-json_8c.html#a3391f98f67a214a642a896dbd820e54c",tooltip="emits the supplied object into the supplied file, with an optional variable name."];
+  Node2 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}
