@@ -262,18 +262,34 @@ char * veridoc_pf_module_filename(
 }
 
 /*!
-@brief Responsible for creating a json_object node which describes all of the
-IO ports for the supplied module.
+@brief Function responsible for exporting information on a module as JSON.
+@param [in] config - The veridoc config being adhered to.
+@param [in] module - The module to document.
 */
-json_object * veridoc_pf_export_module_ports_json(
+void veridoc_pf_export_module_json(
+    veridoc_config         * config,
     ast_module_declaration * module
 ){
+    // Where are we going to put all the JSON data?
+    char * output_file_name = veridoc_pf_module_filename(config,module);
+    json_file * fh          = json_new_file(output_file_name);
+    json_object * top = json_new_object();
+
+    char * module_name = ast_identifier_tostring(module->identifier);
+
+    // Set the standard module properties.
+    json_object_add_string(top, "moduleName",  module_name);
+    json_object_add_string(top, "moduleFile",  module -> meta.file);
+    json_object_add_int   (top, "moduleLine",  module -> meta.line);
+    json_object_add_string(top, "moduleBrief", "None");
+
+    // Add the list of ports
     unsigned int i_p;
     json_object * m_ports = json_new_object();
 
     for(i_p = 0; i_p < module -> module_ports -> items; i_p ++){
         json_object * toadd = json_new_object();
-        ast_port_declaration * port =ast_list_get(module -> module_ports,i_p);
+        ast_port_declaration * port = ast_list_get(module -> module_ports,i_p);
 
         char * port_id = ast_identifier_tostring(
             ast_list_get(port -> port_names,0));
@@ -303,192 +319,9 @@ json_object * veridoc_pf_export_module_ports_json(
         
         json_object_add_object(m_ports,"",toadd);
     }
-    return m_ports;
-}
+    json_object_add_list(top, "ports", m_ports);
 
-/*!
-@brief Responsible for creating a json_object node which describes all of the
-module parameters for the supplied module.
-*/
-json_object * veridoc_pf_export_module_params_json(
-    ast_module_declaration * module
-){
-    unsigned int i;
-    json_object * m_params = json_new_object();
-    
-    for(i=0; i<module -> module_parameters->items;i++)
-    {
-        ast_parameter_declarations * param =
-                                ast_list_get(module -> module_parameters,i);
-        
-        unsigned int j;
-        for(j=0; j < param -> assignments -> items; j ++)
-        {
-            json_object * toadd = json_new_object();
-            ast_single_assignment*assign = ast_list_get(param->assignments,j);
-            ast_lvalue * lv = assign -> lval;
-            
-            if(lv -> type == PARAM_ID){
-                char * pname = ast_identifier_tostring(lv->data.identifier);
-                char * pval  = ast_expression_tostring(assign -> expression);
-
-                json_object_add_string(toadd, "name",pname);
-                json_object_add_string(toadd, "default",pval);
-                json_object_add_string(toadd, "brief","None");
-                
-                json_object_add_object(m_params,"",toadd);
-            }
-        }
-    }
-
-    return m_params;
-}
-
-/*! @brief Iterates over a list of ast_var_declaration and adds a json 
- representation to the supplied add_to list object.
-@bug Sometimes td=ast_list_get(to_itter,i) returns NULL.
-*/
-json_object * veridoc_pf_itter_vardecs(
-    char        * decType, //!< Value for the JSON "type" property
-    ast_list    * to_itter, //!< A list of ast_var_declaration* objects.
-    json_object ** add_to    //!< Something to add the json objects to.
-){
-    unsigned int i;
-    unsigned int j;
-    for(i=0; i< to_itter -> items;i++)
-    {
-        ast_var_declaration * td = ast_list_get(to_itter,i);
-        if(td == NULL){continue;}
-
-        json_object * toadd = json_new_object();
-                
-        char * name      = ast_identifier_tostring(td -> identifier);
-
-        json_object_add_string(toadd,"name",name);
-        json_object_add_string(toadd,"type",decType);
-        json_object_add_string(toadd,"file", td -> meta.file);
-        json_object_add_int   (toadd,"line", td -> meta.line);
-        json_object_add_string(toadd,"brief", "None");
-
-        json_object_add_object(*add_to, "", toadd);
-    }
-    
-    return *add_to;
-}
-
-/*! @brief Iterates over a list of ast_var_declaration and adds a json 
-representation to the supplied add_to list object.
-@bug Sometimes td=ast_list_get(to_itter,i) returns NULL.
-*/
-json_object * veridoc_pf_itter_netdecs(
-    ast_list    * to_itter, //!< A list of ast_net_declaration* objects.
-    json_object ** add_to    //!< Something to add the json objects to.
-){
-    unsigned int i;
-    for(i=0; i< to_itter -> items;i++)
-    {
-        ast_net_declaration * td = ast_list_get(to_itter,i);
-        if(td == NULL){continue;}
-
-        json_object * toadd = json_new_object();
-                
-        char * name      = ast_identifier_tostring(td -> identifier);
-        char * range     = "?";
-        char * nettype   = "?";
-
-        json_object_add_string(toadd,"name",name);
-        json_object_add_string(toadd,"type","net");
-        json_object_add_string(toadd,"nettype",nettype);
-        json_object_add_string(toadd,"range",range);
-        json_object_add_int   (toadd,"vectored",td -> vectored);
-        json_object_add_int   (toadd,"scalared",td -> scalared);
-        json_object_add_int   (toadd,"signed",td -> is_signed);
-        json_object_add_string(toadd,"file", td -> meta.file);
-        json_object_add_int   (toadd,"line", td -> meta.line);
-        json_object_add_string(toadd,"brief", "None");
-
-        json_object_add_object(*add_to, "", toadd);
-    }
-    
-    return *add_to;
-}
-
-/*! @brief Iterates over a list of ast_reg_declaration and adds a json 
-representation to the supplied add_to list object.
-@bug Sometimes td=ast_list_get(to_itter,i) returns NULL.
-*/
-json_object * veridoc_pf_itter_regdecs(
-    ast_list    * to_itter, //!< A list of ast_reg_declaration* objects.
-    json_object ** add_to    //!< Something to add the json objects to.
-){
-    unsigned int i;
-    for(i=0; i< to_itter -> items;i++)
-    {
-        ast_reg_declaration * td = ast_list_get(to_itter,i);
-        if(td == NULL){printf("\tskip\n");continue;}
-
-        json_object * toadd = json_new_object();
-                
-        char * name      = ast_identifier_tostring(td -> identifier);
-        char * range     = "?";
-        char * nettype   = "?";
-
-        json_object_add_string(toadd,"name",name);
-        json_object_add_string(toadd,"type","reg");
-        json_object_add_string(toadd,"range",range);
-        json_object_add_int   (toadd,"signed",td -> is_signed);
-        json_object_add_string(toadd,"file", td -> meta.file);
-        json_object_add_int   (toadd,"line", td -> meta.line);
-
-        json_object_add_object(*add_to, "", toadd);
-    }
-    
-    return *add_to;
-}
-
-/*!
-@brief Responsible for creating a json_object node which describes all of the
-module nets and variables for the supplied module.
-@details Looks through:
-module -> genvar_declarations
-module -> integer_declarations
-module -> net_declarations
-module -> real_declarations
-module -> realtime_declarations
-module -> reg_declarations
-module -> time_declarations
-*/
-json_object * veridoc_pf_export_module_vars_json(
-    ast_module_declaration * module
-){
-    json_object * m_tr= json_new_object();
-    
-    json_object * nets = json_new_object();
-    json_object * regs = json_new_object();
-    json_object * vars = json_new_object();
-    
-    veridoc_pf_itter_netdecs(module -> net_declarations,&nets);
-    veridoc_pf_itter_regdecs(module -> reg_declarations,&regs);
-    veridoc_pf_itter_vardecs("genvar",module -> genvar_declarations,&vars);
-    veridoc_pf_itter_vardecs("integer",module->integer_declarations,&vars);
-    veridoc_pf_itter_vardecs("real",module->real_declarations,&vars);
-    veridoc_pf_itter_vardecs("realtime",module->realtime_declarations,&vars);
-    veridoc_pf_itter_vardecs("time",module -> time_declarations,&vars);
-
-    json_object_add_list(m_tr, "nets", nets);
-    json_object_add_list(m_tr, "regs", regs);
-    json_object_add_list(m_tr, "vars", vars);
-
-    return m_tr;
-}
-
-/*!
-@brief Responsible for creating a json_object node which describes all of the
-instanced child modules for the supplied module.
-*/
-json_object * veridoc_pf_export_module_children_json(
-    ast_module_declaration * module
-){
+    // Add the list of child modules.
     unsigned int i_m;
     json_object * m_children = json_new_object();
 
@@ -509,83 +342,7 @@ json_object * veridoc_pf_export_module_children_json(
         
         json_object_add_object(m_children, "", toadd);
     }
-    return m_children;
-}
-
-/*!
-@brief Iterates over all process blocks (initial, always, triggered) and
-returns a JSON data structure representing them.
-@todo Complete this after re-factoring the always block code in the parser
-library.
-*/
-json_object * veridoc_pf_export_module_blocks_json(
-    ast_module_declaration * module
-){
-    json_object * tr = json_new_object();
-
-    // We must loop over both module -> always_blocks and 
-    // module -> initial_blocks
-
-    unsigned int i;
-    for(i = 0; i < module -> always_blocks; i++)
-    {
-        ast_statement * block = ast_list_get(module -> always_blocks, i);
-        if(block -> type != STM_BLOCK){ continue; }
-
-        json_object * toadd = json_new_object();
-        
-        // Do nothing here while the code for expressing statement blocks is
-        // refactored.
-
-        json_object_add_object(tr,"",toadd);
-    }
-    
-    return tr;
-}
-
-/*!
-@brief Function responsible for exporting information on a module as JSON.
-@param [in] config - The veridoc config being adhered to.
-@param [in] module - The module to document.
-*/
-void veridoc_pf_export_module_json(
-    veridoc_config         * config,
-    ast_module_declaration * module
-){
-    // Where are we going to put all the JSON data?
-    char * output_file_name = veridoc_pf_module_filename(config,module);
-    json_file * fh          = json_new_file(output_file_name);
-    json_object * top = json_new_object();
-
-    char * module_name = ast_identifier_tostring(module->identifier);
-
-    // Set the standard module properties.
-    json_object_add_string(top, "moduleName",  module_name);
-    json_object_add_string(top, "moduleFile",  module -> meta.file);
-    json_object_add_int   (top, "moduleLine",  module -> meta.line);
-    json_object_add_string(top, "moduleBrief", "None");
-
-    // Add the list of ports
-    json_object * module_ports = veridoc_pf_export_module_ports_json(module);
-    json_object_add_list(top, "ports", module_ports);
-
-    // Add the list of child modules.
-    json_object * module_kids = veridoc_pf_export_module_children_json(module);
-    json_object_add_list(top, "children", module_kids);
-
-    // Add the list of module parameters
-    json_object * module_params = veridoc_pf_export_module_params_json(module);
-    json_object_add_list(top, "parameters", module_params);
-
-    // Add the list of internal variable & net declarations
-    json_object * module_vars  = veridoc_pf_export_module_vars_json(module);
-    json_object_add_object(top, "declarations", module_vars);
-
-    // Add the list of internal tasks & functions
-    json_object * module_funcs  = NULL;
-
-    // Add the list of internal process blocks (initial & others)
-    json_object * module_blocks = NULL;
+    json_object_add_list(top, "children", m_children);
 
     // Emit and finish up.
     json_emit_object(fh,top,"veridocModuleInformation",0);
