@@ -1,0 +1,184 @@
+0 
+35
++itf+/auto/edatools/synopsys/vcs/v2015.09mx-SP2-1/linux/lib/vcsdp.tab
++memcbk
++vcs+lic+wait
++vcs+vcdpluson
++vcsd
++vpi
+-Mamsrun=
+-Masflags=--32
+-Mcc=/usr/bin/gcc
+-Mcfl= -pipe -m32 -O -I/auto/edatools/synopsys/vcs/v2015.09mx-SP2-1/include
+-Mcplusplus=g++
+-Mcrt0=
+-Mcrtn=
+-Mcsrc=
+-Mexternalobj=
+-Mldflags= -m32 -m32 -rdynamic
+-Mobjects= /auto/edatools/synopsys/vcs/v2015.09mx-SP2-1/linux/lib/libvirsim.so /auto/edatools/synopsys/vcs/v2015.09mx-SP2-1/linux/lib/liberrorinf.so /auto/edatools/synopsys/vcs/v2015.09mx-SP2-1/linux/lib/libsnpsmalloc.so
+-Mout=simv
+-Msaverestoreobj=/auto/edatools/synopsys/vcs/v2015.09mx-SP2-1/linux/lib/vcs_save_restore_new.o
+-Msyslibs=/auto/edatools/synopsys/vcs/v2015.09mx-SP2-1/linux/lib/ctype-stubs_32.a -ldl -lm
+-Mvcsaceobjs=
+-Mxcflags= -pipe -m32 -I/auto/edatools/synopsys/vcs/v2015.09mx-SP2-1/include
+-Xcbug=0x1
+-Xpiyushb1=0x80
+-Xpiyushb1=0x80
+-debug_access+all+dmptf+bc
+-debug_access+class+driver+dmptf+bc
+-debug_region=cell+lib
+-debug_region=cell+lib
+-f file_list_packet_parser.f
+-gen_obj
+-picarchive
+-pp_used
+-sverilog
+/auto/edatools/synopsys/vcs/v2015.09mx-SP2-1/linux/bin/vcs1
+132
+sysc_uni_pwd=/ws/rakeshku-bgl/fpga
+__LSF_JOB_TMPDIR__=/tmp/3014862.tmpdir
+XILINX=/auto/edatools/xilinx/ise/v9.2i_sp3
+XDG_DATA_DIRS=/usr/local/share:/usr/share:/usr/cisco/packages/xfce/xfce-4.4.2/share
+XAUTHORITY=/users/rakeshku/.Xauthority
+WORKDIR=/vob/gsr/chinook/fpga/common/rtl/espi/sarance
+WDIR=/vob/fr4/etc/scripts
+VNCDESKTOP=x11
+VMR_MODE_FLAG=32
+VIEW=rakesh_cel_view
+VENDOR=unknown
+VCS_MX_HOME_INTERNAL=1
+VCS_LIC_EXPIRE_WARNING=5
+VCS_HOME=/auto/edatools/synopsys/vcs/v2015.09mx-SP2-1
+VCS_DEPTH=0
+VCS_CC=/usr/bin/gcc
+VCS_ARG_ADDED_FOR_TMP=1
+VCS_ARCH=linux
+VCS_AMD_PURE32=1
+UNAME=/bin/uname
+TOOL_HOME=/auto/edatools/synopsys/vcs/v2015.09mx-SP2-1/linux
+TOOLROOT=/auto/edatools
+SW_PATH=/router/bin
+SUDO_PROMPT=Enter RADIUS password (http://otp for help): 
+SSH_TTY=/dev/pts/80
+SSH_CONNECTION=10.61.162.6 61443 173.39.63.135 22
+SSH_CLIENT=10.61.162.6 61443 22
+SSH_AUTH_SOCK=/tmp/ssh-yPngj58602/agent.58602
+SSH_ASKPASS=/usr/libexec/openssh/gnome-ssh-askpass
+SSH_AGENT_PID=58607
+SIMDIR=/vob/gsr/chinook/fpga/common/rtl/espi/sarance/sim
+SESSION_MANAGER=local/unix:@/tmp/.ICE-unix/58617,unix/unix:/tmp/.ICE-unix/58617
+SCRNAME=vcs
+SCRIPT_NAME=vcs
+SBD_KRB5CCNAME_VAL=
+RESULTSDIR=$HOME/regressions/$LOGNAME/$VIEW/
+REMOTEHOST=10.61.162.6
+QTLIB=/usr/lib64/qt-3.3/lib
+QTINC=/usr/lib64/qt-3.3/include
+QTDIR=/usr/lib64/qt-3.3
+PERL=/usr/local/bin/perl
+OVA_UUM=0
+OS_PATH=/bin /usr/X11R6/bin /usr/sbin /sbin /usr/bin /usr/cisco/bin
+OSTYPE=linux
+NNTPSERVER=usenet.cisco.com
+MGLS_LICENSE_FILE=51120@ls-sjc-01:51120@ls-sjc-03:51120@ls-rtp-01:51120@ls-sjc-legacy1
+LS_SUBCWD=/ws/rakeshku-bgl/fpga
+LS_JOBPID=42484
+LS_EXEC_T=START
+LS_EXECCWD=/ws/rakeshku-bgl/fpga
+LSF_VERSION=30
+LSF_SERVERDIR=/auto/edatools/platform/lsf/blr-hw/9.1/linux2.6-glibc2.3-x86_64/etc
+LSF_LOGDIR=/auto/edatools/platform/lsf/blr-hw/log
+LSF_LIM_API_NTRIES=1
+LSF_LIBDIR=/auto/edatools/platform/lsf/blr-hw/9.1/linux2.6-glibc2.3-x86_64/lib
+LSF_JOB_TIMESTAMP_VALUE=1531083722
+LSF_INVOKE_CMD=bsub
+LSF_FARM=blr-hw
+LSF_ENVDIR=/auto/edatools/platform/lsf/blr-hw/conf
+LSF_EAUTH_SERVER=mbatchd@blr-hw
+LSF_EAUTH_CLIENT=user
+LSF_EAUTH_AUX_PASS=yes
+LSF_CGROUP_TOPDIR_KEY=blr-hw
+LSF_BINDIR=/auto/edatools/platform/lsf/blr-hw/9.1/linux2.6-glibc2.3-x86_64/bin
+LSFUSER=rakeshku
+LSB_XFER_OP=
+LSB_UNIXGROUP_INT=eng
+LSB_TRAPSIGS=trap # 15 10 12 2 1
+LSB_SUB_USER=rakeshku
+LSB_SUB_HOST=fpga-vm-bgl003
+LSB_RES_GET_FANOUT_INFO=Y
+LSB_QUEUE=chg
+LSB_PROJECT_NAME=asr90x.p
+LSB_OUTDIR=/ws/rakeshku-bgl/fpga
+LSB_MCPU_HOSTS=bgl-hw-1009 1 
+LSB_MAX_NUM_PROCESSORS=1
+LSB_JOB_EXECUSER=rakeshku
+LSB_JOBRES_PID=42484
+LSB_JOBRES_CALLBACK=54042@bgl-hw-1009
+LSB_JOBNAME=vcs -sverilog -debug_all -f file_list_packet_parser.f +vcs+vcdpluson -debug_pp
+LSB_JOBINDEX=0
+LSB_JOBID=3014862
+LSB_JOBFILENAME=/users/rakeshku/.lsbatch/1531083721.3014862
+LSB_JOBEXIT_STAT=0
+LSB_INTERACTIVE=Y
+LSB_HOSTS=bgl-hw-1009
+LSB_EXIT_PRE_ABORT=99
+LSB_EXEC_HOSTTYPE=CEL6_6
+LSB_EXEC_CLUSTER=blr-hw
+LSB_EFFECTIVE_RSRCREQ=select[type == local] order[r15s:pg] 
+LSB_EEXEC_REAL_UID=
+LSB_EEXEC_REAL_GID=
+LSB_DJOB_RANKFILE=/users/rakeshku/.lsbatch/1531083721.3014862.hostfile
+LSB_DJOB_NUMPROC=1
+LSB_DJOB_HOSTFILE=/users/rakeshku/.lsbatch/1531083721.3014862.hostfile
+LSB_DJOB_ENV_SCRIPT=
+LSB_CHKFILENAME=/users/rakeshku/.lsbatch/1531083721.3014862
+LSB_BATCH_JID=3014862
+LSB_AFFINITY_HOSTFILE=/users/rakeshku/.lsbatch/1531083721.3014862.hostAffinityFile
+LSB_ACCT_FILE=/tmp/3014862.tmpdir/.1531083721.3014862.acct
+LOCAL_PATH=/usr/local/bin /usr/local/etc
+LM_PROJECT=chg_blr.fpga
+LESSOPEN=||/usr/bin/lesspipe.sh %s
+LC_ALL=C
+KRB5CCNAME=
+KDEDIRS=/usr
+JOB_TERMINATE_INTERVAL=10
+IUS_HOME=/auto/edatools/cadence/ius/v6.11-s006/Linux/tools
+HOSTTYPE=x86_64-linux
+G_BROKEN_FILENAMES=1
+GROUP=eng
+GCONF_SHARED_LOCKS=1
+GCONF_GLOBAL_LOCKS=1
+FULLENV=true
+FR4_HOME=/vob/fr4
+FLEXLM_NO_CKOUT_INSTALL_LIC=1
+ESUB_DEBUG=/auto/edatools/platform/lsf/scripts/pre_exec_log/fpga-vm-bgl003.rakeshku.180709023201129162199.esub.log
+EDATOOLS=/auto/edatools
+DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-6qTUieyi5l,guid=f081adefbe0b76694d8739d7005f205a
+CVS_RSH=ssh
+CSHENV_SET=true
+COV_EXCLUDE=/vob/hfr/satori/elm/dv/fullchip/chip/module_exclusion.txt
+COLORTERM=Terminal
+CLEARCASE_ROOT=/view/rakesh_cel_view
+CLEARCASE_CMDLINE=setview rakesh_cel_view
+CDS_LIC_FILE=51060@ls-sjc-01:51060@ls-sjc-03
+BSUB_BLOCK_EXEC_HOST=
+BINARY_TYPE_HPC=
+AVERY_PCI=/vob/gsr/booster/fpga/turbo/dv/pcixactor/v2.1.0311
+AVERY_HOME=/vob/gsr/booster/fpga/turbo/dv/avery_tb/v2010_0402
+AVERYDES_LICENSE_FILE=51045@ls-sjc-01:51045@ls-sjc-03
+APPS_PATH=/usr/atria/bin
+0
+6
+1530982021 /ws/rakeshku-bgl/fpga/dp_ram.v
+1531078421 /ws/rakeshku-bgl/fpga/packet_parser.v
+1531075931 /ws/rakeshku-bgl/fpga/packet_parser_top.v
+1531083715 /ws/rakeshku-bgl/fpga/packet_parser_top_tb.v
+1531083015 file_list_packet_parser.f
+1461294303 /auto/edatools/synopsys/vcs/v2015.09mx-SP2-1/linux/lib/vcsdp.tab
+4
+0 
+1461296527 /auto/edatools/synopsys/vcs/v2015.09mx-SP2-1/linux/lib/libvirsim.so
+1461296158 /auto/edatools/synopsys/vcs/v2015.09mx-SP2-1/linux/lib/liberrorinf.so
+1461296136 /auto/edatools/synopsys/vcs/v2015.09mx-SP2-1/linux/lib/libsnpsmalloc.so
+1531083742 simv.daidir

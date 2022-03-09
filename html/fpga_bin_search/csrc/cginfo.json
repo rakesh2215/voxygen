@@ -1,0 +1,126 @@
+{
+    "MlibObjs": {},
+    "LVLData": [
+        "SIM"
+    ],
+    "NameTable": {
+        "std": [
+            "std",
+            "reYIK",
+            "module"
+        ],
+        "packet_parser_top_tb": [
+            "packet_parser_top_tb",
+            "F9Q1Z",
+            "module"
+        ],
+        "...MASTER...": [
+            "SIM",
+            "amcQw",
+            "module"
+        ]
+    },
+    "CompileStrategy": "fullobj",
+    "CurCompileUdps": {},
+    "PrevCompiledModules": {
+        "std": {
+            "reYIK_d": {
+                "mod": "std",
+                "bytes": 22317,
+                "out": "reYIK_d.o",
+                "checksum": 4294967295,
+                "mode": 4,
+                "archive": "archive.56/_prev_archive_1.a"
+            }
+        },
+        "...MASTER...": {
+            "amcQw_d": {
+                "mod": "...MASTER...",
+                "bytes": 4684,
+                "checksum": 4294967295,
+                "mode": 4,
+                "out": "objs/amcQw_d.o"
+            }
+        },
+        "packet_parser_top_tb": {
+            "F9Q1Z_d": {
+                "mod": "packet_parser_top_tb",
+                "bytes": 85661,
+                "checksum": 4294967295,
+                "mode": 4,
+                "out": "F9Q1Z_d.o",
+                "archive": "archive.56/_43264_archive_1.a"
+            }
+        }
+    },
+    "stat": {
+        "ru_self_cgstart": {
+            "ru_nivcsw": 48,
+            "ru_utime_sec": 0.12098100000000001,
+            "ru_minflt": 12319,
+            "ru_stime_sec": 0.046991999999999999,
+            "ru_maxrss_kb": 49116,
+            "ru_nvcsw": 363,
+            "ru_majflt": 1
+        },
+        "ru_childs_cgstart": {
+            "ru_nivcsw": 12,
+            "ru_utime_sec": 0.003999,
+            "ru_minflt": 1924,
+            "ru_stime_sec": 0.016997000000000002,
+            "ru_maxrss_kb": 11424,
+            "ru_nvcsw": 25,
+            "ru_majflt": 0
+        },
+        "ru_childs_end": {
+            "ru_nivcsw": 12,
+            "ru_utime_sec": 0.003999,
+            "ru_minflt": 1924,
+            "ru_stime_sec": 0.016997000000000002,
+            "ru_maxrss_kb": 11424,
+            "ru_nvcsw": 25,
+            "ru_majflt": 0
+        },
+        "mopSpeed": 133353.33633378343,
+        "CodeGen(%)": 33.149326967707708,
+        "nMops": 8000,
+        "outputSizePerQuad": 43.0,
+        "nQuads": 3462,
+        "ru_self_end": {
+            "ru_nivcsw": 62,
+            "ru_utime_sec": 0.18097199999999999,
+            "ru_minflt": 14574,
+            "ru_stime_sec": 0.061990000000000003,
+            "ru_maxrss_kb": 56388,
+            "ru_nvcsw": 455,
+            "ru_majflt": 1
+        },
+        "mop/quad": 2.3108030040439052,
+        "totalObjSize": 150156,
+        "quadSpeed": 57708.656298444781,
+        "Frontend(%)": 66.850673032292292
+    },
+    "SIMBData": {
+        "out": "amcQwB.o",
+        "bytes": 60035
+    },
+    "CurCompileModules": [
+        "...MASTER...",
+        "std",
+        "packet_parser_top_tb"
+    ],
+    "PEModules": [],
+    "CompileProcesses": [
+        "cgproc.43264.json"
+    ],
+    "CompileStatus": "Successful",
+    "Misc": {
+        "cwd": "/ws/rakeshku-bgl/fpga",
+        "default_output_dir": "csrc",
+        "csrc": "csrc",
+        "daidir": "simv.daidir",
+        "csrc_abs": "/ws/rakeshku-bgl/fpga/csrc",
+        "daidir_abs": "/ws/rakeshku-bgl/fpga/simv.daidir",
+        "archive_dir": "archive.56"
+    }
+}

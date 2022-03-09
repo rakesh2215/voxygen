@@ -1,0 +1,40 @@
+{
+    "Modules": {
+        "...MASTER...": {},
+        "std": {},
+        "packet_parser_top_tb": {
+            "Compiled": "Yes",
+            "Compiled Times": 4
+        }
+    },
+    "ObjArchives": [
+        {
+            "archive": "archive.56/_43264_archive_1.a",
+            "objects": [
+                [
+                    "F9Q1Z_d.o",
+                    85437
+                ]
+            ],
+            "size": 85437
+        }
+    ],
+    "reusePaths": {},
+    "CompUnits": {
+        "amcQw_d": {
+            "bytes": 4684,
+            "mod": "...MASTER...",
+            "checksum": 4294967295,
+            "mode": 4,
+            "out": "objs/amcQw_d.o"
+        },
+        "F9Q1Z_d": {
+            "bytes": 85437,
+            "mod": "packet_parser_top_tb",
+            "checksum": 4294967295,
+            "mode": 4,
+            "out": "F9Q1Z_d.o",
+            "archive": "archive.56/_43264_archive_1.a"
+        }
+    }
+}

@@ -1,0 +1,11 @@
+rc file Version 1.0
+
+[Design]
+COMPILE_PATH=/ws/rakeshku-bgl/fpga
+SystemC=FALSE
+UUM=FALSE
+KDB=FALSE
+USE_NOVAS_HOME=FALSE
+COSIM=FALSE
+TOP=packet_parser_top_tb 
+OPTION=-ssz -ssv -ssy -ssz -ssv -ssy -ssz 

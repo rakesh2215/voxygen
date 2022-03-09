@@ -1,0 +1,2456 @@
+# Preference setting overrides
+gui_create_pref_key -category {Globals} -key {load_detail_for_funcov} -value_type {bool} -value {false}
+gui_set_pref_value -category {Schematics} -key {highlight_color} -value {Orange}
+gui_set_pref_value -category {Wave} -key {bringToFront} -value {true}
+gui_set_pref_value -category {Wave} -key {showgrid} -value {true}
+gui_create_pref_category -category {dlg_settings}
+gui_create_pref_key -category {dlg_settings} -key {tableWithImmediatePopup} -value_type {bool} -value {true}
+gui_create_pref_category -category {schem_obj_name}
+gui_create_pref_key -category {schem_obj_name} -key {show_cell_and_pin_with_symbol_name} -value_type {bool} -value {false}
+gui_create_pref_key -category {schem_pin_hc} -key {textExtFont} -value_type {string} -value {Helvetica,10,-1,5,50,0,0,0,0,0}
+
+# State setting overrides
+gui_state_default_create -off -ini
+gui_set_state_value -category Globals -key recent_databases -value {{gui_open_db -file /users/rakeshku/fpga/vcdplus.vpd -design V1} {gui_open_db -file /vob/uea/prog_parts/interstellar/godavari/rtl/data_path/ptp_cf_chk_test_050718.vpd -design V1} {gui_open_db -file /vob/uea/prog_parts/pegasus/IO_FPGA/dg_320_july03.vpd -design V1} {gui_open_db -file /vob/uea/prog_parts/pegasus/IO_FPGA/rtl/handoff/oam_dyinggasp/dg_len_320_0306.vpd -design V1} {gui_open_db -file /vob/uea/prog_parts/default_len_128.vpd -design V1}}
+gui_set_state_value -category Globals -key recent_sessions -value {{gui_load_session -ignore_errors -file /vob/uea/prog_parts/pegasus/IO_FPGA/session.default_len_128.vpd.tcl -ignore_errors} {gui_load_session -ignore_errors -file /vob/uea/prog_parts/pegasus/IO_FPGA/session.default_len_128.vpd.tcl} {gui_load_session -ignore_errors -file /vob/uea/prog_parts/interstellar/godavari/rtl/data_path/session.classification_ptp_stk_vlan_chk_test_1243.vpd.tcl -ignore_errors} {gui_load_session -ignore_errors -file /vob/uea/prog_parts/pegasus/IO_FPGA/rtl/handoff/bfd_rx/session.error_3785.vpd.tcl -ignore_errors} {gui_load_session -ignore_errors -file /vob/uea/prog_parts/pegasus/IO_FPGA/rtl/handoff/bfd_rx/session.error_3785.vpd.tcl}}
+gui_set_state_value -category Layout -key child_console_size_x -value 1390
+gui_set_state_value -category Layout -key child_console_size_y -value 184
+gui_set_state_value -category Layout -key child_data_coltype -value 146
+gui_set_state_value -category Layout -key child_data_colvalue -value 140
+gui_set_state_value -category Layout -key child_data_colvariable -value 325
+gui_set_state_value -category Layout -key child_data_size_x -value 588
+gui_set_state_value -category Layout -key child_data_size_y -value 477
+gui_set_state_value -category Layout -key child_hier_col3 -value {-1}
+gui_set_state_value -category Layout -key child_hier_colhier -value 497
+gui_set_state_value -category Layout -key child_hier_colpd -value 0
+gui_set_state_value -category Layout -key child_hier_coltype -value 130
+gui_set_state_value -category Layout -key child_hier_size_x -value 628
+gui_set_state_value -category Layout -key child_hier_size_y -value 477
+gui_set_state_value -category Layout -key child_source_docknewline -value false
+gui_set_state_value -category Layout -key child_source_pos_x -value {-2}
+gui_set_state_value -category Layout -key child_source_pos_y -value {-15}
+gui_set_state_value -category Layout -key child_source_size_x -value 211
+gui_set_state_value -category Layout -key child_source_size_y -value 472
+gui_set_state_value -category Layout -key child_wave_colname -value 199
+gui_set_state_value -category Layout -key child_wave_colvalue -value 199
+gui_set_state_value -category Layout -key child_wave_left -value 402
+gui_set_state_value -category Layout -key child_wave_right -value 979
+gui_set_state_value -category Layout -key main_pos_x -value 41
+gui_set_state_value -category Layout -key main_pos_y -value 37
+gui_set_state_value -category Layout -key main_size_x -value 1431
+gui_set_state_value -category Layout -key main_size_y -value 805
+gui_set_state_value -category Layout -key stand_wave_child_docknewline -value false
+gui_set_state_value -category Layout -key stand_wave_child_pos_x -value {-2}
+gui_set_state_value -category Layout -key stand_wave_child_pos_y -value {-15}
+gui_set_state_value -category Layout -key stand_wave_child_size_x -value 1391
+gui_set_state_value -category Layout -key stand_wave_child_size_y -value 629
+gui_set_state_value -category Layout -key stand_wave_top_pos_x -value 72
+gui_set_state_value -category Layout -key stand_wave_top_pos_y -value 64
+gui_set_state_value -category Layout -key stand_wave_top_size_x -value 1458
+gui_set_state_value -category Layout -key stand_wave_top_size_y -value 805
+gui_create_state_key -category FindDialog -key m_pMatchCase -value_type bool -value false
+gui_create_state_key -category FindDialog -key m_pMatchWord -value_type bool -value false
+gui_create_state_key -category FindDialog -key m_pUseCombo -value_type string -value {}
+gui_create_state_key -category FindDialog -key m_pWrapAround -value_type bool -value true
+gui_create_state_key -category Widget_History -key TopLevel.1|qt_left_dock|DockWnd2|DLPane.1|pages|Data.1|hbox|textfilter -value_type string -value {*app* *mac* *lp*cnt* *lp*drop*}
+gui_create_state_key -category Widget_History -key dlgSearchValue|m_ValueComboBox -value_type string -value 6a
+gui_state_default_create -off
+
+# Begin command logging
+gui_open_db -file /ws/rakeshku-bgl/fpga/vcdplus.vpd -design V1
+gui_list_select -id Data.1 -selected  { binary_search_tb.Clk   }
+gui_list_select -id Data.1 -selected  { binary_search_tb.Clk  binary_search_tb.Rst   }
+gui_list_select -id Data.1 -selected  { binary_search_tb.Clk  binary_search_tb.Rst  {binary_search_tb.sw_state[1:0]}   }
+gui_list_select -id Data.1 -selected  { binary_search_tb.Clk  binary_search_tb.Rst  {binary_search_tb.sw_state[1:0]}  {binary_search_tb.cpu_data[31:0]}   }
+gui_list_select -id Data.1 -selected  { binary_search_tb.Clk  binary_search_tb.Rst  {binary_search_tb.sw_state[1:0]}  {binary_search_tb.cpu_data[31:0]}  {binary_search_tb.cpu_addr[9:0]}   }
+gui_list_select -id Data.1 -selected  { binary_search_tb.Clk  binary_search_tb.Rst  {binary_search_tb.sw_state[1:0]}  {binary_search_tb.cpu_data[31:0]}  {binary_search_tb.cpu_addr[9:0]}  binary_search_tb.cpu_wr   }
+gui_list_select -id Data.1 -selected  { binary_search_tb.Clk  binary_search_tb.Rst  {binary_search_tb.sw_state[1:0]}  {binary_search_tb.cpu_data[31:0]}  {binary_search_tb.cpu_addr[9:0]}  binary_search_tb.cpu_wr  binary_search_tb.cpu_rd   }
+gui_list_select -id Data.1 -selected  { binary_search_tb.Clk  binary_search_tb.Rst  {binary_search_tb.sw_state[1:0]}  {binary_search_tb.cpu_data[31:0]}  {binary_search_tb.cpu_addr[9:0]}  binary_search_tb.cpu_wr  binary_search_tb.cpu_rd  binary_search_tb.cpu_access_done   }
+gui_open_window Wave
+gui_list_add -id Wave.1 -from Data.1 { binary_search_tb.Clk binary_search_tb.Rst {binary_search_tb.sw_state[1:0]} {binary_search_tb.cpu_data[31:0]} {binary_search_tb.cpu_addr[9:0]} binary_search_tb.cpu_wr binary_search_tb.cpu_rd binary_search_tb.cpu_access_done } -insertionbar
+gui_zoom -window Wave.1 -full
+gui_wv_zoom_timerange -id  Wave.1 0 24251209
+gui_marker_move -id  Wave.1 C1 19395910
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.cpu_data[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.cpu_addr[9:0]}   }
+gui_marker_move -id  Wave.1 C1 21115495
+gui_save_session -reload -default_file
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
+gui_marker_move -id  Wave.1 C1 17145276
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.sw_state[1:0]}   }
+gui_zoom -window Wave.1 -full
+gui_zoom -window Wave.1 -full
+gui_list_select -id Wave.1 -selected  { binary_search_tb.cpu_wr   }
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.cpu_addr[9:0]}   }
+gui_marker_move -id  Wave.1 C1 565294391
+gui_wv_zoom_timerange -id  Wave.1 0 20994427
+gui_wv_zoom_timerange -id  Wave.1 0 306488
+gui_wv_zoom_timerange -id  Wave.1 0 4474
+gui_wv_zoom_timerange -id  Wave.1 0 243
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.sw_state[1:0]}   }
+gui_marker_move -id  Wave.1 C1 50
+gui_marker_move -id  Wave.1 C1 210
+gui_list_set_filter -id Data.1 -text {*DEP*}
+gui_list_select -id Data.1 -selected  { {binary_search_tb.DEPTH[31:0]}   }
+gui_list_add -id Wave.1 -from Data.1 { {binary_search_tb.DEPTH[31:0]} } -insertionbar
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.DEPTH[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.cpu_addr[9:0]}   }
+gui_marker_move -id  Wave.1 C1 50
+gui_wv_zoom_timerange -id  Wave.1 24 125
+gui_marker_move -id  Wave.1 C1 111
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.sw_state[1:0]}   }
+gui_marker_move -id  Wave.1 C1 50
+gui_list_select -id Wave.1 -selected  { binary_search_tb.cpu_wr   }
+gui_list_set_filter -id Data.1 -text {*cpu_wr*}
+gui_list_select -id Data.1 -selected  { binary_search_tb.cpu_wr   }
+gui_list_add -id Wave.1 -from Data.1 { binary_search_tb.cpu_wr } -insertionbar
+gui_list_select -id Wave.1 -selected  { binary_search_tb.cpu_wr   }
+gui_list_select -id Wave.1 -selected  { binary_search_tb.Rst   }
+gui_marker_move -id  Wave.1 C1 43
+gui_marker_move -id  Wave.1 C1 50
+gui_marker_move -id  Wave.1 C1 108
+gui_save_session -reload -default_file
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
+gui_marker_move -id  Wave.1 C1 40
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_marker_move -id  Wave.1 C1 10
+gui_marker_move -id  Wave.1 C1 339
+gui_save_session -reload -default_file
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.cpu_data[31:0]}   }
+gui_list_set_filter -id Data.1 -text {i*}
+gui_list_select -id Data.1 -selected  { {binary_search_tb.i[1023:0]}   }
+gui_list_add -id Wave.1 -from Data.1 { {binary_search_tb.i[1023:0]} } -insertionbar
+gui_marker_move -id  Wave.1 C1 293
+gui_marker_move -id  Wave.1 C1 360
+gui_list_set_filter -id Data.1 -text {mem*}
+gui_list_select -id Data.1 -selected  { {binary_search_tb.mem[1023:0][31:0]}   }
+gui_list_add -id Wave.1 -from Data.1 { {binary_search_tb.mem[1023:0][31:0]} } -insertionbar
+gui_save_session -reload -default_file
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
+gui_marker_move -id  Wave.1 C1 310
+gui_save_session -reload -default_file
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.i[9:0]}   }
+gui_zoom -window Wave.1 -full
+gui_wv_zoom_timerange -id  Wave.1 28025101 56622143
+gui_marker_move -id  Wave.1 C1 51200335
+gui_wv_zoom_timerange -id  Wave.1 28030469 28746140
+gui_wv_zoom_timerange -id  Wave.1 28032064 28040273
+gui_wv_zoom_timerange -id  Wave.1 28032160 28032485
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.mem[1023:0][31:0]}   }
+gui_list_set_filter -id Data.1 -text {j*}
+gui_list_select -id Data.1 -selected  { {binary_search_tb.j[9:0]}   }
+gui_list_add -id Wave.1 -from Data.1 { {binary_search_tb.j[9:0]} } -insertionbar
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.j[9:0]}   }
+gui_zoom -window Wave.1 -full
+gui_marker_move -id  Wave.1 C1 250510050
+gui_save_session -reload -default_file
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
+gui_zoom -window Wave.1 -full
+gui_list_expand -id  Wave.1   {binary_search_tb.mem[1023:0][31:0]}
+gui_list_collapse -id  Wave.1   {binary_search_tb.mem[1023:0][31:0]}
+gui_list_expand -id  Wave.1   {binary_search_tb.mem[1023:0][31:0]}
+gui_list_collapse -id  Wave.1   {binary_search_tb.mem[1023:0][31:0]}
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.mem[1023:0][31:0]}   }
+gui_zoom -window Wave.1 -factor 0.5
+gui_wv_zoom_timerange -id  Wave.1 26962972 110303067
+gui_wv_zoom_timerange -id  Wave.1 29286352 32067252
+gui_wv_zoom_timerange -id  Wave.1 29377787 29435783
+gui_wv_zoom_timerange -id  Wave.1 29379117 29379963
+gui_marker_move -id  Wave.1 C1 29379770
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_list_set_filter -id Data.1 -text {mem*}
+gui_list_expand -id  Data.1   {binary_search_tb.mem[1023:0][31:0]}
+gui_list_collapse -id  Data.1   {binary_search_tb.mem[1023:0][31:0]}
+gui_list_expand -id  Data.1   {binary_search_tb.mem[1023:0][31:0]}
+gui_save_session -reload -default_file
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
+gui_list_select -id Wave.1 -selected  { binary_search_tb.cpu_wr   }
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.mem[0:1023][31:0]}   }
+gui_list_select -id Wave.1 -selected  { binary_search_tb.cpu_wr   }
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.cpu_data[31:0]}   }
+gui_zoom -window Wave.1 -full
+gui_wv_zoom_timerange -id  Wave.1 0 43794429
+gui_wv_zoom_timerange -id  Wave.1 0 2237672
+gui_wv_zoom_timerange -id  Wave.1 0 77000
+gui_wv_zoom_timerange -id  Wave.1 0 1285
+gui_wv_zoom_timerange -id  Wave.1 25 506
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.mem[0:1023][31:0]}   }
+gui_list_expand -id  Wave.1   {binary_search_tb.mem[0:1023][31:0]}
+gui_list_collapse -id  Wave.1   {binary_search_tb.mem[0:1023][31:0]}
+gui_list_expand -id  Wave.1   {binary_search_tb.mem[0:1023][31:0]}
+gui_list_collapse -id  Wave.1   {binary_search_tb.mem[0:1023][31:0]}
+gui_list_expand -id  Data.1   {binary_search_tb.mem[0:1023][31:0]}
+gui_list_select -id Data.1 -selected  { {binary_search_tb.mem[0:1023][31:0]}   }
+gui_save_session -reload -default_file
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.j[9:0]}   }
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.mem[0:1023][31:0]}   }
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.cpu_data[31:0]}   }
+gui_wv_zoom_timerange -id  Wave.1 31 83
+gui_zoom -window Wave.1 -full
+gui_marker_move -id  Wave.1 C1 561219210
+gui_wv_zoom_timerange -id  Wave.1 0 10009006
+gui_wv_zoom_timerange -id  Wave.1 0 177428
+gui_wv_zoom_timerange -id  Wave.1 0 2590
+gui_wv_zoom_timerange -id  Wave.1 0 284
+gui_marker_move -id  Wave.1 C1 50
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.sw_state[1:0]}   }
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.cpu_data[31:0]}   }
+gui_marker_move -id  Wave.1 C1 231
+gui_marker_move -id  Wave.1 C1 210
+gui_save_session -reload -default_file
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.j[9:0]}   }
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_marker_move -id  Wave.1 C1 938
+gui_save_session -reload -default_file
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.mem[0:1023][31:0]}   }
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.cpu_data[31:0]}   }
+gui_marker_move -id  Wave.1 C1 530
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_list_select -id Wave.1 -selected  { binary_search_tb.cpu_access_done   }
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_marker_move -id  Wave.1 C1 14575
+gui_save_session -reload -default_file
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.sw_state[1:0]}   }
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 2
+gui_list_select -id Wave.1 -selected  { binary_search_tb.cpu_rd   }
+gui_wv_zoom_timerange -id  Wave.1 7278 10728
+gui_wv_zoom_timerange -id  Wave.1 7346 7472
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.cpu_data[31:0]}   }
+gui_marker_move -id  Wave.1 C1 7370
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -full
+gui_wv_zoom_timerange -id  Wave.1 256374996 261369314
+gui_wv_zoom_timerange -id  Wave.1 261199186 261235641
+gui_wv_zoom_timerange -id  Wave.1 261234211 261234439
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.cpu_addr[9:0]}   }
+gui_list_expand -id  Wave.1   {binary_search_tb.cpu_addr[9:0]}
+gui_list_collapse -id  Wave.1   {binary_search_tb.cpu_addr[9:0]}
+gui_list_select -id Wave.1 -selected  { binary_search_tb.cpu_wr   }
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.cpu_data[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.cpu_addr[9:0]}   }
+gui_list_expand -id  Wave.1   {binary_search_tb.cpu_addr[9:0]}
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.cpu_addr[9]}   }
+gui_zoom -window Wave.1 -full
+gui_zoom -window Wave.1 -full
+gui_wv_zoom_timerange -id  Wave.1 89620264 112927082
+gui_wv_zoom_timerange -id  Wave.1 90140759 92838420
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.cpu_addr[8]}   }
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.cpu_addr[9]}   }
+gui_zoom -window Wave.1 -factor 0.5
+gui_list_collapse -id  Wave.1   {binary_search_tb.cpu_addr[9:0]}
+gui_list_select -id Wave.1 -selected  { binary_search_tb.cpu_wr   }
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.cpu_addr[9:0]}   }
+gui_list_expand -id  Wave.1   {binary_search_tb.cpu_addr[9:0]}
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.cpu_addr[9]}   }
+gui_wv_zoom_timerange -id  Wave.1 88789318 89166259
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_list_collapse -id  Wave.1   {binary_search_tb.cpu_addr[9:0]}
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.sw_state[1:0]}   }
+gui_wv_zoom_timerange -id  Wave.1 88418597 88663864
+gui_wv_zoom_timerange -id  Wave.1 88496119 88502513
+gui_wv_zoom_timerange -id  Wave.1 88498201 88498714
+gui_marker_move -id  Wave.1 C1 88498635
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.cpu_addr[9:0]}   }
+gui_list_set_selected_property -id Wave.1 -radix decimal
+gui_marker_move -id  Wave.1 C1 88498263
+gui_seek_criteria -id Wave.1 "Value..." 
+gui_seek_value  1022
+gui_seek_next -id Wave.1 -number 1 
+gui_marker_move -id  Wave.1 C1 88535070
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_wv_zoom_timerange -id  Wave.1 88532693 88539691
+gui_wv_zoom_timerange -id  Wave.1 88534522 88535631
+gui_wv_zoom_timerange -id  Wave.1 88534822 88535341
+gui_wv_zoom_timerange -id  Wave.1 88534938 88535253
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.DEPTH[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.cpu_addr[9:0]}   }
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.sw_state[1:0]}   }
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.cpu_addr[9:0]}   }
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.cpu_data[31:0]}   }
+gui_marker_move -id  Wave.1 C1 88535030
+gui_marker_move -id  Wave.1 C1 88535191
+gui_marker_move -id  Wave.1 C1 88535070
+gui_marker_move -id  Wave.1 C1 88535177
+gui_save_session -reload -default_file
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.cpu_addr[9:0]}   }
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -full
+gui_zoom -window Wave.1 -full
+gui_wv_zoom_timerange -id  Wave.1 0 4747240
+gui_wv_zoom_timerange -id  Wave.1 0 103954
+gui_marker_move -id  Wave.1 C1 60890
+gui_list_select -id Wave.1 -selected  { binary_search_tb.cpu_wr   }
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.sw_state[1:0]}   }
+gui_wv_zoom_timerange -id  Wave.1 52465 72085
+gui_wv_zoom_timerange -id  Wave.1 59269 63934
+gui_wv_zoom_timerange -id  Wave.1 60645 62085
+gui_wv_zoom_timerange -id  Wave.1 61087 61755
+gui_marker_move -id  Wave.1 C1 61410
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.cpu_addr[9:0]}   }
+gui_marker_move -id  Wave.1 C1 61430
+gui_marker_move -id  Wave.1 C1 61690
+gui_save_session -reload -default_file
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -full
+gui_wv_zoom_timerange -id  Wave.1 0 4253467
+gui_wv_zoom_timerange -id  Wave.1 0 155236
+gui_wv_zoom_timerange -id  Wave.1 56655 67015
+gui_wv_zoom_timerange -id  Wave.1 60324 62841
+gui_wv_zoom_timerange -id  Wave.1 61104 61841
+gui_marker_move -id  Wave.1 C1 61430
+gui_marker_select -id  Wave.1 { C1 }
+gui_marker_move -id  Wave.1 C1 61726
+gui_save_session -reload -default_file
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
+gui_zoom -window Wave.1 -full
+gui_wv_zoom_timerange -id  Wave.1 0 23301816
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.sw_state[1:0]}   }
+gui_wv_zoom_timerange -id  Wave.1 0 485961
+gui_wv_zoom_timerange -id  Wave.1 26350 84625
+gui_wv_zoom_timerange -id  Wave.1 58883 62346
+gui_wv_zoom_timerange -id  Wave.1 61016 61702
+gui_marker_move -id  Wave.1 C1 61370
+gui_list_select -id Wave.1 -selected  { binary_search_tb.cpu_wr   }
+gui_list_select -id Wave.1 -selected  { binary_search_tb.cpu_rd   }
+gui_list_select -id Wave.1 -selected  { binary_search_tb.cpu_wr   }
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_marker_move -id  Wave.1 C1 69656
+gui_zoom -window Wave.1 -full
+gui_wv_zoom_timerange -id  Wave.1 0 25165962
+gui_wv_zoom_timerange -id  Wave.1 0 1207126
+gui_wv_zoom_timerange -id  Wave.1 0 149789
+gui_marker_move -id  Wave.1 C1 62633
+gui_marker_move -id  Wave.1 C1 60910
+gui_wv_zoom_timerange -id  Wave.1 48264 88718
+gui_wv_zoom_timerange -id  Wave.1 56906 67325
+gui_wv_zoom_timerange -id  Wave.1 59505 63198
+gui_marker_move -id  Wave.1 C1 61390
+gui_wv_zoom_timerange -id  Wave.1 60659 62096
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.cpu_addr[9:0]}   }
+gui_marker_move -id  Wave.1 C1 61410
+gui_marker_move -id  Wave.1 C1 61876
+gui_save_session -reload -default_file
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
+gui_marker_move -id  Wave.1 C1 61410
+gui_list_select -id Wave.1 -selected  { binary_search_tb.cpu_wr   }
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_marker_move -id  Wave.1 C1 68810
+gui_marker_move -id  Wave.1 C1 69260
+gui_wv_zoom_timerange -id  Wave.1 49931 52016
+gui_wv_zoom_timerange -id  Wave.1 49951 50364
+gui_save_session -reload -default_file
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
+gui_marker_move -id  Wave.1 C1 50060
+gui_zoom -window Wave.1 -full
+gui_marker_move -id  Wave.1 C1 173441702
+gui_marker_move -id  Wave.1 C1 16452950
+gui_wv_zoom_timerange -id  Wave.1 11654185 24679452
+gui_wv_zoom_timerange -id  Wave.1 12998103 14071091
+gui_wv_zoom_timerange -id  Wave.1 13153334 13230535
+gui_wv_zoom_timerange -id  Wave.1 13168043 13169895
+gui_wv_zoom_timerange -id  Wave.1 13168259 13168767
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.cpu_data[31:0]}   }
+gui_zoom -window Wave.1 -full
+gui_wv_zoom_timerange -id  Wave.1 0 2285134
+gui_wv_zoom_timerange -id  Wave.1 0 111993
+gui_wv_zoom_timerange -id  Wave.1 54770 63412
+gui_wv_zoom_timerange -id  Wave.1 58106 59809
+gui_wv_zoom_timerange -id  Wave.1 58708 59392
+gui_marker_move -id  Wave.1 C1 59230
+gui_list_set_filter -id Data.1 -text {test*}
+gui_list_select -id Data.1 -selected  { {binary_search_tb.test_index[9:0]}   }
+gui_list_select -id Data.1 -selected  { {binary_search_tb.test_index[9:0]}  {binary_search_tb.test_index_latched[9:0]}   }
+gui_list_select -id Data.1 -selected  { {binary_search_tb.test_index[9:0]}  {binary_search_tb.test_index_latched[9:0]}  binary_search_tb.test_done   }
+gui_list_add -id Wave.1 -from Data.1 { {binary_search_tb.test_index[9:0]} {binary_search_tb.test_index_latched[9:0]} binary_search_tb.test_done } -insertionbar
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.test_index_latched[9:0]}   }
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.test_index[9:0]}   }
+gui_zoom -window Wave.1 -full
+gui_marker_move -id  Wave.1 C1 23765398
+gui_wv_zoom_timerange -id  Wave.1 0 20566210
+gui_wv_zoom_timerange -id  Wave.1 0 900710
+gui_wv_zoom_timerange -id  Wave.1 0 116463
+gui_marker_move -id  Wave.1 C1 94603
+gui_save_session -reload -default_file
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
+gui_zoom -window Wave.1 -full
+gui_list_set_filter -id Data.1 -text {init*}
+gui_list_select -id Data.1 -selected  { binary_search_tb.init_done   }
+gui_list_add -id Wave.1 -from Data.1 { binary_search_tb.init_done } -insertionbar
+gui_wv_zoom_timerange -id  Wave.1 0 2635150
+gui_marker_move -id  Wave.1 C1 2005890
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.test_index_latched[9:0]}   }
+gui_marker_move -id  Wave.1 C1 2124030
+gui_save_session -reload -default_file
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
+gui_zoom -window Wave.1 -full
+gui_marker_move -id  Wave.1 C1 344012767
+gui_list_set_filter -id Data.1 -text {res*}
+gui_list_select -id Data.1 -selected  { binary_search_tb.response_index   }
+gui_list_select -id Data.1 -selected  { binary_search_tb.response_index  binary_search_tb.response_valid   }
+gui_list_add -id Wave.1 -from Data.1 { binary_search_tb.response_index binary_search_tb.response_valid } -insertionbar
+gui_list_select -id Wave.1 -selected  { binary_search_tb.response_index   }
+gui_list_select -id Wave.1 -selected  { binary_search_tb.response_valid   }
+gui_zoom -window Wave.1 -full
+gui_zoom -window Wave.1 -full
+gui_zoom -window Wave.1 -full
+gui_zoom -window Wave.1 -full
+gui_zoom -window Wave.1 -full
+gui_list_select -id Wave.1 -selected  { binary_search_tb.response_index   }
+gui_wv_zoom_timerange -id  Wave.1 0 16881263
+gui_wv_zoom_timerange -id  Wave.1 0 756928
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.test_index_latched[9:0]}   }
+gui_wv_zoom_timerange -id  Wave.1 44200 97083
+gui_wv_zoom_timerange -id  Wave.1 60272 64684
+gui_wv_zoom_timerange -id  Wave.1 61225 62449
+gui_wv_zoom_timerange -id  Wave.1 61395 61810
+gui_list_set_filter -id Data.1 -text {req*}
+gui_list_select -id Data.1 -selected  { {binary_search_tb.req_state[1:0]}   }
+gui_list_add -id Wave.1 -from Data.1 { {binary_search_tb.req_state[1:0]} } -insertionbar
+gui_list_select -id Wave.1 -selected  { binary_search_tb.response_valid   }
+gui_zoom -window Wave.1 -factor 0.5
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.req_state[1:0]}   }
+gui_list_select -id Wave.1 -selected  { {New Group}   }
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.req_state[1:0]}   }
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -full
+gui_zoom -window Wave.1 -full
+gui_wv_zoom_timerange -id  Wave.1 0 5475004
+gui_wv_zoom_timerange -id  Wave.1 0 154145
+gui_marker_move -id  Wave.1 C1 133571
+gui_marker_move -id  Wave.1 C1 131964
+gui_save_session -reload -default_file
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
+gui_list_select -id Wave.1 -selected  { binary_search_tb.response_valid   }
+gui_list_select -id Wave.1 -selected  { binary_search_tb.response_index   }
+gui_list_select -id Wave.1 -selected  { binary_search_tb.init_done   }
+gui_list_select -id Wave.1 -selected  { binary_search_tb.response_index   }
+gui_list_select -id Wave.1 -selected  { binary_search_tb.response_valid   }
+gui_zoom -window Wave.1 -full
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.test_index_latched[9:0]}   }
+gui_list_select -id Wave.1 -selected  { binary_search_tb.response_valid   }
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.req_state[1:0]}   }
+gui_wv_zoom_timerange -id  Wave.1 0 9770273
+gui_wv_zoom_timerange -id  Wave.1 0 478835
+gui_wv_zoom_timerange -id  Wave.1 43939 119834
+gui_wv_zoom_timerange -id  Wave.1 57772 71226
+gui_wv_zoom_timerange -id  Wave.1 61069 63089
+gui_wv_zoom_timerange -id  Wave.1 61396 61780
+gui_marker_move -id  Wave.1 C1 61490
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.test_index_latched[9:0]}   }
+gui_list_select -id Wave.1 -selected  { binary_search_tb.response_valid   }
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.req_state[1:0]}   }
+gui_marker_move -id  Wave.1 C1 61685
+gui_marker_move -id  Wave.1 C1 61490
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.test_index_latched[9:0]}   }
+gui_marker_move -id  Wave.1 C1 61711
+gui_list_select -id Wave.1 -selected  { binary_search_tb.Rst   }
+gui_marker_move -id  Wave.1 C1 61470
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.test_index[9:0]}   }
+gui_marker_move -id  Wave.1 C1 61490
+gui_marker_move -id  Wave.1 C1 61715
+gui_marker_move -id  Wave.1 C1 61490
+gui_marker_move -id  Wave.1 C1 61699
+gui_marker_move -id  Wave.1 C1 61490
+gui_marker_move -id  Wave.1 C1 61713
+gui_marker_move -id  Wave.1 C1 61492
+gui_marker_move -id  Wave.1 C1 61490
+gui_marker_move -id  Wave.1 C1 61723
+gui_marker_move -id  Wave.1 C1 61490
+gui_marker_move -id  Wave.1 C1 61693
+gui_marker_move -id  Wave.1 C1 61490
+gui_marker_move -id  Wave.1 C1 61701
+gui_save_session -reload -default_file
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
+gui_marker_move -id  Wave.1 C1 61712
+gui_save_session -reload -default_file
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_list_select -id Wave.1 -selected  { binary_search_tb.init_done   }
+gui_list_select -id Wave.1 -selected  { binary_search_tb.response_valid   }
+gui_list_select -id Wave.1 -selected  { binary_search_tb.response_index   }
+gui_list_select -id Wave.1 -selected  { binary_search_tb.response_valid   }
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.req_state[1:0]}   }
+gui_wv_zoom_timerange -id  Wave.1 51254 96767
+gui_wv_zoom_timerange -id  Wave.1 60178 63974
+gui_wv_zoom_timerange -id  Wave.1 61239 62153
+gui_wv_zoom_timerange -id  Wave.1 61355 61709
+gui_marker_move -id  Wave.1 C1 61470
+gui_marker_move -id  Wave.1 C1 61490
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.test_index_latched[9:0]}   }
+gui_marker_move -id  Wave.1 C1 61510
+gui_list_select -id Wave.1 -selected  { binary_search_tb.response_index   }
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.test_index[9:0]}   }
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.test_index_latched[9:0]}   }
+gui_list_select -id Wave.1 -selected  { binary_search_tb.response_valid   }
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.req_state[1:0]}   }
+gui_list_select -id Wave.1 -selected  { {New Group}   }
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.req_state[1:0]}   }
+gui_list_select -id Wave.1 -selected  { binary_search_tb.response_valid   }
+gui_list_select -id Wave.1 -selected  { binary_search_tb.response_index   }
+gui_list_select -id Data.1 -selected  { binary_search_tb.request_key_valid   }
+gui_list_add -id Wave.1 -from Data.1 { binary_search_tb.request_key_valid } -insertionbar
+gui_list_select -id Wave.1 -selected  { binary_search_tb.response_valid   }
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.req_state[1:0]}   }
+gui_list_select -id Wave.1 -selected  { binary_search_tb.request_key_valid   }
+gui_list_select -id Wave.1 -selected  { {New Group}   }
+gui_list_select -id Wave.1 -selected  { binary_search_tb.request_key_valid   }
+gui_list_select -id Data.1 -selected  { {binary_search_tb.request_key[31:0]}   }
+gui_list_add -id Wave.1 -from Data.1 { {binary_search_tb.request_key[31:0]} } -insertionbar
+gui_scroll -window Wave.1 -vrel .2
+gui_scroll -window Wave.1 -vrel .2
+gui_scroll -window Wave.1 -vrel .2
+gui_list_select -id Wave.1 -selected  { binary_search_tb.cpu_wr   }
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.cpu_addr[9:0]}   }
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.cpu_data[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.sw_state[1:0]}   }
+gui_list_select -id Wave.1 -selected  { binary_search_tb.Rst   }
+gui_list_select -id Wave.1 -selected  { binary_search_tb.Clk   }
+gui_list_select -id Wave.1 -selected  { Group1   }
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.cpu_data[31:0]}   }
+gui_zoom -window Wave.1 -full
+gui_wv_zoom_timerange -id  Wave.1 0 1642860
+gui_wv_zoom_timerange -id  Wave.1 0 92507
+gui_wv_zoom_timerange -id  Wave.1 0 1158
+gui_marker_move -id  Wave.1 C1 50
+gui_marker_move -id  Wave.1 C1 10
+gui_seek_criteria -id Wave.1 "Value..." 
+gui_seek_value  1521932a
+gui_seek_value  1521932a
+gui_seek_next -id Wave.1 -number 1 
+gui_wv_zoom_timerange -id  Wave.1 5782 6365
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -full
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.req_state[1:0]}   }
+gui_list_select -id Wave.1 -selected  { binary_search_tb.request_key_valid   }
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.request_key[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {New Group}   }
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.request_key[31:0]}   }
+gui_list_select -id Wave.1 -selected  { binary_search_tb.request_key_valid   }
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.req_state[1:0]}   }
+gui_list_select -id Wave.1 -selected  { binary_search_tb.response_valid   }
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.req_state[1:0]}   }
+gui_list_expand -id  Hier.1   binary_search_tb
+gui_list_expand -id  Hier.1   binary_search_tb.DUT
+gui_list_select -id Hier.1 -current_item_name binary_search_tb.DUT.dp_ram_DEPTHxDATA_WIDTH -current_item_type Scope  -selected  { binary_search_tb.DUT.dp_ram_DEPTHxDATA_WIDTH   }
+gui_list_set_filter -id Data.1 -text {*}
+gui_list_select -id Data.1 -selected  { binary_search_tb.DUT.dp_ram_DEPTHxDATA_WIDTH.Rst   }
+gui_list_select -id Data.1 -selected  { binary_search_tb.DUT.dp_ram_DEPTHxDATA_WIDTH.Clk   }
+gui_list_select -id Data.1 -selected  { binary_search_tb.DUT.dp_ram_DEPTHxDATA_WIDTH.Clk  binary_search_tb.DUT.dp_ram_DEPTHxDATA_WIDTH.Rst  binary_search_tb.DUT.dp_ram_DEPTHxDATA_WIDTH.write_ena  {binary_search_tb.DUT.dp_ram_DEPTHxDATA_WIDTH.addr_a[15:0]}  {binary_search_tb.DUT.dp_ram_DEPTHxDATA_WIDTH.addr_b[15:0]}  {binary_search_tb.DUT.dp_ram_DEPTHxDATA_WIDTH.din_a[31:0]}  {binary_search_tb.DUT.dp_ram_DEPTHxDATA_WIDTH.dout_b[31:0]}  {binary_search_tb.DUT.dp_ram_DEPTHxDATA_WIDTH.mem[15:0][31:0]}   }
+gui_open_window Wave
+gui_list_add -id Wave.2 -from Data.1 { binary_search_tb.DUT.dp_ram_DEPTHxDATA_WIDTH.Clk binary_search_tb.DUT.dp_ram_DEPTHxDATA_WIDTH.Rst binary_search_tb.DUT.dp_ram_DEPTHxDATA_WIDTH.write_ena {binary_search_tb.DUT.dp_ram_DEPTHxDATA_WIDTH.addr_a[15:0]} {binary_search_tb.DUT.dp_ram_DEPTHxDATA_WIDTH.addr_b[15:0]} {binary_search_tb.DUT.dp_ram_DEPTHxDATA_WIDTH.din_a[31:0]} {binary_search_tb.DUT.dp_ram_DEPTHxDATA_WIDTH.dout_b[31:0]} {binary_search_tb.DUT.dp_ram_DEPTHxDATA_WIDTH.mem[15:0][31:0]} } -insertionbar
+gui_zoom -window Wave.2 -factor 0.5
+gui_zoom -window Wave.2 -full
+gui_wv_zoom_timerange -id  Wave.2 0 3755108
+gui_wv_zoom_timerange -id  Wave.2 0 195782
+gui_list_select -id Wave.2 -selected  { binary_search_tb.DUT.dp_ram_DEPTHxDATA_WIDTH.write_ena   }
+gui_list_select -id Wave.2 -selected  { {binary_search_tb.DUT.dp_ram_DEPTHxDATA_WIDTH.mem[15:0][31:0]}   }
+gui_list_select -id Wave.2 -selected  { {binary_search_tb.DUT.dp_ram_DEPTHxDATA_WIDTH.dout_b[31:0]}   }
+gui_marker_move -id  Wave.2 C1 82273
+gui_list_select -id Wave.2 -selected  { {binary_search_tb.DUT.dp_ram_DEPTHxDATA_WIDTH.addr_b[15:0]}   }
+gui_zoom -window Wave.2 -factor 0.5
+gui_zoom -window Wave.2 -factor 0.5
+gui_zoom -window Wave.2 -factor 0.5
+gui_zoom -window Wave.2 -factor 0.5
+gui_zoom -window Wave.2 -factor 0.5
+gui_zoom -window Wave.2 -factor 0.5
+gui_zoom -window Wave.2 -full
+gui_list_set_filter -id Data.1 -text {*state*}
+gui_list_select -id Hier.1 -current_item_name binary_search_tb.DUT -current_item_type Scope  -selected  { binary_search_tb.DUT   }
+gui_list_select -id Data.1 -selected  { {binary_search_tb.DUT.state[2:0]}   }
+gui_list_add -id Wave.2 -from Data.1 { {binary_search_tb.DUT.state[2:0]} } -insertionbar
+gui_list_select -id Wave.2 -selected  { {binary_search_tb.DUT.state[2:0]}   }
+gui_zoom -window Wave.2 -full
+gui_marker_move -id  Wave.2 C1 169214572
+gui_wv_zoom_timerange -id  Wave.2 0 5397968
+gui_wv_zoom_timerange -id  Wave.2 0 247665
+gui_marker_move -id  Wave.2 C1 61530
+gui_marker_move -id  Wave.1 C1 190337057
+gui_save_session -reload -default_file
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
+gui_zoom -window Wave.1 -full
+gui_zoom -window Wave.1 -full
+gui_list_select -id Wave.1 -selected  { binary_search_tb.request_key_valid   }
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.request_key[31:0]}   }
+gui_zoom -window Wave.2 -full
+gui_save_session -reload -default_file
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
+gui_zoom -window Wave.2 -factor 2
+gui_close_window -window TopLevel.3
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.req_state[1:0]}   }
+gui_list_select -id Wave.1 -selected  { binary_search_tb.request_key_valid   }
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.request_key[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {New Group}   }
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.request_key[31:0]}   }
+gui_list_select -id Wave.1 -selected  { binary_search_tb.request_key_valid   }
+gui_close_window -window TopLevel.2
+gui_open_window Wave
+gui_list_add -id Wave.1 -from Data.1 { {binary_search_tb.DUT.state[2:0]} } -insertionbar
+gui_list_set_filter -id Data.1 -text {*req*}
+gui_list_select -id Data.1 -selected  { {binary_search_tb.DUT.request_key[31:0]}   }
+gui_list_select -id Data.1 -selected  { {binary_search_tb.DUT.request_key[31:0]}  binary_search_tb.DUT.request_key_valid   }
+gui_list_select -id Data.1 -selected  { {binary_search_tb.DUT.request_key[31:0]}  binary_search_tb.DUT.request_key_valid  {binary_search_tb.DUT.request_key_latched[31:0]}   }
+gui_list_add -id Wave.1 -from Data.1 { {binary_search_tb.DUT.request_key[31:0]} binary_search_tb.DUT.request_key_valid {binary_search_tb.DUT.request_key_latched[31:0]} } -insertionbar
+gui_zoom -window Wave.1 -full
+gui_wv_zoom_timerange -id  Wave.1 0 22849491
+gui_wv_zoom_timerange -id  Wave.1 0 715537
+gui_wv_zoom_timerange -id  Wave.1 45561 73197
+gui_wv_zoom_timerange -id  Wave.1 61445 61936
+gui_marker_move -id  Wave.1 C1 61530
+gui_marker_move -id  Wave.1 C1 61864
+gui_list_set_filter -id Data.1 -text {*res*}
+gui_list_select -id Data.1 -selected  { binary_search_tb.DUT.response_valid   }
+gui_list_select -id Data.1 -selected  { binary_search_tb.DUT.response_valid  {binary_search_tb.DUT.response_index[4:0]}   }
+gui_list_add -id Wave.1 -from Data.1 { {binary_search_tb.DUT.response_index[4:0]} binary_search_tb.DUT.response_valid } -insertionbar
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -full
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.DUT.response_index[4:0]}   }
+gui_wv_zoom_timerange -id  Wave.1 0 53010819
+gui_wv_zoom_timerange -id  Wave.1 0 1936721
+gui_wv_zoom_timerange -id  Wave.1 0 244617
+gui_wv_zoom_timerange -id  Wave.1 56175 75326
+gui_wv_zoom_timerange -id  Wave.1 60512 63670
+gui_wv_zoom_timerange -id  Wave.1 61185 62033
+gui_list_set_filter -id Data.1 -text {*match*}
+gui_list_select -id Data.1 -selected  { binary_search_tb.DUT.no_match_found   }
+gui_list_add -id Wave.1 -from Data.1 { binary_search_tb.DUT.no_match_found } -insertionbar
+gui_list_select -id Wave.1 -selected  { binary_search_tb.DUT.no_match_found   }
+gui_marker_move -id  Wave.1 C1 61590
+gui_marker_move -id  Wave.1 C1 61987
+gui_save_session -reload -default_file
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
+gui_save_session -reload -default_file
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
+gui_zoom -window Wave.1 -full
+gui_wv_zoom_timerange -id  Wave.1 0 10207244
+gui_wv_zoom_timerange -id  Wave.1 0 383571
+gui_wv_zoom_timerange -id  Wave.1 50449 96093
+gui_wv_zoom_timerange -id  Wave.1 59080 71420
+gui_marker_move -id  Wave.1 C1 69429
+gui_save_session -reload -default_file
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
+gui_zoom -window Wave.1 -full
+gui_wv_zoom_timerange -id  Wave.1 0 5638192
+gui_wv_zoom_timerange -id  Wave.1 0 188332
+gui_save_session -reload -default_file
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
+gui_wv_zoom_timerange -id  Wave.1 57797 73131
+gui_wv_zoom_timerange -id  Wave.1 60568 63033
+gui_wv_zoom_timerange -id  Wave.1 61334 61967
+gui_marker_move -id  Wave.1 C1 61862
+gui_save_session -reload -default_file
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
+gui_wv_zoom_timerange -id  Wave.1 61429 61762
+gui_marker_move -id  Wave.1 C1 61590
+gui_marker_move -id  Wave.1 C1 61722
+gui_list_set_filter -id Data.1 -text {*high*}
+gui_list_select -id Data.1 -selected  { {binary_search_tb.DUT.high_index[9:0]}   }
+gui_list_add -id Wave.1 -from Data.1 { {binary_search_tb.DUT.high_index[9:0]} } -insertionbar
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.DUT.high_index[9:0]}   }
+gui_zoom -window Wave.1 -full
+gui_wv_zoom_timerange -id  Wave.1 0 14893324
+gui_wv_zoom_timerange -id  Wave.1 0 746221
+gui_wv_zoom_timerange -id  Wave.1 0 10126
+gui_zoom -window Wave.1 -full
+gui_list_set_filter -id Data.1 -text {*DEP*}
+gui_list_select -id Data.1 -selected  { {binary_search_tb.DUT.DEPTH[31:0]}   }
+gui_list_add -id Wave.1 -from Data.1 { {binary_search_tb.DUT.DEPTH[31:0]} } -insertionbar
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.DUT.DEPTH[31:0]}   }
+gui_list_select -id Wave.1 -selected  { binary_search_tb.DUT.no_match_found   }
+gui_save_session -reload -default_file
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.DUT.state[2:0]}   }
+gui_wv_zoom_timerange -id  Wave.1 0 26595221
+gui_wv_zoom_timerange -id  Wave.1 0 1054925
+gui_wv_zoom_timerange -id  Wave.1 41845 90296
+gui_wv_zoom_timerange -id  Wave.1 57352 72070
+gui_list_select -id Wave.1 -selected  { binary_search_tb.DUT.no_match_found   }
+gui_wv_zoom_timerange -id  Wave.1 60209 65048
+gui_wv_zoom_timerange -id  Wave.1 61235 63180
+gui_list_set_filter -id Data.1 -text {*low*}
+gui_list_select -id Data.1 -selected  { {binary_search_tb.DUT.low_index[9:0]}   }
+gui_list_add -id Wave.1 -from Data.1 { {binary_search_tb.DUT.low_index[9:0]} } -insertionbar
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.DUT.low_index[9:0]}   }
+gui_marker_move -id  Wave.1 C1 61890
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.DUT.high_index[9:0]}   }
+gui_list_set_filter -id Data.1 -text {*curr*}
+gui_list_select -id Data.1 -selected  { {binary_search_tb.DUT.current_value[31:0]}   }
+gui_list_add -id Wave.1 -from Data.1 { {binary_search_tb.DUT.current_value[31:0]} } -insertionbar
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.DUT.current_value[31:0]}   }
+gui_marker_move -id  Wave.1 C1 61592
+gui_wv_zoom_timerange -id  Wave.1 61369 62508
+gui_list_set_filter -id Data.1 -text {*mid*}
+gui_list_select -id Data.1 -selected  { {binary_search_tb.DUT.middle_index[9:0]}   }
+gui_list_add -id Wave.1 -from Data.1 { {binary_search_tb.DUT.middle_index[9:0]} } -insertionbar
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.DUT.middle_index[9:0]}   }
+gui_marker_move -id  Wave.1 C1 61550
+gui_wv_zoom_timerange -id  Wave.1 61392 61886
+gui_list_set_filter -id Data.1 -text {*cl*}
+gui_list_select -id Data.1 -selected  { binary_search_tb.DUT.Clk   }
+gui_list_add -id Wave.1 -from Data.1 { binary_search_tb.DUT.Clk } -insertionbar
+gui_list_select -id Wave.1 -selected  { binary_search_tb.DUT.response_valid   }
+gui_list_select -id Wave.1 -selected  { binary_search_tb.DUT.Clk   }
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.DUT.middle_index[9:0]}   }
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.DUT.current_value[31:0]}   }
+gui_marker_move -id  Wave.1 C1 61570
+gui_wv_zoom_timerange -id  Wave.1 61460 61868
+gui_marker_move -id  Wave.1 C1 61610
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.DUT.middle_index[9:0]}   }
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.DUT.current_value[31:0]}   }
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_wv_zoom_timerange -id  Wave.1 61171 62841
+gui_wv_zoom_timerange -id  Wave.1 61379 62198
+gui_wv_zoom_timerange -id  Wave.1 61704 62043
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.DUT.request_key[31:0]}   }
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_list_expand -id  Hier.1   binary_search_tb.DUT
+gui_list_select -id Hier.1 -current_item_name binary_search_tb.DUT.dp_ram_DEPTHxDATA_WIDTH -current_item_type Scope  -selected  { binary_search_tb.DUT.dp_ram_DEPTHxDATA_WIDTH   }
+gui_list_set_filter -id Data.1 -text {**}
+gui_list_select -id Data.1 -selected  { binary_search_tb.DUT.dp_ram_DEPTHxDATA_WIDTH.write_ena   }
+gui_list_select -id Data.1 -selected  { binary_search_tb.DUT.dp_ram_DEPTHxDATA_WIDTH.write_ena  {binary_search_tb.DUT.dp_ram_DEPTHxDATA_WIDTH.addr_a[15:0]}   }
+gui_list_select -id Data.1 -selected  { binary_search_tb.DUT.dp_ram_DEPTHxDATA_WIDTH.write_ena  {binary_search_tb.DUT.dp_ram_DEPTHxDATA_WIDTH.addr_a[15:0]}  {binary_search_tb.DUT.dp_ram_DEPTHxDATA_WIDTH.addr_b[15:0]}   }
+gui_list_select -id Data.1 -selected  { binary_search_tb.DUT.dp_ram_DEPTHxDATA_WIDTH.write_ena  {binary_search_tb.DUT.dp_ram_DEPTHxDATA_WIDTH.addr_a[15:0]}   }
+gui_list_select -id Data.1 -selected  { binary_search_tb.DUT.dp_ram_DEPTHxDATA_WIDTH.write_ena  {binary_search_tb.DUT.dp_ram_DEPTHxDATA_WIDTH.addr_a[15:0]}  {binary_search_tb.DUT.dp_ram_DEPTHxDATA_WIDTH.din_a[31:0]}   }
+gui_list_add -id Wave.1 -from Data.1 { binary_search_tb.DUT.dp_ram_DEPTHxDATA_WIDTH.write_ena {binary_search_tb.DUT.dp_ram_DEPTHxDATA_WIDTH.addr_a[15:0]} {binary_search_tb.DUT.dp_ram_DEPTHxDATA_WIDTH.din_a[31:0]} } -insertionbar
+gui_wv_zoom_timerange -id  Wave.1 61176 62209
+gui_marker_move -id  Wave.1 C1 61550
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_wv_zoom_timerange -id  Wave.1 0 5516
+gui_wv_zoom_timerange -id  Wave.1 0 328
+gui_marker_move -id  Wave.1 C1 50
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.DUT.dp_ram_DEPTHxDATA_WIDTH.addr_a[15:0]}   }
+gui_marker_move -id  Wave.1 C1 40
+gui_seek_criteria -id Wave.1 "Value..." 
+gui_seek_value  1ff
+gui_seek_value  1ff
+gui_seek_next -id Wave.1 -number 1 
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.DUT.dp_ram_DEPTHxDATA_WIDTH.din_a[31:0]}   }
+gui_list_select -id Wave.1 -selected  { binary_search_tb.DUT.response_valid   }
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.DUT.dp_ram_DEPTHxDATA_WIDTH.din_a[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.DUT.dp_ram_DEPTHxDATA_WIDTH.addr_a[15:0]}   }
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.DUT.dp_ram_DEPTHxDATA_WIDTH.din_a[31:0]}   }
+gui_list_select -id Wave.1 -selected  { binary_search_tb.DUT.response_valid   }
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.DUT.dp_ram_DEPTHxDATA_WIDTH.din_a[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.DUT.dp_ram_DEPTHxDATA_WIDTH.addr_a[15:0]}   }
+gui_marker_move -id  Wave.1 C1 30808
+gui_marker_move -id  Wave.1 C1 30795
+gui_save_session -reload -default_file
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_wv_zoom_timerange -id  Wave.1 45150 98060
+gui_wv_zoom_timerange -id  Wave.1 52800 72240
+gui_wv_zoom_timerange -id  Wave.1 60775 63900
+gui_wv_zoom_timerange -id  Wave.1 61319 62585
+gui_wv_zoom_timerange -id  Wave.1 61487 62115
+gui_marker_move -id  Wave.1 C1 61570
+gui_list_select -id Data.1 -selected  { {binary_search_tb.DUT.dp_ram_DEPTHxDATA_WIDTH.dout_b[31:0]}   }
+gui_list_select -id Data.1 -selected  { {binary_search_tb.DUT.dp_ram_DEPTHxDATA_WIDTH.addr_a[15:0]}   }
+gui_list_select -id Data.1 -selected  { binary_search_tb.DUT.dp_ram_DEPTHxDATA_WIDTH.write_ena   }
+gui_list_add -id Wave.1 -from Data.1 { binary_search_tb.DUT.dp_ram_DEPTHxDATA_WIDTH.write_ena } -insertionbar
+gui_list_select -id Wave.1 -selected  { binary_search_tb.DUT.dp_ram_DEPTHxDATA_WIDTH.write_ena   }
+gui_zoom -window Wave.1 -full
+gui_zoom -window Wave.1 -full
+gui_wv_zoom_timerange -id  Wave.1 0 5157051
+gui_wv_zoom_timerange -id  Wave.1 0 247625
+gui_wv_zoom_timerange -id  Wave.1 44976 75735
+gui_wv_zoom_timerange -id  Wave.1 45239 45978
+gui_marker_move -id  Wave.1 C1 45290
+gui_wv_zoom_timerange -id  Wave.1 45256 45433
+gui_marker_move -id  Wave.1 C1 45411
+gui_list_set_filter -id Data.1 -text {*dou*}
+gui_list_select -id Data.1 -selected  { {binary_search_tb.DUT.dp_ram_DEPTHxDATA_WIDTH.dout_b[31:0]}   }
+gui_list_add -id Wave.1 -from Data.1 { {binary_search_tb.DUT.dp_ram_DEPTHxDATA_WIDTH.dout_b[31:0]} } -insertionbar
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.DUT.dp_ram_DEPTHxDATA_WIDTH.dout_b[31:0]}   }
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_list_set_filter -id Data.1 -text {*addr*}
+gui_list_select -id Data.1 -selected  { {binary_search_tb.DUT.dp_ram_DEPTHxDATA_WIDTH.addr_b[15:0]}   }
+gui_list_add -id Wave.1 -from Data.1 { {binary_search_tb.DUT.dp_ram_DEPTHxDATA_WIDTH.addr_b[15:0]} } -insertionbar
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.DUT.dp_ram_DEPTHxDATA_WIDTH.addr_b[15:0]}   }
+gui_wv_zoom_timerange -id  Wave.1 58272 67353
+gui_wv_zoom_timerange -id  Wave.1 61311 62145
+gui_marker_move -id  Wave.1 C1 61850
+gui_wv_zoom_timerange -id  Wave.1 61508 62049
+gui_list_set_filter -id Data.1 -text {*din*}
+gui_list_select -id Data.1 -selected  { {binary_search_tb.DUT.dp_ram_DEPTHxDATA_WIDTH.din_a[31:0]}   }
+gui_list_add -id Wave.1 -from Data.1 { {binary_search_tb.DUT.dp_ram_DEPTHxDATA_WIDTH.din_a[31:0]} } -insertionbar
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.DUT.dp_ram_DEPTHxDATA_WIDTH.din_a[31:0]}   }
+gui_wv_scroll_vslidermove -id  Wave.1 33
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_wv_zoom_timerange -id  Wave.1 0 3186
+gui_wv_zoom_timerange -id  Wave.1 0 160
+gui_list_select -id Wave.1 -selected  { binary_search_tb.DUT.dp_ram_DEPTHxDATA_WIDTH.write_ena   }
+gui_marker_move -id  Wave.1 C1 50
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.DUT.dp_ram_DEPTHxDATA_WIDTH.din_a[31:0]}   }
+gui_save_session -reload -default_file
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.DUT.current_value[31:0]}   }
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_marker_move -id  Wave.1 C1 61570
+gui_wv_zoom_timerange -id  Wave.1 51478 90642
+gui_wv_zoom_timerange -id  Wave.1 56579 67535
+gui_wv_zoom_timerange -id  Wave.1 60189 63437
+gui_wv_zoom_timerange -id  Wave.1 60932 62851
+gui_list_select -id Wave.1 -selected  { binary_search_tb.DUT.no_match_found   }
+gui_list_select -id Wave.1 -selected  { binary_search_tb.DUT.response_valid   }
+gui_marker_move -id  Wave.1 C1 62130
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.DUT.response_index[4:0]}   }
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.DUT.current_value[31:0]}   }
+gui_wv_zoom_timerange -id  Wave.1 61536 62476
+gui_wv_zoom_timerange -id  Wave.1 61842 62343
+gui_marker_move -id  Wave.1 C1 62110
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.DUT.middle_index[9:0]}   }
+gui_marker_move -id  Wave.1 C1 62090
+gui_marker_move -id  Wave.1 C1 62110
+gui_marker_move -id  Wave.1 C1 62130
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.DUT.response_index[4:0]}   }
+gui_marker_move -id  Wave.1 C1 62281
+gui_save_session -reload -default_file
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
+gui_marker_move -id  Wave.1 C1 62092
+gui_marker_move -id  Wave.1 C1 62130
+gui_list_select -id Wave.1 -selected  { binary_search_tb.DUT.request_key_valid   }
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.DUT.request_key[31:0]}   }
+gui_zoom -window Wave.1 -factor 0.5
+gui_list_select -id Wave.1 -selected  { binary_search_tb.DUT.no_match_found   }
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.DUT.middle_index[9:0]}   }
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.DUT.current_value[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.DUT.high_index[9:0]}   }
+gui_marker_move -id  Wave.1 C1 62435
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.DUT.request_key[31:0]}   }
+gui_marker_move -id  Wave.1 C1 62555
+gui_save_session -reload -default_file
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -full
+gui_wv_zoom_timerange -id  Wave.1 66849579 84375686
+gui_wv_zoom_timerange -id  Wave.1 71513103 73141311
+gui_wv_zoom_timerange -id  Wave.1 71914786 71986169
+gui_wv_zoom_timerange -id  Wave.1 71925153 71948476
+gui_wv_zoom_timerange -id  Wave.1 71928254 71937700
+gui_wv_zoom_timerange -id  Wave.1 71928766 71932532
+gui_list_select -id Wave.1 -selected  { binary_search_tb.DUT.response_valid   }
+gui_wv_zoom_timerange -id  Wave.1 71929145 71929755
+gui_marker_move -id  Wave.1 C1 71929326
+gui_marker_move -id  Wave.1 C1 71929330
+gui_marker_move -id  Wave.1 C1 71929390
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_marker_move -id  Wave.1 C1 71930010
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_wv_zoom_timerange -id  Wave.1 71851339 71854273
+gui_marker_move -id  Wave.1 C1 71854050
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.DUT.low_index[9:0]}   }
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.DUT.low_index[9:0]}  {binary_search_tb.DUT.current_value[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.DUT.low_index[9:0]}  {binary_search_tb.DUT.current_value[31:0]}  {binary_search_tb.DUT.middle_index[9:0]}   }
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.DUT.current_value[31:0]}   }
+gui_list_select -id Wave.1 -selected  { binary_search_tb.DUT.response_valid   }
+gui_list_move  -id  Wave.1    -sid  Wave.1   -after {binary_search_tb.DUT.request_key_latched[31:0]} {{binary_search_tb.DUT.response_valid}} 
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.DUT.request_key[31:0]}   }
+gui_list_select -id Wave.1 -selected  { binary_search_tb.DUT.request_key_valid   }
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.DUT.request_key_latched[31:0]}   }
+gui_list_select -id Wave.1 -selected  { binary_search_tb.DUT.response_valid   }
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.DUT.response_index[9:0]}   }
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.DUT.request_key_latched[31:0]}   }
+gui_copy_selected -id Wave.1
+gui_delete_selected -id  Wave.1
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.DUT.response_index[9:0]}   }
+gui_list_select -id Wave.1 -selected  { binary_search_tb.DUT.response_valid   }
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.DUT.response_index[9:0]}   }
+gui_list_move  -id  Wave.1    -sid  Wave.1   -after binary_search_tb.DUT.request_key_valid {{binary_search_tb.DUT.response_index[9:0]}} 
+gui_list_select -id Wave.1 -selected  { binary_search_tb.DUT.no_match_found   }
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.DUT.high_index[9:0]}   }
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.DUT.DEPTH[31:0]}   }
+gui_copy_selected -id Wave.1
+gui_delete_selected -id  Wave.1
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.DUT.low_index[9:0]}   }
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.DUT.current_value[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.DUT.middle_index[9:0]}   }
+gui_list_move  -id  Wave.1    -sid  Wave.1   -after {binary_search_tb.DUT.low_index[9:0]} {{binary_search_tb.DUT.middle_index[9:0]}} 
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.DUT.current_value[31:0]}   }
+gui_list_select -id Wave.1 -selected  { binary_search_tb.DUT.Clk   }
+gui_list_move  -id  Wave.1    -sid  Wave.1   -after {binary_search_tb.DUT.middle_index[9:0]} {{binary_search_tb.DUT.Clk}} 
+gui_list_select -id Wave.1 -selected  { {binary_search_tb.DUT.current_value[31:0]}   }
+gui_list_move  -id  Wave.1    -sid  Wave.1   -after binary_search_tb.DUT.Clk {{binary_search_tb.DUT.current_value[31:0]}} 
+gui_list_select -id Wave.1 -selected  { binary_search_tb.DUT.Clk   }
+gui_list_select -id Wave.1 -selected  { binary_search_tb.DUT.response_valid   }
+gui_list_select -id Wave.1 -selected  {  }
+gui_zoom -window Wave.1 -full
+gui_wv_zoom_timerange -id  Wave.1 0 4757086
+gui_wv_zoom_timerange -id  Wave.1 0 382355
+gui_wv_zoom_timerange -id  Wave.1 54280 110955
+gui_wv_zoom_timerange -id  Wave.1 60402 67442
+gui_wv_zoom_timerange -id  Wave.1 61008 65175
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_zoom_timerange -id  Wave.1 61826 65997
+gui_wv_zoom_timerange -id  Wave.1 61826 66036
+gui_wv_zoom_timerange -id  Wave.1 61826 66058
+gui_wv_zoom_timerange -id  Wave.1 61826 66063
+gui_wv_zoom_timerange -id  Wave.1 61826 66071
+gui_wv_zoom_timerange -id  Wave.1 61826 66089
+gui_wv_zoom_timerange -id  Wave.1 61826 66089
+gui_wv_zoom_timerange -id  Wave.1 61826 66089
+gui_wv_zoom_timerange -id  Wave.1 61826 66089
+gui_wv_zoom_timerange -id  Wave.1 61826 66089
+gui_wv_zoom_timerange -id  Wave.1 61826 66089
+gui_wv_zoom_timerange -id  Wave.1 61826 66089
+gui_marker_move -id  Wave.1 C1 65530
+gui_save_session -savedb relative -global { Breakpoint Bus Radix Expression TimeShift Compare SignalGroup Highlight Stack }  -file /ws/rakeshku-bgl/fpga/session.vcdplus.vpd.tcl
+gui_save_session -savedb relative -global { Breakpoint Bus Radix Expression TimeShift Compare SignalGroup Highlight Stack }  -file /ws/rakeshku-bgl/fpga/bin_search_session.vcdplus.vpd.tcl
+gui_close_window -window TopLevel.2
+gui_save_session -reload -default_file
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
+gui_list_select -id Hier.1 -current_item_name packet_parser_top_tb -current_item_type Scope  -selected  { packet_parser_top_tb   }
+gui_list_expand -id  Hier.1   packet_parser_top_tb
+gui_list_select -id Hier.1 -current_item_name packet_parser_top_tb.DUT -current_item_type Scope  -selected  { packet_parser_top_tb.DUT   }
+gui_list_expand -id  Hier.1   packet_parser_top_tb.DUT
+gui_list_select -id Hier.1 -current_item_name {packet_parser_top_tb.DUT.loop[0].packet_parser_top} -current_item_type Scope  -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top}   }
+gui_list_set_filter -id Data.1 -text {**}
+gui_list_set_filter -id Data.1 -type All -value 0
+gui_list_set_filter -id Data.1 -type Input -value 1
+gui_list_set_filter -id Data.1 -type Output -value 1
+gui_list_select -id Data.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.Rst}   }
+gui_list_select -id Data.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.Clk}   }
+gui_list_select -id Data.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.Clk}  {packet_parser_top_tb.DUT.loop[0].packet_parser_top.Rst}  {packet_parser_top_tb.DUT.loop[0].packet_parser_top.InBus_DataSop}  {packet_parser_top_tb.DUT.loop[0].packet_parser_top.InBus_DataEop}  {packet_parser_top_tb.DUT.loop[0].packet_parser_top.InBus_DataValid}  {packet_parser_top_tb.DUT.loop[0].packet_parser_top.InBus_Mod[2:0]}  {packet_parser_top_tb.DUT.loop[0].packet_parser_top.InBus_Data[63:0]}  {packet_parser_top_tb.DUT.loop[0].packet_parser_top.OutBus_Valid}  {packet_parser_top_tb.DUT.loop[0].packet_parser_top.OutBus_Field[31:0]}  {packet_parser_top_tb.DUT.loop[0].packet_parser_top.error_offset_or_size}   }
+gui_open_window Wave
+gui_list_add -id Wave.1 -from Data.1 { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.Clk} {packet_parser_top_tb.DUT.loop[0].packet_parser_top.Rst} {packet_parser_top_tb.DUT.loop[0].packet_parser_top.InBus_DataSop} {packet_parser_top_tb.DUT.loop[0].packet_parser_top.InBus_DataEop} {packet_parser_top_tb.DUT.loop[0].packet_parser_top.InBus_DataValid} {packet_parser_top_tb.DUT.loop[0].packet_parser_top.InBus_Mod[2:0]} {packet_parser_top_tb.DUT.loop[0].packet_parser_top.InBus_Data[63:0]} {packet_parser_top_tb.DUT.loop[0].packet_parser_top.OutBus_Valid} {packet_parser_top_tb.DUT.loop[0].packet_parser_top.OutBus_Field[31:0]} {packet_parser_top_tb.DUT.loop[0].packet_parser_top.error_offset_or_size} } -insertionbar
+gui_zoom -window Wave.1 -full
+gui_wv_zoom_timerange -id  Wave.1 0 225
+gui_wv_zoom_timerange -id  Wave.1 0 3
+gui_marker_move -id  Wave.1 C1 2
+gui_save_session -reload -default_file
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
+gui_wv_zoom_timerange -id  Wave.1 0 1
+gui_marker_move -id  Wave.1 C1 0
+gui_save_session -reload -default_file
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
+gui_zoom -window Wave.1 -full
+gui_zoom -window Wave.1 -full
+gui_wv_zoom_timerange -id  Wave.1 0 245
+gui_wv_zoom_timerange -id  Wave.1 0 6
+gui_wv_zoom_timerange -id  Wave.1 0 1
+gui_marker_move -id  Wave.1 C1 0
+gui_save_session -reload -default_file
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
+gui_marker_move -id  Wave.1 C1 0
+gui_marker_move -id  Wave.1 C1 0
+gui_save_session -reload -default_file
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
+gui_zoom -window Wave.1 -full
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.Rst}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.InBus_DataSop}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.InBus_DataEop}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.InBus_DataValid}   }
+gui_marker_move -id  Wave.1 C1 1541377586
+gui_save_session -reload -default_file
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
+gui_zoom -window Wave.1 -full
+gui_wv_zoom_timerange -id  Wave.1 0 34063593
+gui_wv_zoom_timerange -id  Wave.1 0 1496154
+gui_marker_move -id  Wave.1 C1 1103394
+gui_save_session -reload -default_file
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
+gui_wv_zoom_timerange -id  Wave.1 0 9169
+gui_wv_zoom_timerange -id  Wave.1 0 206
+gui_wv_zoom_timerange -id  Wave.1 0 3
+gui_save_session -reload -default_file
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
+gui_marker_move -id  Wave.1 C1 2
+gui_save_session -reload -default_file
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
+gui_wv_zoom_timerange -id  Wave.1 0 1
+gui_marker_move -id  Wave.1 C1 0
+gui_marker_move -id  Wave.1 C1 0
+gui_wv_zoom_timerange -id  Wave.1 0 1
+gui_zoom -window Wave.1 -full
+gui_save_session -reload -default_file
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.Clk}   }
+gui_list_set_filter -id Data.1 -text {*state*}
+gui_list_select -id Hier.1 -current_item_name {packet_parser_top_tb.DUT.loop[1].packet_parser_top} -current_item_type Scope  -selected  { {packet_parser_top_tb.DUT.loop[1].packet_parser_top}   }
+gui_list_select -id Hier.1 -current_item_name {packet_parser_top_tb.DUT.loop[0].packet_parser_top} -current_item_type Scope  -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top}   }
+gui_list_set_filter -id Data.1 -type All -value 1
+gui_list_select -id Data.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.state[1:0]}   }
+gui_list_add -id Wave.1 -from Data.1 { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.state[1:0]} } -insertionbar
+gui_marker_move -id  Wave.1 C1 1722340424
+gui_save_session -reload -default_file
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
+gui_zoom -window Wave.1 -full
+gui_marker_move -id  Wave.1 C1 69348650
+gui_zoom -window Wave.1 -full
+gui_wv_zoom_timerange -id  Wave.1 0 9424519
+gui_wv_zoom_timerange -id  Wave.1 288800 490961
+gui_wv_zoom_timerange -id  Wave.1 294259 304997
+gui_wv_zoom_timerange -id  Wave.1 295136 297341
+gui_wv_zoom_timerange -id  Wave.1 295420 296146
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.InBus_DataSop}   }
+gui_marker_move -id  Wave.1 C1 295510
+gui_marker_move -id  Wave.1 C1 295530
+gui_marker_move -id  Wave.1 C1 295570
+gui_marker_move -id  Wave.1 C1 296057
+gui_save_session -reload -default_file
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
+gui_zoom -window Wave.1 -full
+gui_wv_zoom_timerange -id  Wave.1 0 2328193
+gui_wv_zoom_timerange -id  Wave.1 0 30916
+gui_wv_zoom_timerange -id  Wave.1 0 1074
+gui_marker_move -id  Wave.1 C1 70
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.InBus_DataEop}   }
+gui_marker_move -id  Wave.1 C1 330
+gui_marker_move -id  Wave.1 C1 70
+gui_marker_move -id  Wave.1 C1 350
+gui_marker_move -id  Wave.1 C1 370
+gui_marker_move -id  Wave.1 C1 630
+gui_marker_move -id  Wave.1 C1 650
+gui_marker_move -id  Wave.1 C1 843
+gui_save_session -reload -default_file
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.InBus_Data[63:0]}   }
+gui_wv_zoom_timerange -id  Wave.1 48 157
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -full
+gui_wv_zoom_timerange -id  Wave.1 0 1592100
+gui_wv_zoom_timerange -id  Wave.1 0 48788
+gui_list_set_filter -id Data.1 -text {*read*}
+gui_list_select -id Hier.1 -current_item_name packet_parser_top_tb.DUT -current_item_type Scope  -selected  { packet_parser_top_tb.DUT   }
+gui_list_select -id Hier.1 -current_item_name packet_parser_top_tb -current_item_type Scope  -selected  { packet_parser_top_tb   }
+gui_list_select -id Data.1 -selected  { packet_parser_top_tb.field0_is_ready   }
+gui_list_select -id Data.1 -selected  { packet_parser_top_tb.field0_is_ready  packet_parser_top_tb.field1_is_ready  packet_parser_top_tb.field2_is_ready  packet_parser_top_tb.field3_is_ready   }
+gui_list_add -id Wave.1 -from Data.1 { packet_parser_top_tb.field0_is_ready packet_parser_top_tb.field1_is_ready packet_parser_top_tb.field2_is_ready packet_parser_top_tb.field3_is_ready } -insertionbar
+gui_wv_zoom_timerange -id  Wave.1 0 2741
+gui_marker_move -id  Wave.1 C1 90
+gui_wv_zoom_timerange -id  Wave.1 36 350
+gui_list_select -id Data.1 -selected  { packet_parser_top_tb.OutBus_AllValues_Ready_d1   }
+gui_list_select -id Data.1 -selected  { packet_parser_top_tb.OutBus_AllValues_Ready   }
+gui_list_add -id Wave.1 -from Data.1 { packet_parser_top_tb.OutBus_AllValues_Ready } -insertionbar
+gui_list_select -id Wave.1 -selected  { packet_parser_top_tb.OutBus_AllValues_Ready   }
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_wv_zoom_timerange -id  Wave.1 231 749
+gui_marker_move -id  Wave.1 C1 350
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.InBus_DataEop}   }
+gui_list_set_filter -id Data.1 -text {lvar*}
+gui_list_select -id Data.1 -selected  { packet_parser_top_tb.lvar   }
+gui_list_add -id Wave.1 -from Data.1 { packet_parser_top_tb.lvar } -insertionbar
+gui_list_select -id Wave.1 -selected  { packet_parser_top_tb.lvar   }
+gui_list_set_filter -id Data.1 -text {outb*}
+gui_list_select -id Data.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[127:0]}   }
+gui_list_select -id Data.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[127:0]}  {packet_parser_top_tb.OutBus_Valid_muxed[3:0]}   }
+gui_list_add -id Wave.1 -from Data.1 { {packet_parser_top_tb.OutBus_Field_muxed[127:0]} {packet_parser_top_tb.OutBus_Valid_muxed[3:0]} } -insertionbar
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[127:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Valid_muxed[3:0]}   }
+gui_list_select -id Wave.1 -selected  { {New Group}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Valid_muxed[3:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[127:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Valid_muxed[3:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[127:0]}   }
+gui_list_expand -id  Wave.1   {packet_parser_top_tb.OutBus_Field_muxed[127:0]}
+gui_list_collapse -id  Wave.1   {packet_parser_top_tb.OutBus_Field_muxed[127:0]}
+gui_marker_move -id  Wave.1 C1 670
+gui_save_session -reload -default_file
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
+gui_list_expand -id  Wave.1   {packet_parser_top_tb.OutBus_Field_muxed[127:0]}
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[124]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[116]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[115]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[114]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[113]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[112]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[111]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[110]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[109]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[108]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[107]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[106]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[105]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[104]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[103]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[102]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[101]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[100]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[99]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[98]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[97]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[96]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[95]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[94]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[93]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[92]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[91]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[90]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[89]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[88]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[87]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[86]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[85]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[84]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[83]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[82]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[81]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[80]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[79]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[78]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[77]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[76]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[75]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[74]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[73]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[72]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[71]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[70]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[69]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[68]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[67]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[66]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[65]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[64]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[63]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[62]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[61]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[60]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[59]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[58]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[57]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[56]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[55]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[54]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[53]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[52]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[51]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[50]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[49]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[48]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[47]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[66]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[67]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[68]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[69]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[70]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[71]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[72]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[73]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[74]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[75]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[76]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[77]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[78]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[79]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[80]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[81]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[82]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[83]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[84]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[85]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[86]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[87]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[88]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[89]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[90]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[91]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[92]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[93]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[94]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[95]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[96]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[97]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[98]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[99]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[100]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[101]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[102]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[103]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[104]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[105]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[106]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[107]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[108]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[109]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[110]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[111]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[112]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[113]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[114]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[115]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[116]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[117]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[118]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[119]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[120]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[121]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[122]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[123]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[124]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[125]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[126]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[127]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[127:0]}   }
+gui_list_select -id Wave.1 -selected  { packet_parser_top_tb.OutBus_AllValues_Ready   }
+gui_list_select -id Wave.1 -selected  { packet_parser_top_tb.field3_is_ready   }
+gui_list_select -id Wave.1 -selected  { packet_parser_top_tb.field2_is_ready   }
+gui_list_select -id Wave.1 -selected  { packet_parser_top_tb.field1_is_ready   }
+gui_list_select -id Wave.1 -selected  { packet_parser_top_tb.field0_is_ready   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.state[1:0]}   }
+gui_list_collapse -id  Wave.1   {packet_parser_top_tb.OutBus_Field_muxed[127:0]}
+gui_marker_move -id  Wave.1 C1 625
+gui_list_expand -id  Hier.1   packet_parser_top_tb
+gui_list_select -id Hier.1 -current_item_name packet_parser_top_tb.DUT -current_item_type Scope  -selected  { packet_parser_top_tb.DUT   }
+gui_list_expand -id  Hier.1   packet_parser_top_tb.DUT
+gui_list_select -id Hier.1 -current_item_name {packet_parser_top_tb.DUT.loop[3].packet_parser_top} -current_item_type Scope  -selected  { {packet_parser_top_tb.DUT.loop[3].packet_parser_top}   }
+gui_list_select -id Hier.1 -current_item_name {packet_parser_top_tb.DUT.loop[1].packet_parser_top} -current_item_type Scope  -selected  { {packet_parser_top_tb.DUT.loop[1].packet_parser_top}   }
+gui_list_select -id Hier.1 -current_item_name {packet_parser_top_tb.DUT.loop[0].packet_parser_top} -current_item_type Scope  -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top}   }
+gui_list_select -id Data.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.OutBus_Field[31:0]}   }
+gui_list_add -id Wave.1 -from Data.1 { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.OutBus_Field[31:0]} } -insertionbar
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.OutBus_Field[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {New Group}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.OutBus_Field[31:0]}   }
+gui_list_select -id Hier.1 -current_item_name {packet_parser_top_tb.DUT.loop[1].packet_parser_top} -current_item_type Scope  -selected  { {packet_parser_top_tb.DUT.loop[1].packet_parser_top}   }
+gui_list_select -id Data.1 -selected  { {packet_parser_top_tb.DUT.loop[1].packet_parser_top.OutBus_Field[31:0]}   }
+gui_list_add -id Wave.1 -from Data.1 { {packet_parser_top_tb.DUT.loop[1].packet_parser_top.OutBus_Field[31:0]} } -insertionbar
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[1].packet_parser_top.OutBus_Field[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {New Group}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[1].packet_parser_top.OutBus_Field[31:0]}   }
+gui_list_select -id Hier.1 -current_item_name {packet_parser_top_tb.DUT.loop[2].packet_parser_top} -current_item_type Scope  -selected  { {packet_parser_top_tb.DUT.loop[2].packet_parser_top}   }
+gui_list_select -id Data.1 -selected  { {packet_parser_top_tb.DUT.loop[2].packet_parser_top.OutBus_Field[31:0]}   }
+gui_list_add -id Wave.1 -from Data.1 { {packet_parser_top_tb.DUT.loop[2].packet_parser_top.OutBus_Field[31:0]} } -insertionbar
+gui_scroll -window Wave.1 -vrel .2
+gui_scroll -window Wave.1 -vrel .2
+gui_list_select -id Hier.1 -current_item_name {packet_parser_top_tb.DUT.loop[3].packet_parser_top} -current_item_type Scope  -selected  { {packet_parser_top_tb.DUT.loop[3].packet_parser_top}   }
+gui_list_select -id Data.1 -selected  { {packet_parser_top_tb.DUT.loop[3].packet_parser_top.OutBus_Field[31:0]}   }
+gui_list_add -id Wave.1 -from Data.1 { {packet_parser_top_tb.DUT.loop[3].packet_parser_top.OutBus_Field[31:0]} } -insertionbar
+gui_scroll -window Wave.1 -vrel .2
+gui_scroll -window Wave.1 -vrel .2
+gui_scroll -window Wave.1 -vrel .2
+gui_scroll -window Wave.1 -vrel .2
+gui_marker_move -id  Wave.1 C1 690
+gui_save_session -reload -default_file
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[127:0]}   }
+gui_list_select -id Hier.1 -current_item_name {packet_parser_top_tb.DUT.loop[0].packet_parser_top} -current_item_type Scope  -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top}   }
+gui_list_select -id Hier.1 -current_item_name packet_parser_top_tb.DUT -current_item_type Scope  -selected  { packet_parser_top_tb.DUT   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Valid_muxed[3:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[3].packet_parser_top.OutBus_Field[31:0]}   }
+gui_marker_move -id  Wave.1 C1 650
+gui_save_session -reload -default_file
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -full
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.state[1:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.error_offset_or_size}   }
+gui_marker_move -id  Wave.1 C1 20411490
+gui_marker_move -id  Wave.1 C1 47411190
+gui_save_session -savedb relative -global { Breakpoint Bus Radix Expression TimeShift Compare SignalGroup Highlight Stack }  -file /ws/rakeshku-bgl/fpga/packet_parser.vcdplus.vpd.tcl
+gui_marker_move -id  Wave.1 C1 51058250
+gui_wv_zoom_timerange -id  Wave.1 5176415 13058684
+gui_wv_zoom_timerange -id  Wave.1 6376667 6513540
+gui_wv_zoom_timerange -id  Wave.1 6399477 6410941
+gui_wv_zoom_timerange -id  Wave.1 6400905 6405343
+gui_wv_zoom_timerange -id  Wave.1 6400915 6403195
+gui_wv_zoom_timerange -id  Wave.1 6401285 6402287
+gui_wv_zoom_timerange -id  Wave.1 6401339 6401760
+gui_list_select -id Hier.1 -current_item_name packet_parser_top_tb -current_item_type Scope  -selected  { packet_parser_top_tb   }
+gui_list_set_filter -id Data.1 -text {packe*}
+gui_list_select -id Data.1 -selected  { {packet_parser_top_tb.packet_count[2:0]}   }
+gui_wv_zoom_timerange -id  Wave.1 6401419 6401593
+gui_wv_zoom_timerange -id  Wave.1 6401445 6401523
+gui_zoom -window Wave.1 -factor 0.5
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_zoom_timerange -id  Wave.1 6401643 6401679
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_marker_move -id  Wave.1 C1 6401737
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -full
+gui_wv_zoom_timerange -id  Wave.1 0 1058812
+gui_wv_zoom_timerange -id  Wave.1 0 95174
+gui_wv_zoom_timerange -id  Wave.1 292 3597
+gui_wv_zoom_timerange -id  Wave.1 520 2053
+gui_zoom -window Wave.1 -factor 0.5
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.InBus_Data[63:0]}   }
+gui_wv_zoom_timerange -id  Wave.1 175 961
+gui_wv_zoom_timerange -id  Wave.1 272 631
+gui_wv_zoom_timerange -id  Wave.1 324 521
+gui_marker_move -id  Wave.1 C1 486
+gui_save_session -reload -default_file
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -full
+gui_wv_zoom_timerange -id  Wave.1 0 3606963
+gui_wv_zoom_timerange -id  Wave.1 0 70002
+gui_wv_zoom_timerange -id  Wave.1 0 5291
+gui_wv_zoom_timerange -id  Wave.1 76 2972
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.InBus_DataEop}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.InBus_DataSop}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.Rst}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.Clk}   }
+gui_list_select -id Wave.1 -selected  { Group4   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.Clk}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.Rst}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.InBus_DataSop}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.InBus_DataEop}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.InBus_DataValid}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.InBus_Mod[2:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.InBus_Data[63:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.OutBus_Valid}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.OutBus_Field[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.error_offset_or_size}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.state[1:0]}   }
+gui_list_select -id Wave.1 -selected  { packet_parser_top_tb.field0_is_ready   }
+gui_list_select -id Wave.1 -selected  { packet_parser_top_tb.field1_is_ready   }
+gui_list_select -id Wave.1 -selected  { packet_parser_top_tb.field2_is_ready   }
+gui_list_select -id Wave.1 -selected  { packet_parser_top_tb.field3_is_ready   }
+gui_list_select -id Wave.1 -selected  { packet_parser_top_tb.OutBus_AllValues_Ready   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[127:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Valid_muxed[3:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.OutBus_Field[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Valid_muxed[3:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[127:0]}   }
+gui_list_select -id Wave.1 -selected  { packet_parser_top_tb.OutBus_AllValues_Ready   }
+gui_list_select -id Wave.1 -selected  { packet_parser_top_tb.field3_is_ready   }
+gui_list_select -id Wave.1 -selected  { packet_parser_top_tb.field2_is_ready   }
+gui_list_select -id Wave.1 -selected  { packet_parser_top_tb.field1_is_ready   }
+gui_list_select -id Wave.1 -selected  { packet_parser_top_tb.field0_is_ready   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.state[1:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.error_offset_or_size}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.OutBus_Field[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.OutBus_Valid}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.InBus_Data[63:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.InBus_Mod[2:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.InBus_DataValid}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.InBus_DataEop}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.InBus_DataSop}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.Rst}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.Clk}   }
+gui_list_select -id Wave.1 -selected  { Group4   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.Clk}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.Rst}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.InBus_DataSop}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.InBus_DataEop}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.InBus_DataValid}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.InBus_Mod[2:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.InBus_Data[63:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.OutBus_Valid}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.OutBus_Field[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.error_offset_or_size}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.state[1:0]}   }
+gui_list_select -id Wave.1 -selected  { packet_parser_top_tb.field0_is_ready   }
+gui_list_select -id Wave.1 -selected  { packet_parser_top_tb.field1_is_ready   }
+gui_list_select -id Wave.1 -selected  { packet_parser_top_tb.field2_is_ready   }
+gui_list_select -id Wave.1 -selected  { packet_parser_top_tb.field3_is_ready   }
+gui_list_select -id Wave.1 -selected  { packet_parser_top_tb.OutBus_AllValues_Ready   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[127:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Valid_muxed[3:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.OutBus_Field[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[1].packet_parser_top.OutBus_Field[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[2].packet_parser_top.OutBus_Field[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[3].packet_parser_top.OutBus_Field[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {New Group}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[3].packet_parser_top.OutBus_Field[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[2].packet_parser_top.OutBus_Field[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[1].packet_parser_top.OutBus_Field[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.OutBus_Field[31:0]}   }
+gui_list_set_filter -id Data.1 -text {que*}
+gui_list_select -id Data.1 -selected  { {packet_parser_top_tb.queue_out[31:0]}   }
+gui_list_add -id Wave.1 -from Data.1 { {packet_parser_top_tb.queue_out[31:0]} } -insertionbar
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.queue_out[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {New Group}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.queue_out[31:0]}   }
+gui_marker_move -id  Wave.1 C1 2343
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_wv_zoom_timerange -id  Wave.1 0 994
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.OutBus_Field[31:0]}   }
+gui_marker_move -id  Wave.1 C1 350
+gui_wv_zoom_timerange -id  Wave.1 234 645
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.OutBus_Valid}   }
+gui_wv_zoom_timerange -id  Wave.1 318 504
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.InBus_Data[63:0]}   }
+gui_marker_move -id  Wave.1 C1 607
+gui_list_set_filter -id Data.1 -text {*}
+gui_list_expand -id  Hier.1   packet_parser_top_tb
+gui_list_select -id Hier.1 -current_item_name packet_parser_top_tb.DUT -current_item_type Scope  -selected  { packet_parser_top_tb.DUT   }
+gui_list_expand -id  Hier.1   packet_parser_top_tb.DUT
+gui_list_select -id Hier.1 -current_item_name {packet_parser_top_tb.DUT.loop[1].packet_parser_top} -current_item_type Scope  -selected  { {packet_parser_top_tb.DUT.loop[1].packet_parser_top}   }
+gui_list_select -id Hier.1 -current_item_name {packet_parser_top_tb.DUT.loop[0].packet_parser_top} -current_item_type Scope  -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top}   }
+gui_list_select -id Data.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.Clk}   }
+gui_list_select -id Data.1 { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.Rst}  {packet_parser_top_tb.DUT.loop[0].packet_parser_top.InBus_DataSop}  {packet_parser_top_tb.DUT.loop[0].packet_parser_top.InBus_DataEop}  {packet_parser_top_tb.DUT.loop[0].packet_parser_top.InBus_DataValid}  {packet_parser_top_tb.DUT.loop[0].packet_parser_top.InBus_Mod[2:0]}  {packet_parser_top_tb.DUT.loop[0].packet_parser_top.InBus_Data[63:0]}  {packet_parser_top_tb.DUT.loop[0].packet_parser_top.OutBus_Valid}  {packet_parser_top_tb.DUT.loop[0].packet_parser_top.OutBus_Field[31:0]}  {packet_parser_top_tb.DUT.loop[0].packet_parser_top.error_offset_or_size}  {packet_parser_top_tb.DUT.loop[0].packet_parser_top.word_count[3:0]}  {packet_parser_top_tb.DUT.loop[0].packet_parser_top.field_found}  {packet_parser_top_tb.DUT.loop[0].packet_parser_top.pending_bytes[15:0]}  {packet_parser_top_tb.DUT.loop[0].packet_parser_top.state[1:0]}  {packet_parser_top_tb.DUT.loop[0].packet_parser_top.byte_valid[63:0]}  {packet_parser_top_tb.DUT.loop[0].packet_parser_top.DATA_WIDTH[31:0]}  {packet_parser_top_tb.DUT.loop[0].packet_parser_top.FIELD_SIZE_MAX[31:0]}  {packet_parser_top_tb.DUT.loop[0].packet_parser_top.FIELD_OFFSET[7:0]}  {packet_parser_top_tb.DUT.loop[0].packet_parser_top.FIELD_SIZE[31:0]}  {packet_parser_top_tb.DUT.loop[0].packet_parser_top.IDLE[1:0]}  {packet_parser_top_tb.DUT.loop[0].packet_parser_top.PARSE[1:0]}   }
+gui_open_window Wave
+gui_list_add -id Wave.2 -from Data.1 { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.Clk} {packet_parser_top_tb.DUT.loop[0].packet_parser_top.Rst} {packet_parser_top_tb.DUT.loop[0].packet_parser_top.InBus_DataSop} {packet_parser_top_tb.DUT.loop[0].packet_parser_top.InBus_DataEop} {packet_parser_top_tb.DUT.loop[0].packet_parser_top.InBus_DataValid} {packet_parser_top_tb.DUT.loop[0].packet_parser_top.InBus_Mod[2:0]} {packet_parser_top_tb.DUT.loop[0].packet_parser_top.InBus_Data[63:0]} {packet_parser_top_tb.DUT.loop[0].packet_parser_top.OutBus_Valid} {packet_parser_top_tb.DUT.loop[0].packet_parser_top.OutBus_Field[31:0]} {packet_parser_top_tb.DUT.loop[0].packet_parser_top.error_offset_or_size} {packet_parser_top_tb.DUT.loop[0].packet_parser_top.word_count[3:0]} {packet_parser_top_tb.DUT.loop[0].packet_parser_top.field_found} {packet_parser_top_tb.DUT.loop[0].packet_parser_top.pending_bytes[15:0]} {packet_parser_top_tb.DUT.loop[0].packet_parser_top.state[1:0]} {packet_parser_top_tb.DUT.loop[0].packet_parser_top.byte_valid[63:0]} {packet_parser_top_tb.DUT.loop[0].packet_parser_top.DATA_WIDTH[31:0]} {packet_parser_top_tb.DUT.loop[0].packet_parser_top.FIELD_SIZE_MAX[31:0]} {packet_parser_top_tb.DUT.loop[0].packet_parser_top.FIELD_OFFSET[7:0]} {packet_parser_top_tb.DUT.loop[0].packet_parser_top.FIELD_SIZE[31:0]} {packet_parser_top_tb.DUT.loop[0].packet_parser_top.IDLE[1:0]} {packet_parser_top_tb.DUT.loop[0].packet_parser_top.PARSE[1:0]} } -insertionbar
+gui_zoom -window Wave.2 -full
+gui_wv_zoom_timerange -id  Wave.2 0 6059697
+gui_list_select -id Wave.2 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.InBus_DataValid}   }
+gui_zoom -window Wave.2 -full
+gui_wv_zoom_timerange -id  Wave.2 0 7791039
+gui_wv_zoom_timerange -id  Wave.2 39791 684402
+gui_list_select -id Wave.2 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.InBus_DataSop}   }
+gui_list_select -id Wave.2 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.InBus_DataEop}   }
+gui_zoom -window Wave.2 -factor 0.5
+gui_zoom -window Wave.2 -factor 0.5
+gui_zoom -window Wave.2 -factor 0.5
+gui_zoom -window Wave.2 -factor 0.5
+gui_zoom -window Wave.2 -factor 0.5
+gui_zoom -window Wave.2 -factor 0.5
+gui_zoom -window Wave.2 -full
+gui_list_select -id Wave.2 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.InBus_DataSop}   }
+gui_save_session -reload -default_file
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
+gui_list_select -id Wave.2 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.InBus_DataEop}   }
+gui_wv_zoom_timerange -id  Wave.2 1731342 13706458
+gui_wv_zoom_timerange -id  Wave.2 2287382 4134412
+gui_list_select -id Wave.2 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.InBus_DataValid}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.InBus_DataValid}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.InBus_DataEop}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.InBus_DataSop}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.Rst}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.Clk}   }
+gui_list_select -id Wave.1 -selected  { Group4   }
+gui_list_select -id Hier.1 -current_item_name packet_parser_top_tb.DUT -current_item_type Scope  -selected  { packet_parser_top_tb.DUT   }
+gui_list_select -id Hier.1 -current_item_name {packet_parser_top_tb.DUT.loop[0].packet_parser_top} -current_item_type Scope  -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top}   }
+gui_list_select -id Hier.1 -current_item_name {packet_parser_top_tb.DUT.loop[1].packet_parser_top} -current_item_type Scope  -selected  { {packet_parser_top_tb.DUT.loop[1].packet_parser_top}   }
+gui_list_select -id Hier.1 -current_item_name {packet_parser_top_tb.DUT.loop[2].packet_parser_top} -current_item_type Scope  -selected  { {packet_parser_top_tb.DUT.loop[2].packet_parser_top}   }
+gui_list_select -id Hier.1 -current_item_name {packet_parser_top_tb.DUT.loop[1].packet_parser_top} -current_item_type Scope  -selected  { {packet_parser_top_tb.DUT.loop[1].packet_parser_top}   }
+gui_list_select -id Hier.1 -current_item_name packet_parser_top_tb.DUT -current_item_type Scope  -selected  { packet_parser_top_tb.DUT   }
+gui_list_select -id Hier.1 -current_item_name {packet_parser_top_tb.DUT.loop[0].packet_parser_top} -current_item_type Scope  -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top}   }
+gui_close_window -window TopLevel.3
+gui_close_window -window TopLevel.2
+gui_list_select -id Hier.1 -current_item_name packet_parser_top_tb.DUT -current_item_type Scope  -selected  { packet_parser_top_tb.DUT   }
+gui_list_select -id Data.1 -selected  { packet_parser_top_tb.DUT.InBus_DataValid   }
+gui_list_select -id Data.1 -selected  { packet_parser_top_tb.DUT.InBus_DataSop   }
+gui_list_select -id Hier.1 -current_item_name {packet_parser_top_tb.DUT.loop[0].packet_parser_top} -current_item_type Scope  -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top}   }
+gui_list_select -id Data.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.InBus_DataSop}   }
+gui_open_window Wave
+gui_list_add -id Wave.1 -from Data.1 { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.InBus_DataSop} } -insertionbar
+gui_list_select -id Data.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.InBus_DataEop}   }
+gui_list_select -id Data.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.InBus_DataEop}  {packet_parser_top_tb.DUT.loop[0].packet_parser_top.InBus_DataValid}   }
+gui_list_add -id Wave.1 -from Data.1 { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.InBus_DataEop} {packet_parser_top_tb.DUT.loop[0].packet_parser_top.InBus_DataValid} } -insertionbar
+gui_marker_move -id  Wave.1 C1 70
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_list_select -id Hier.1 -current_item_name {packet_parser_top_tb.DUT.loop[1].packet_parser_top} -current_item_type Scope  -selected  { {packet_parser_top_tb.DUT.loop[1].packet_parser_top}   }
+gui_list_select -id Data.1 -selected  { {packet_parser_top_tb.DUT.loop[1].packet_parser_top.InBus_DataSop}   }
+gui_list_select -id Data.1 -selected  { {packet_parser_top_tb.DUT.loop[1].packet_parser_top.InBus_DataSop}  {packet_parser_top_tb.DUT.loop[1].packet_parser_top.InBus_DataEop}   }
+gui_list_select -id Data.1 -selected  { {packet_parser_top_tb.DUT.loop[1].packet_parser_top.InBus_DataSop}  {packet_parser_top_tb.DUT.loop[1].packet_parser_top.InBus_DataEop}  {packet_parser_top_tb.DUT.loop[1].packet_parser_top.InBus_DataValid}   }
+gui_list_add -id Wave.1 -from Data.1 { {packet_parser_top_tb.DUT.loop[1].packet_parser_top.InBus_DataSop} {packet_parser_top_tb.DUT.loop[1].packet_parser_top.InBus_DataEop} {packet_parser_top_tb.DUT.loop[1].packet_parser_top.InBus_DataValid} } -insertionbar
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[1].packet_parser_top.InBus_DataSop}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[1].packet_parser_top.InBus_DataSop}  {packet_parser_top_tb.DUT.loop[1].packet_parser_top.InBus_DataEop}  {packet_parser_top_tb.DUT.loop[1].packet_parser_top.InBus_DataValid}   }
+gui_copy_selected -id Wave.1
+gui_delete_selected -id  Wave.1
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.InBus_DataValid}   }
+gui_close_window -window TopLevel.2
+gui_list_select -id Hier.1 -current_item_name {packet_parser_top_tb.DUT.loop[0].packet_parser_top} -current_item_type Scope  -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top}   }
+gui_list_sort -id  Data.1   {Variable}
+gui_list_sort -id  Data.1   -descending  {Variable}
+gui_list_select -id Data.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.word_count[3:0]}   }
+gui_list_select -id Data.1 { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.state[1:0]}  {packet_parser_top_tb.DUT.loop[0].packet_parser_top.pending_bytes[15:0]}  {packet_parser_top_tb.DUT.loop[0].packet_parser_top.field_found}  {packet_parser_top_tb.DUT.loop[0].packet_parser_top.error_offset_or_size}  {packet_parser_top_tb.DUT.loop[0].packet_parser_top.byte_valid[63:0]}  {packet_parser_top_tb.DUT.loop[0].packet_parser_top.Rst}  {packet_parser_top_tb.DUT.loop[0].packet_parser_top.PARSE[1:0]}  {packet_parser_top_tb.DUT.loop[0].packet_parser_top.OutBus_Valid}  {packet_parser_top_tb.DUT.loop[0].packet_parser_top.OutBus_Field[31:0]}  {packet_parser_top_tb.DUT.loop[0].packet_parser_top.InBus_Mod[2:0]}  {packet_parser_top_tb.DUT.loop[0].packet_parser_top.InBus_Data[63:0]}  {packet_parser_top_tb.DUT.loop[0].packet_parser_top.InBus_DataValid}  {packet_parser_top_tb.DUT.loop[0].packet_parser_top.InBus_DataSop}  {packet_parser_top_tb.DUT.loop[0].packet_parser_top.InBus_DataEop}  {packet_parser_top_tb.DUT.loop[0].packet_parser_top.IDLE[1:0]}  {packet_parser_top_tb.DUT.loop[0].packet_parser_top.FIELD_SIZE_MAX[31:0]}  {packet_parser_top_tb.DUT.loop[0].packet_parser_top.FIELD_SIZE[31:0]}  {packet_parser_top_tb.DUT.loop[0].packet_parser_top.FIELD_OFFSET[7:0]}  {packet_parser_top_tb.DUT.loop[0].packet_parser_top.DATA_WIDTH[31:0]}  {packet_parser_top_tb.DUT.loop[0].packet_parser_top.Clk}   }
+gui_open_window Wave
+gui_list_add -id Wave.1 -from Data.1 { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.word_count[3:0]} {packet_parser_top_tb.DUT.loop[0].packet_parser_top.state[1:0]} {packet_parser_top_tb.DUT.loop[0].packet_parser_top.pending_bytes[15:0]} {packet_parser_top_tb.DUT.loop[0].packet_parser_top.field_found} {packet_parser_top_tb.DUT.loop[0].packet_parser_top.error_offset_or_size} {packet_parser_top_tb.DUT.loop[0].packet_parser_top.byte_valid[63:0]} {packet_parser_top_tb.DUT.loop[0].packet_parser_top.Rst} {packet_parser_top_tb.DUT.loop[0].packet_parser_top.PARSE[1:0]} {packet_parser_top_tb.DUT.loop[0].packet_parser_top.OutBus_Valid} {packet_parser_top_tb.DUT.loop[0].packet_parser_top.OutBus_Field[31:0]} {packet_parser_top_tb.DUT.loop[0].packet_parser_top.InBus_Mod[2:0]} {packet_parser_top_tb.DUT.loop[0].packet_parser_top.InBus_Data[63:0]} {packet_parser_top_tb.DUT.loop[0].packet_parser_top.InBus_DataValid} {packet_parser_top_tb.DUT.loop[0].packet_parser_top.InBus_DataSop} {packet_parser_top_tb.DUT.loop[0].packet_parser_top.InBus_DataEop} {packet_parser_top_tb.DUT.loop[0].packet_parser_top.IDLE[1:0]} {packet_parser_top_tb.DUT.loop[0].packet_parser_top.FIELD_SIZE_MAX[31:0]} {packet_parser_top_tb.DUT.loop[0].packet_parser_top.FIELD_SIZE[31:0]} {packet_parser_top_tb.DUT.loop[0].packet_parser_top.FIELD_OFFSET[7:0]} {packet_parser_top_tb.DUT.loop[0].packet_parser_top.DATA_WIDTH[31:0]} {packet_parser_top_tb.DUT.loop[0].packet_parser_top.Clk} } -insertionbar
+gui_wv_scroll_vslidermove -id  Wave.1 77
+gui_zoom -window Wave.1 -full
+gui_wv_scroll_vslidermove -id  Wave.1 0
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.InBus_DataSop}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.InBus_DataEop}   }
+gui_wv_zoom_timerange -id  Wave.1 5343763 8809988
+gui_zoom -window Wave.1 -full
+gui_wv_zoom_timerange -id  Wave.1 0 1010982
+gui_wv_zoom_timerange -id  Wave.1 0 24809
+gui_wv_zoom_timerange -id  Wave.1 0 2892
+gui_wv_zoom_timerange -id  Wave.1 33 778
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.byte_valid[63:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.pending_bytes[15:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.state[1:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.word_count[3:0]}   }
+gui_marker_move -id  Wave.1 C1 673
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.InBus_DataSop}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.InBus_DataEop}   }
+gui_marker_move -id  Wave.1 C1 90
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.word_count[3:0]}   }
+gui_marker_move -id  Wave.1 C1 695
+gui_save_session -reload -default_file
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
+gui_wv_zoom_timerange -id  Wave.1 73 209
+gui_marker_move -id  Wave.1 C1 90
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.state[1:0]}   }
+gui_marker_move -id  Wave.1 C1 350
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.byte_valid[63:0]}   }
+gui_marker_move -id  Wave.1 C1 446
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.OutBus_Field[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.IDLE[1:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.FIELD_SIZE_MAX[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.IDLE[1:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.FIELD_SIZE_MAX[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.FIELD_SIZE[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.FIELD_OFFSET[7:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.DATA_WIDTH[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.FIELD_OFFSET[7:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.DATA_WIDTH[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.Clk}   }
+gui_list_select -id Wave.1 -selected  { {New Group}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.Clk}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.DATA_WIDTH[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.Clk}   }
+gui_list_select -id Wave.1 -selected  { {New Group}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.Clk}   }
+gui_list_select -id Wave.1 -selected  { {New Group}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.Clk}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.DATA_WIDTH[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.FIELD_OFFSET[7:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.FIELD_SIZE[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.FIELD_SIZE_MAX[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.IDLE[1:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.FIELD_SIZE_MAX[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.IDLE[1:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.InBus_DataEop}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.InBus_DataSop}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.InBus_DataValid}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.InBus_Data[63:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.InBus_Mod[2:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.OutBus_Field[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.OutBus_Valid}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.PARSE[1:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.Rst}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.byte_valid[63:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.error_offset_or_size}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.field_found}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.pending_bytes[15:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.state[1:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.word_count[15:0]}   }
+gui_list_select -id Wave.1 -selected  { Group7   }
+gui_list_set_filter -id Data.1 -text {*found*}
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.field_found}   }
+gui_marker_move -id  Wave.1 C1 90
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.OutBus_Valid}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.OutBus_Field[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.InBus_Mod[2:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.InBus_Data[63:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.InBus_DataValid}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.InBus_DataSop}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.InBus_DataEop}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.IDLE[1:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.FIELD_SIZE_MAX[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.FIELD_SIZE[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.FIELD_OFFSET[7:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.FIELD_SIZE[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.pending_bytes[15:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.OutBus_Field[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.OutBus_Valid}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.OutBus_Field[31:0]}   }
+gui_wv_zoom_timerange -id  Wave.1 39 251
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.field_found}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.InBus_Data[63:0]}   }
+gui_wv_zoom_timerange -id  Wave.1 51 170
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.OutBus_Valid}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.OutBus_Field[31:0]}   }
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_zoom_timerange -id  Wave.1 52 377
+gui_wv_zoom_timerange -id  Wave.1 60 213
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.FIELD_SIZE[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.FIELD_OFFSET[7:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.DATA_WIDTH[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.FIELD_OFFSET[7:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.FIELD_SIZE[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.FIELD_SIZE_MAX[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.FIELD_SIZE[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.FIELD_OFFSET[7:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.DATA_WIDTH[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.Clk}   }
+gui_list_select -id Wave.1 -selected  { {New Group}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.Clk}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.DATA_WIDTH[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.FIELD_OFFSET[7:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.FIELD_SIZE[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.FIELD_SIZE_MAX[31:0]}   }
+gui_list_set_filter -id Data.1 -text {**}
+gui_list_select -id Data.1 -selected  { {packet_parser_top_tb.DUT.loop[1].packet_parser_top.word_count[15:0]}   }
+gui_list_select -id Data.1 { {packet_parser_top_tb.DUT.loop[1].packet_parser_top.state[1:0]}  {packet_parser_top_tb.DUT.loop[1].packet_parser_top.pending_bytes[15:0]}  {packet_parser_top_tb.DUT.loop[1].packet_parser_top.field_found}  {packet_parser_top_tb.DUT.loop[1].packet_parser_top.error_offset_or_size}  {packet_parser_top_tb.DUT.loop[1].packet_parser_top.byte_valid[63:0]}  {packet_parser_top_tb.DUT.loop[1].packet_parser_top.Rst}  {packet_parser_top_tb.DUT.loop[1].packet_parser_top.PARSE[1:0]}  {packet_parser_top_tb.DUT.loop[1].packet_parser_top.OutBus_Valid}  {packet_parser_top_tb.DUT.loop[1].packet_parser_top.OutBus_Field[31:0]}  {packet_parser_top_tb.DUT.loop[1].packet_parser_top.InBus_Mod[2:0]}  {packet_parser_top_tb.DUT.loop[1].packet_parser_top.InBus_Data[63:0]}  {packet_parser_top_tb.DUT.loop[1].packet_parser_top.InBus_DataValid}  {packet_parser_top_tb.DUT.loop[1].packet_parser_top.InBus_DataSop}  {packet_parser_top_tb.DUT.loop[1].packet_parser_top.InBus_DataEop}  {packet_parser_top_tb.DUT.loop[1].packet_parser_top.IDLE[1:0]}  {packet_parser_top_tb.DUT.loop[1].packet_parser_top.FIELD_SIZE_MAX[31:0]}  {packet_parser_top_tb.DUT.loop[1].packet_parser_top.FIELD_SIZE[31:0]}  {packet_parser_top_tb.DUT.loop[1].packet_parser_top.FIELD_OFFSET[7:0]}  {packet_parser_top_tb.DUT.loop[1].packet_parser_top.DATA_WIDTH[31:0]}  {packet_parser_top_tb.DUT.loop[1].packet_parser_top.Clk}   }
+gui_open_window Wave
+gui_list_add -id Wave.2 -from Data.1 { {packet_parser_top_tb.DUT.loop[1].packet_parser_top.word_count[15:0]} {packet_parser_top_tb.DUT.loop[1].packet_parser_top.state[1:0]} {packet_parser_top_tb.DUT.loop[1].packet_parser_top.pending_bytes[15:0]} {packet_parser_top_tb.DUT.loop[1].packet_parser_top.field_found} {packet_parser_top_tb.DUT.loop[1].packet_parser_top.error_offset_or_size} {packet_parser_top_tb.DUT.loop[1].packet_parser_top.byte_valid[63:0]} {packet_parser_top_tb.DUT.loop[1].packet_parser_top.Rst} {packet_parser_top_tb.DUT.loop[1].packet_parser_top.PARSE[1:0]} {packet_parser_top_tb.DUT.loop[1].packet_parser_top.OutBus_Valid} {packet_parser_top_tb.DUT.loop[1].packet_parser_top.OutBus_Field[31:0]} {packet_parser_top_tb.DUT.loop[1].packet_parser_top.InBus_Mod[2:0]} {packet_parser_top_tb.DUT.loop[1].packet_parser_top.InBus_Data[63:0]} {packet_parser_top_tb.DUT.loop[1].packet_parser_top.InBus_DataValid} {packet_parser_top_tb.DUT.loop[1].packet_parser_top.InBus_DataSop} {packet_parser_top_tb.DUT.loop[1].packet_parser_top.InBus_DataEop} {packet_parser_top_tb.DUT.loop[1].packet_parser_top.IDLE[1:0]} {packet_parser_top_tb.DUT.loop[1].packet_parser_top.FIELD_SIZE_MAX[31:0]} {packet_parser_top_tb.DUT.loop[1].packet_parser_top.FIELD_SIZE[31:0]} {packet_parser_top_tb.DUT.loop[1].packet_parser_top.FIELD_OFFSET[7:0]} {packet_parser_top_tb.DUT.loop[1].packet_parser_top.DATA_WIDTH[31:0]} {packet_parser_top_tb.DUT.loop[1].packet_parser_top.Clk} } -insertionbar
+gui_zoom -window Wave.2 -full
+gui_list_select -id Wave.2 -selected  { {packet_parser_top_tb.DUT.loop[1].packet_parser_top.FIELD_SIZE_MAX[31:0]}   }
+gui_list_select -id Wave.2 -selected  { {packet_parser_top_tb.DUT.loop[1].packet_parser_top.FIELD_SIZE[31:0]}   }
+gui_list_select -id Wave.2 -selected  { {packet_parser_top_tb.DUT.loop[1].packet_parser_top.FIELD_OFFSET[7:0]}   }
+gui_list_select -id Wave.2 -selected  { {packet_parser_top_tb.DUT.loop[1].packet_parser_top.DATA_WIDTH[31:0]}   }
+gui_list_select -id Wave.2 -selected  { {packet_parser_top_tb.DUT.loop[1].packet_parser_top.Clk}   }
+gui_list_select -id Wave.2 -selected  { {packet_parser_top_tb.DUT.loop[1].packet_parser_top.DATA_WIDTH[31:0]}   }
+gui_list_select -id Wave.2 -selected  { {packet_parser_top_tb.DUT.loop[1].packet_parser_top.FIELD_OFFSET[7:0]}   }
+gui_list_select -id Wave.2 -selected  { {packet_parser_top_tb.DUT.loop[1].packet_parser_top.FIELD_SIZE[31:0]}   }
+gui_list_select -id Wave.2 -selected  { {packet_parser_top_tb.DUT.loop[1].packet_parser_top.FIELD_SIZE_MAX[31:0]}   }
+gui_list_select -id Wave.2 -selected  { {packet_parser_top_tb.DUT.loop[1].packet_parser_top.IDLE[1:0]}   }
+gui_list_select -id Wave.2 -selected  { {packet_parser_top_tb.DUT.loop[1].packet_parser_top.InBus_DataEop}   }
+gui_list_select -id Wave.2 -selected  { {packet_parser_top_tb.DUT.loop[1].packet_parser_top.InBus_DataSop}   }
+gui_list_select -id Wave.2 -selected  { {packet_parser_top_tb.DUT.loop[1].packet_parser_top.InBus_DataValid}   }
+gui_list_select -id Wave.2 -selected  { {packet_parser_top_tb.DUT.loop[1].packet_parser_top.InBus_Data[63:0]}   }
+gui_list_select -id Wave.2 -selected  { {packet_parser_top_tb.DUT.loop[1].packet_parser_top.InBus_Mod[2:0]}   }
+gui_list_select -id Wave.2 -selected  { {packet_parser_top_tb.DUT.loop[1].packet_parser_top.OutBus_Field[31:0]}   }
+gui_list_select -id Wave.2 -selected  { {packet_parser_top_tb.DUT.loop[1].packet_parser_top.OutBus_Valid}   }
+gui_list_select -id Wave.2 -selected  { {packet_parser_top_tb.DUT.loop[1].packet_parser_top.PARSE[1:0]}   }
+gui_list_select -id Wave.2 -selected  { {packet_parser_top_tb.DUT.loop[1].packet_parser_top.Rst}   }
+gui_list_select -id Wave.2 -selected  { {packet_parser_top_tb.DUT.loop[1].packet_parser_top.byte_valid[63:0]}   }
+gui_list_select -id Wave.2 -selected  { {packet_parser_top_tb.DUT.loop[1].packet_parser_top.error_offset_or_size}   }
+gui_list_select -id Wave.2 -selected  { {packet_parser_top_tb.DUT.loop[1].packet_parser_top.field_found}   }
+gui_list_select -id Wave.2 -selected  { {packet_parser_top_tb.DUT.loop[1].packet_parser_top.pending_bytes[15:0]}   }
+gui_list_select -id Wave.2 -selected  { {packet_parser_top_tb.DUT.loop[1].packet_parser_top.state[1:0]}   }
+gui_list_select -id Wave.2 -selected  { {packet_parser_top_tb.DUT.loop[1].packet_parser_top.word_count[15:0]}   }
+gui_list_select -id Wave.2 -selected  { {packet_parser_top_tb.DUT.loop[1].packet_parser_top.state[1:0]}   }
+gui_list_select -id Wave.2 -selected  { {packet_parser_top_tb.DUT.loop[1].packet_parser_top.pending_bytes[15:0]}   }
+gui_list_select -id Wave.2 -selected  { {packet_parser_top_tb.DUT.loop[1].packet_parser_top.field_found}   }
+gui_list_select -id Wave.2 -selected  { {packet_parser_top_tb.DUT.loop[1].packet_parser_top.error_offset_or_size}   }
+gui_list_select -id Wave.2 -selected  { {packet_parser_top_tb.DUT.loop[1].packet_parser_top.byte_valid[63:0]}   }
+gui_list_select -id Wave.2 -selected  { {packet_parser_top_tb.DUT.loop[1].packet_parser_top.Rst}   }
+gui_list_select -id Wave.2 -selected  { {packet_parser_top_tb.DUT.loop[1].packet_parser_top.PARSE[1:0]}   }
+gui_list_select -id Wave.2 -selected  { {packet_parser_top_tb.DUT.loop[1].packet_parser_top.OutBus_Valid}   }
+gui_list_select -id Wave.2 -selected  { {packet_parser_top_tb.DUT.loop[1].packet_parser_top.OutBus_Field[31:0]}   }
+gui_zoom -window Wave.2 -full
+gui_wv_zoom_timerange -id  Wave.2 0 531178
+gui_wv_zoom_timerange -id  Wave.2 0 27699
+gui_wv_zoom_timerange -id  Wave.2 0 3682
+gui_wv_zoom_timerange -id  Wave.2 218 791
+gui_marker_move -id  Wave.2 C1 350
+gui_marker_move -id  Wave.2 C1 650
+gui_marker_move -id  Wave.2 C1 690
+gui_save_session -reload -default_file
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
+gui_list_select -id Hier.1 -current_item_name packet_parser_top_tb -current_item_type Scope  -selected  { packet_parser_top_tb   }
+gui_list_set_filter -id Data.1 -text {*queu*}
+gui_list_select -id Data.1 -selected  { {packet_parser_top_tb.queue_out[127:0]}   }
+gui_list_add -id Wave.2 -from Data.1 { {packet_parser_top_tb.queue_out[127:0]} } -insertionbar
+gui_scroll -window Wave.2 -vrel .2
+gui_scroll -window Wave.2 -vrel .2
+gui_scroll -window Wave.2 -vrel .2
+gui_scroll -window Wave.2 -vrel .2
+gui_scroll -window Wave.2 -vrel .2
+gui_scroll -window Wave.2 -vrel .2
+gui_scroll -window Wave.2 -vrel .2
+gui_scroll -window Wave.2 -vrel .2
+gui_scroll -window Wave.2 -vrel .2
+gui_scroll -window Wave.2 -vrel .2
+gui_scroll -window Wave.2 -vrel .2
+gui_scroll -window Wave.2 -vrel .2
+gui_scroll -window Wave.2 -vrel .2
+gui_list_select -id Wave.2 -selected  { {packet_parser_top_tb.queue_out[127:0]}   }
+gui_zoom -window Wave.2 -factor 0.5
+gui_zoom -window Wave.2 -factor 0.5
+gui_zoom -window Wave.2 -factor 0.5
+gui_marker_move -id  Wave.2 C1 2470
+gui_list_select -id Wave.2 -selected  { {packet_parser_top_tb.DUT.loop[1].packet_parser_top.OutBus_Field[31:0]}   }
+gui_close_window -window TopLevel.3
+gui_close_window -window TopLevel.2
+gui_open_window Wave
+gui_list_add -id Wave.1 -from Data.1 { {packet_parser_top_tb.queue_out[127:0]} } -insertionbar
+gui_zoom -window Wave.1 -full
+gui_wv_zoom_timerange -id  Wave.1 0 1265069
+gui_wv_zoom_timerange -id  Wave.1 0 23307
+gui_wv_zoom_timerange -id  Wave.1 0 4556
+gui_list_set_filter -id Data.1 -text {*muxed*}
+gui_list_select -id Data.1 -selected  { {packet_parser_top_tb.OutBus_Valid_muxed[3:0]}   }
+gui_list_select -id Data.1 -selected  { {packet_parser_top_tb.OutBus_Valid_muxed[3:0]}  {packet_parser_top_tb.OutBus_Field_muxed[127:0]}   }
+gui_list_add -id Wave.1 -from Data.1 { {packet_parser_top_tb.OutBus_Valid_muxed[3:0]} {packet_parser_top_tb.OutBus_Field_muxed[127:0]} } -insertionbar
+gui_marker_move -id  Wave.1 C1 390
+gui_wv_zoom_timerange -id  Wave.1 145 1287
+gui_wv_zoom_timerange -id  Wave.1 282 771
+gui_marker_move -id  Wave.1 C1 350
+gui_wv_zoom_timerange -id  Wave.1 281 815
+gui_wv_zoom_timerange -id  Wave.1 308 645
+gui_wv_zoom_timerange -id  Wave.1 308 629
+gui_wv_zoom_timerange -id  Wave.1 308 616
+gui_list_set_filter -id Data.1 -text {*field*}
+gui_list_select -id Data.1 -selected  { packet_parser_top_tb.field0_is_ready   }
+gui_list_select -id Data.1 -selected  { {packet_parser_top_tb.field3_out[31:0]}   }
+gui_list_select -id Data.1 { packet_parser_top_tb.field3_is_ready  {packet_parser_top_tb.field3[31:0]}  {packet_parser_top_tb.field2_out[31:0]}  packet_parser_top_tb.field2_is_ready  {packet_parser_top_tb.field2[31:0]}  {packet_parser_top_tb.field1_out[31:0]}  packet_parser_top_tb.field1_is_ready  {packet_parser_top_tb.field1[31:0]}  {packet_parser_top_tb.field0_out[31:0]}  packet_parser_top_tb.field0_is_ready  {packet_parser_top_tb.field0[31:0]}   }
+gui_list_add -id Wave.1 -from Data.1 { {packet_parser_top_tb.field3_out[31:0]} packet_parser_top_tb.field3_is_ready {packet_parser_top_tb.field3[31:0]} {packet_parser_top_tb.field2_out[31:0]} packet_parser_top_tb.field2_is_ready {packet_parser_top_tb.field2[31:0]} {packet_parser_top_tb.field1_out[31:0]} packet_parser_top_tb.field1_is_ready {packet_parser_top_tb.field1[31:0]} {packet_parser_top_tb.field0_out[31:0]} packet_parser_top_tb.field0_is_ready {packet_parser_top_tb.field0[31:0]} } -insertionbar
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.field2_out[31:0]}   }
+gui_copy_selected -id Wave.1
+gui_delete_selected -id  Wave.1
+gui_list_select -id Wave.1 -selected  { packet_parser_top_tb.field2_is_ready   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.field0_out[31:0]}   }
+gui_copy_selected -id Wave.1
+gui_delete_selected -id  Wave.1
+gui_list_select -id Wave.1 -selected  { packet_parser_top_tb.field0_is_ready   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.field1_out[31:0]}   }
+gui_copy_selected -id Wave.1
+gui_delete_selected -id  Wave.1
+gui_list_select -id Wave.1 -selected  { packet_parser_top_tb.field1_is_ready   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.field3_out[31:0]}   }
+gui_copy_selected -id Wave.1
+gui_delete_selected -id  Wave.1
+gui_list_select -id Wave.1 -selected  { packet_parser_top_tb.field3_is_ready   }
+gui_list_select -id Wave.1 -selected  { packet_parser_top_tb.field2_is_ready   }
+gui_list_move  -id  Wave.1    -sid  Wave.1   -after packet_parser_top_tb.field3_is_ready {{packet_parser_top_tb.field2_is_ready}} 
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.field1[31:0]}   }
+gui_list_select -id Wave.1 -selected  { packet_parser_top_tb.field0_is_ready   }
+gui_list_move  -id  Wave.1    -sid  Wave.1   -after {packet_parser_top_tb.OutBus_Field_muxed[127:0]} {{packet_parser_top_tb.field0_is_ready}} 
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.field1[31:0]}   }
+gui_list_select -id Wave.1 -selected  { packet_parser_top_tb.field1_is_ready   }
+gui_list_move  -id  Wave.1    -sid  Wave.1   -after packet_parser_top_tb.field0_is_ready {{packet_parser_top_tb.field1_is_ready}} 
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_wv_zoom_timerange -id  Wave.1 35 833
+gui_wv_zoom_timerange -id  Wave.1 54 564
+gui_marker_move -id  Wave.1 C1 90
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.field0[31:0]}   }
+gui_wv_zoom_timerange -id  Wave.1 69 225
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.field3[31:0]}   }
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_wv_zoom_timerange -id  Wave.1 57 413
+gui_wv_zoom_timerange -id  Wave.1 77 160
+gui_list_select -id Data.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.OutBus_Field[31:0]}   }
+gui_list_add -id Wave.1 -from Data.1 { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.OutBus_Field[31:0]} } -insertionbar
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.OutBus_Field[31:0]}   }
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_list_set_filter -id Data.1 -text {*v*}
+gui_list_select -id Data.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.OutBus_Valid}   }
+gui_list_add -id Wave.1 -from Data.1 { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.OutBus_Valid} } -insertionbar
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.OutBus_Valid}   }
+gui_marker_move -id  Wave.1 C1 350
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.OutBus_Field[31:0]}   }
+gui_list_set_filter -id Data.1 -text {*byte*}
+gui_list_select -id Data.1 -selected  { {packet_parser_top_tb.byte_count[15:0]}   }
+gui_list_add -id Wave.1 -from Data.1 { {packet_parser_top_tb.byte_count[15:0]} } -insertionbar
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.byte_count[15:0]}   }
+gui_wv_zoom_timerange -id  Wave.1 35 288
+gui_marker_move -id  Wave.1 C1 70
+gui_list_set_filter -id Data.1 -text {*Sop*}
+gui_list_select -id Data.1 -selected  { packet_parser_top_tb.InBus_DataSop   }
+gui_list_add -id Wave.1 -from Data.1 { packet_parser_top_tb.InBus_DataSop } -insertionbar
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.OutBus_Valid}   }
+gui_list_select -id Wave.1 -selected  { packet_parser_top_tb.InBus_DataSop   }
+gui_marker_move -id  Wave.1 C1 230
+gui_marker_move -id  Wave.1 C1 70
+gui_marker_move -id  Wave.1 C1 236
+gui_list_select -id Wave.1 -selected  { packet_parser_top_tb.field0_is_ready   }
+gui_marker_move -id  Wave.1 C1 90
+gui_list_set_filter -id Data.1 -text {*Data*}
+gui_list_select -id Data.1 -selected  { {packet_parser_top_tb.InBus_Data[63:0]}   }
+gui_list_add -id Wave.1 -from Data.1 { {packet_parser_top_tb.InBus_Data[63:0]} } -insertionbar
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.InBus_Data[63:0]}   }
+gui_wv_zoom_timerange -id  Wave.1 55 187
+gui_wv_zoom_timerange -id  Wave.1 63 120
+gui_marker_move -id  Wave.1 C1 70
+gui_list_select -id Wave.1 -selected  { packet_parser_top_tb.field0_is_ready   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.field3[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.field0[31:0]}   }
+gui_marker_move -id  Wave.1 C1 90
+gui_marker_move -id  Wave.1 C1 90
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.field3[31:0]}   }
+gui_list_set_filter -id Data.1 -text {*OFF*}
+gui_list_select -id Data.1 -selected  { {packet_parser_top_tb.FIELD_OFFSET[31:0]}   }
+gui_list_add -id Wave.1 -from Data.1 { {packet_parser_top_tb.FIELD_OFFSET[31:0]} } -insertionbar
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.FIELD_OFFSET[31:0]}   }
+gui_list_set_selected_property -id Wave.1 -radix hex
+gui_marker_move -id  Wave.1 C1 106
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.InBus_Data[63:0]}   }
+gui_list_set_filter -id Data.1 -text {*size*}
+gui_list_select -id Data.1 -selected  { {packet_parser_top_tb.FIELD_SIZE[127:0]}   }
+gui_list_add -id Wave.1 -from Data.1 { {packet_parser_top_tb.FIELD_SIZE[127:0]} } -insertionbar
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.FIELD_SIZE[127:0]}   }
+gui_list_set_selected_property -id Wave.1 -radix hex
+gui_marker_move -id  Wave.1 C1 108
+gui_list_select -id Wave.1 -selected  { packet_parser_top_tb.field1_is_ready   }
+gui_list_select -id Wave.1 -selected  { packet_parser_top_tb.field3_is_ready   }
+gui_list_move  -id  Wave.1    -sid  Wave.1   -after packet_parser_top_tb.field1_is_ready {{packet_parser_top_tb.field3_is_ready}} 
+gui_list_select -id Wave.1 -selected  { packet_parser_top_tb.field2_is_ready   }
+gui_list_move  -id  Wave.1    -sid  Wave.1   -after packet_parser_top_tb.field3_is_ready {{packet_parser_top_tb.field2_is_ready}} 
+gui_marker_move -id  Wave.1 C1 90
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.field0[31:0]}   }
+gui_list_move  -id  Wave.1    -sid  Wave.1   -after {packet_parser_top_tb.field2[31:0]} {{packet_parser_top_tb.field0[31:0]}} 
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.field3[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.field2[31:0]}   }
+gui_list_move  -id  Wave.1    -sid  Wave.1   -after {packet_parser_top_tb.field1[31:0]} {{packet_parser_top_tb.field2[31:0]}} 
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.field3[31:0]}   }
+gui_list_move  -id  Wave.1    -sid  Wave.1   -after {packet_parser_top_tb.field2[31:0]} {{packet_parser_top_tb.field3[31:0]}} 
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.FIELD_SIZE[127:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.field3[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.InBus_Data[63:0]}   }
+gui_marker_move -id  Wave.1 C1 110
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Valid_muxed[3:0]}   }
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_wv_zoom_timerange -id  Wave.1 61 164
+gui_marker_move -id  Wave.1 C1 90
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.InBus_Data[63:0]}   }
+gui_marker_move -id  Wave.1 C1 70
+gui_marker_move -id  Wave.1 C1 90
+gui_marker_move -id  Wave.1 C1 70
+gui_marker_move -id  Wave.1 C1 90
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.byte_count[15:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.field0[31:0]}   }
+gui_marker_move -id  Wave.1 C1 146
+gui_save_session -reload -default_file
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.field3[31:0]}   }
+gui_marker_move -id  Wave.1 C1 79
+gui_marker_move -id  Wave.1 C1 79
+gui_marker_move -id  Wave.1 C1 136
+gui_marker_move -id  Wave.1 C1 79
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.field2[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.field0[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.field3[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.field0[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.field1[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[127:0]}   }
+gui_list_select -id Wave.1 -selected  { packet_parser_top_tb.field0_is_ready   }
+gui_list_select -id Wave.1 -selected  { packet_parser_top_tb.field1_is_ready   }
+gui_list_select -id Wave.1 -selected  { packet_parser_top_tb.field3_is_ready   }
+gui_list_select -id Wave.1 -selected  { packet_parser_top_tb.field1_is_ready   }
+gui_list_select -id Wave.1 -selected  { packet_parser_top_tb.field0_is_ready   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[127:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Valid_muxed[3:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.queue_out[127:0]}   }
+gui_list_select -id Wave.1 -selected  { Group9   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.queue_out[127:0]}   }
+gui_list_select -id Wave.1 -selected  { Group9   }
+gui_list_select -id Wave.1 -selected  { packet_parser_top_tb.field0_is_ready   }
+gui_marker_move -id  Wave.1 C1 90
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_marker_move -id  Wave.1 C1 742
+gui_marker_move -id  Wave.1 C1 690
+gui_save_session -reload -default_file
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.InBus_Data[63:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.FIELD_OFFSET[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.FIELD_SIZE[127:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.field0[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.field1[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.field0[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.FIELD_SIZE[127:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.FIELD_OFFSET[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.InBus_Data[63:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.FIELD_OFFSET[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.FIELD_SIZE[127:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.field0[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.field1[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.field2[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.field3[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {New Group}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.field3[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.field2[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.field1[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.field0[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.FIELD_SIZE[127:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.FIELD_OFFSET[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.InBus_Data[63:0]}   }
+gui_list_select -id Wave.1 -selected  { packet_parser_top_tb.InBus_DataSop   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.byte_count[15:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.OutBus_Valid}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.OutBus_Field[31:0]}   }
+gui_list_select -id Wave.1 -selected  { packet_parser_top_tb.field2_is_ready   }
+gui_list_select -id Wave.1 -selected  { packet_parser_top_tb.field3_is_ready   }
+gui_list_select -id Wave.1 -selected  { packet_parser_top_tb.field1_is_ready   }
+gui_list_select -id Wave.1 -selected  { packet_parser_top_tb.field0_is_ready   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[127:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Valid_muxed[3:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.queue_out[127:0]}   }
+gui_list_select -id Wave.1 -selected  { Group9   }
+gui_marker_move -id  Wave.1 C1 387
+gui_wv_zoom_timerange -id  Wave.1 0 149
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.queue_out[127:0]}   }
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_wv_zoom_timerange -id  Wave.1 304 893
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[127:0]}   }
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Valid_muxed[3:0]}   }
+gui_wv_zoom_timerange -id  Wave.1 204 1247
+gui_wv_zoom_timerange -id  Wave.1 273 623
+gui_wv_zoom_timerange -id  Wave.1 322 434
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[127:0]}   }
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_wv_zoom_timerange -id  Wave.1 64 325
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_wv_zoom_timerange -id  Wave.1 170 1361
+gui_wv_zoom_timerange -id  Wave.1 266 808
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_zoom_timerange -id  Wave.1 51 219
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -full
+gui_wv_zoom_timerange -id  Wave.1 0 607217
+gui_wv_zoom_timerange -id  Wave.1 0 20594
+gui_wv_zoom_timerange -id  Wave.1 0 614
+gui_zoom -window Wave.1 -factor 0.5
+gui_wv_zoom_timerange -id  Wave.1 239 1042
+gui_wv_zoom_timerange -id  Wave.1 283 741
+gui_list_set_filter -id Data.1 -text {*push*}
+gui_list_select -id Data.1 -selected  { packet_parser_top_tb.push_queue   }
+gui_list_add -id Wave.1 -from Data.1 { packet_parser_top_tb.push_queue } -insertionbar
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.field0[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.field1[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.field2[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.field3[31:0]}   }
+gui_list_select -id Wave.1 -selected  { packet_parser_top_tb.push_queue   }
+gui_list_select -id Wave.1 -selected  { {New Group}   }
+gui_zoom -window Wave.1 -factor 0.5
+gui_wv_zoom_timerange -id  Wave.1 67 421
+gui_wv_zoom_timerange -id  Wave.1 81 176
+gui_list_select -id Wave.1 -selected  { packet_parser_top_tb.push_queue   }
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_marker_move -id  Wave.1 C1 690
+gui_save_session -reload -default_file
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
+gui_marker_move -id  Wave.1 C1 130
+gui_wv_zoom_timerange -id  Wave.1 73 196
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_marker_move -id  Wave.1 C1 90
+gui_wv_zoom_timerange -id  Wave.1 34 259
+gui_wv_zoom_timerange -id  Wave.1 70 175
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[127:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Valid_muxed[3:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[127:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Valid_muxed[3:0]}   }
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_marker_move -id  Wave.1 C1 370
+gui_wv_zoom_timerange -id  Wave.1 291 798
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.queue_out[127:0]}   }
+gui_list_select -id Wave.1 -selected  { Group9   }
+gui_marker_move -id  Wave.1 C1 717
+gui_save_session -reload -default_file
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.queue_out[127:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.field0[31:0]}   }
+gui_wv_zoom_timerange -id  Wave.1 96 221
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_list_select -id Wave.1 -selected  { packet_parser_top_tb.push_queue   }
+gui_list_select -id Wave.1 -selected  { {New Group}   }
+gui_marker_move -id  Wave.1 C1 90
+gui_marker_move -id  Wave.1 C1 174
+gui_save_session -reload -default_file
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
+gui_marker_move -id  Wave.1 C1 115
+gui_scroll -window Wave.1 -vrel -.2
+gui_scroll -window Wave.1 -vrel -.2
+gui_scroll -window Wave.1 -vrel -.2
+gui_scroll -window Wave.1 -vrel -.2
+gui_scroll -window Wave.1 -vrel -.2
+gui_scroll -window Wave.1 -vrel -.2
+gui_scroll -window Wave.1 -vrel -.2
+gui_scroll -window Wave.1 -vrel -.2
+gui_scroll -window Wave.1 -vrel -.2
+gui_scroll -window Wave.1 -vrel -.2
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.queue_out[127:0]}   }
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_wv_zoom_timerange -id  Wave.1 0 564
+gui_wv_zoom_timerange -id  Wave.1 67 251
+gui_marker_move -id  Wave.1 C1 110
+gui_marker_move -id  Wave.1 C1 223
+gui_marker_move -id  Wave.1 C1 235
+gui_save_session -reload -default_file
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.field0[31:0]}   }
+gui_list_select -id Wave.1 -selected  { packet_parser_top_tb.push_queue   }
+gui_list_select -id Wave.1 -selected  { {New Group}   }
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_marker_move -id  Wave.1 C1 390
+gui_wv_zoom_timerange -id  Wave.1 338 522
+gui_marker_move -id  Wave.1 C1 495
+gui_list_set_filter -id Data.1 -text {*ready*}
+gui_list_select -id Data.1 -selected  { packet_parser_top_tb.OutBus_AllValues_Ready   }
+gui_list_add -id Wave.1 -from Data.1 { packet_parser_top_tb.OutBus_AllValues_Ready } -insertionbar
+gui_list_select -id Wave.1 -selected  { packet_parser_top_tb.OutBus_AllValues_Ready   }
+gui_list_select -id Wave.1 -selected  { {New Group}   }
+gui_list_select -id Wave.1 -selected  { packet_parser_top_tb.OutBus_AllValues_Ready   }
+gui_marker_move -id  Wave.1 C1 350
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_wv_zoom_timerange -id  Wave.1 3 599
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[127:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Valid_muxed[3:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.queue_out[127:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Valid_muxed[3:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[127:0]}   }
+gui_list_select -id Wave.1 -selected  { packet_parser_top_tb.OutBus_AllValues_Ready   }
+gui_marker_move -id  Wave.1 C1 390
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[127:0]}   }
+gui_marker_move -id  Wave.1 C1 350
+gui_marker_move -id  Wave.1 C1 370
+gui_list_set_filter -id Data.1 -text {*Eop*}
+gui_list_select -id Data.1 -selected  { packet_parser_top_tb.InBus_DataEop   }
+gui_list_add -id Wave.1 -from Data.1 { packet_parser_top_tb.InBus_DataEop } -insertionbar
+gui_list_select -id Wave.1 -selected  { packet_parser_top_tb.OutBus_AllValues_Ready   }
+gui_list_select -id Wave.1 -selected  { packet_parser_top_tb.InBus_DataEop   }
+gui_list_select -id Wave.1 -selected  { {New Group}   }
+gui_list_select -id Wave.1 -selected  { packet_parser_top_tb.InBus_DataEop   }
+gui_list_action -id  Wave.1 packet_parser_top_tb.InBus_DataEop
+gui_get_drivers -id Wave.1 -signal packet_parser_top_tb.InBus_DataEop
+gui_list_select -id Wave.1 -selected  {  }
+gui_list_move  -id  Wave.1    -sid  Wave.1   -after packet_parser_top_tb.field2_is_ready {{packet_parser_top_tb.InBus_DataEop}} 
+gui_list_move  -id  Wave.1    -sid  Wave.1   -after packet_parser_top_tb.field0_is_ready {{packet_parser_top_tb.InBus_DataEop}} 
+gui_list_select -id Wave.1 -selected  { packet_parser_top_tb.field0_is_ready   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[127:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Valid_muxed[3:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.queue_out[127:0]}   }
+gui_list_select -id Wave.1 -selected  { Group9   }
+gui_list_select -id Wave.1 -selected  { packet_parser_top_tb.InBus_DataEop   }
+gui_list_move  -id  Wave.1    -sid  Wave.1   -after {packet_parser_top_tb.queue_out[127:0]} {{packet_parser_top_tb.InBus_DataEop}} 
+gui_marker_move -id  Wave.1 C1 333
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.byte_count[15:0]}   }
+gui_list_select -id Wave.1 -selected  { packet_parser_top_tb.InBus_DataSop   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.InBus_Data[63:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.FIELD_OFFSET[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.FIELD_SIZE[127:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.field0[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.field1[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.field2[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.field3[31:0]}   }
+gui_list_select -id Wave.1 -selected  { packet_parser_top_tb.push_queue   }
+gui_list_select -id Wave.1 -selected  { packet_parser_top_tb.OutBus_AllValues_Ready   }
+gui_list_select -id Wave.1 -selected  { {New Group}   }
+gui_list_select -id Wave.1 -selected  { packet_parser_top_tb.OutBus_AllValues_Ready   }
+gui_list_move  -id  Wave.1    -sid  Wave.1   -after {packet_parser_top_tb.OutBus_Field_muxed[127:0]} {{packet_parser_top_tb.OutBus_AllValues_Ready}} 
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[127:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Valid_muxed[3:0]}   }
+gui_list_select -id Wave.1 -selected  { packet_parser_top_tb.InBus_DataEop   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.queue_out[127:0]}   }
+gui_list_select -id Wave.1 -selected  { Group9   }
+gui_list_select -id Wave.1 -selected  { packet_parser_top_tb.OutBus_AllValues_Ready   }
+gui_list_move  -id  Wave.1    -sid  Wave.1   -after packet_parser_top_tb.InBus_DataEop {{packet_parser_top_tb.OutBus_AllValues_Ready}} 
+gui_marker_move -id  Wave.1 C1 350
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Valid_muxed[3:0]}   }
+gui_list_select -id Wave.1 -selected  { packet_parser_top_tb.OutBus_AllValues_Ready   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[127:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.FIELD_OFFSET[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.FIELD_SIZE[127:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.field0[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.field1[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.field2[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.field3[31:0]}   }
+gui_list_select -id Wave.1 -selected  { packet_parser_top_tb.push_queue   }
+gui_list_select -id Wave.1 -selected  { {New Group}   }
+gui_list_select -id Wave.1 -selected  { packet_parser_top_tb.push_queue   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.field3[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.field2[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.field1[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.field0[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.FIELD_SIZE[127:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.FIELD_OFFSET[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.InBus_Data[63:0]}   }
+gui_list_select -id Wave.1 -selected  { packet_parser_top_tb.InBus_DataSop   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.byte_count[15:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.OutBus_Valid}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.OutBus_Field[31:0]}   }
+gui_list_select -id Wave.1 -selected  { packet_parser_top_tb.field2_is_ready   }
+gui_list_select -id Wave.1 -selected  { packet_parser_top_tb.field3_is_ready   }
+gui_list_select -id Wave.1 -selected  { packet_parser_top_tb.field1_is_ready   }
+gui_list_select -id Wave.1 -selected  { packet_parser_top_tb.field0_is_ready   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[127:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Valid_muxed[3:0]}   }
+gui_list_select -id Wave.1 -selected  { packet_parser_top_tb.OutBus_AllValues_Ready   }
+gui_list_select -id Wave.1 -selected  { packet_parser_top_tb.InBus_DataEop   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.queue_out[127:0]}   }
+gui_list_select -id Wave.1 -selected  { Group9   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.queue_out[127:0]}   }
+gui_list_select -id Wave.1 -selected  { packet_parser_top_tb.InBus_DataEop   }
+gui_list_select -id Wave.1 -selected  { packet_parser_top_tb.OutBus_AllValues_Ready   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Valid_muxed[3:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[127:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Valid_muxed[3:0]}   }
+gui_list_select -id Wave.1 -selected  { packet_parser_top_tb.OutBus_AllValues_Ready   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.queue_out[127:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[127:0]}   }
+gui_list_move  -id  Wave.1    -sid  Wave.1   -after {packet_parser_top_tb.queue_out[127:0]} {{packet_parser_top_tb.OutBus_Field_muxed[127:0]}} 
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_marker_move -id  Wave.1 C1 17288
+gui_wv_zoom_timerange -id  Wave.1 0 4116
+gui_wv_zoom_timerange -id  Wave.1 106 2957
+gui_list_select -id Wave.1 -selected  { packet_parser_top_tb.field0_is_ready   }
+gui_list_select -id Wave.1 -selected  { packet_parser_top_tb.field0_is_ready  packet_parser_top_tb.field1_is_ready  packet_parser_top_tb.field3_is_ready  packet_parser_top_tb.field2_is_ready   }
+gui_copy_selected -id Wave.1
+gui_delete_selected -id  Wave.1
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.OutBus_Field[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.FIELD_OFFSET[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.field3[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.field0[31:0]}   }
+gui_wv_zoom_timerange -id  Wave.1 105 2959
+gui_wv_zoom_timerange -id  Wave.1 105 2985
+gui_wv_zoom_timerange -id  Wave.1 105 3015
+gui_wv_zoom_timerange -id  Wave.1 105 3018
+gui_wv_zoom_timerange -id  Wave.1 105 3020
+gui_wv_zoom_timerange -id  Wave.1 105 3023
+gui_wv_zoom_timerange -id  Wave.1 105 3032
+gui_wv_zoom_timerange -id  Wave.1 105 3044
+gui_wv_zoom_timerange -id  Wave.1 105 3047
+gui_wv_zoom_timerange -id  Wave.1 105 3050
+gui_wv_zoom_timerange -id  Wave.1 105 3053
+gui_wv_zoom_timerange -id  Wave.1 105 3056
+gui_wv_zoom_timerange -id  Wave.1 105 3059
+gui_wv_zoom_timerange -id  Wave.1 105 3061
+gui_wv_zoom_timerange -id  Wave.1 105 3064
+gui_wv_zoom_timerange -id  Wave.1 105 3067
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.queue_out[127:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.field0[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.queue_out[127:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[127:0]}   }
+gui_wv_zoom_timerange -id  Wave.1 220 1234
+gui_wv_zoom_timerange -id  Wave.1 287 863
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.byte_count[15:0]}   }
+gui_copy_selected -id Wave.1
+gui_delete_selected -id  Wave.1
+gui_list_select -id Wave.1 -selected  { packet_parser_top_tb.InBus_DataSop   }
+gui_list_move  -id  Wave.1    -sid  Wave.1   -after packet_parser_top_tb.InBus_DataEop {{packet_parser_top_tb.InBus_DataSop}} 
+gui_list_move  -id  Wave.1    -sid  Wave.1   -after {packet_parser_top_tb.OutBus_Field_muxed[127:0]} {{packet_parser_top_tb.InBus_DataSop}} 
+gui_list_select -id Wave.1 -selected  { packet_parser_top_tb.InBus_DataEop   }
+gui_list_set_filter -id Data.1 -text {*InB*}
+gui_list_select -id Data.1 -selected  { {packet_parser_top_tb.InBus_Mod[2:0]}   }
+gui_list_select -id Data.1 -selected  { {packet_parser_top_tb.InBus_Mod[2:0]}  {packet_parser_top_tb.InBus_Data[63:0]}  packet_parser_top_tb.InBus_DataValid  packet_parser_top_tb.InBus_DataSop  packet_parser_top_tb.InBus_DataEop   }
+gui_list_add -id Wave.1 -from Data.1 { {packet_parser_top_tb.InBus_Mod[2:0]} {packet_parser_top_tb.InBus_Data[63:0]} packet_parser_top_tb.InBus_DataValid packet_parser_top_tb.InBus_DataSop packet_parser_top_tb.InBus_DataEop } -insertionbar
+gui_list_select -id Wave.1 -selected  { packet_parser_top_tb.InBus_DataSop   }
+gui_list_select -id Wave.1 -selected  { packet_parser_top_tb.InBus_DataEop   }
+gui_copy_selected -id Wave.1
+gui_delete_selected -id  Wave.1
+gui_list_select -id Wave.1 -selected  { packet_parser_top_tb.OutBus_AllValues_Ready   }
+gui_list_select -id Wave.1 -selected  { packet_parser_top_tb.InBus_DataSop   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[127:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[127:0]}  {packet_parser_top_tb.queue_out[127:0]}   }
+gui_list_select -id Wave.1 -selected  { packet_parser_top_tb.OutBus_AllValues_Ready   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Valid_muxed[3:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.OutBus_Field[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.OutBus_Valid}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.OutBus_Field[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Valid_muxed[3:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.OutBus_Valid}   }
+gui_copy_selected -id Wave.1
+gui_delete_selected -id  Wave.1
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.InBus_Data[63:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.DUT.loop[0].packet_parser_top.OutBus_Field[31:0]}   }
+gui_copy_selected -id Wave.1
+gui_delete_selected -id  Wave.1
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.InBus_Data[63:0]}   }
+gui_copy_selected -id Wave.1
+gui_delete_selected -id  Wave.1
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.FIELD_OFFSET[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.FIELD_SIZE[127:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.field0[31:0]}   }
+gui_list_select -id Wave.1 -selected  { packet_parser_top_tb.push_queue   }
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_wv_zoom_timerange -id  Wave.1 34 983
+gui_wv_zoom_timerange -id  Wave.1 53 604
+gui_list_select -id Wave.1 -selected  { packet_parser_top_tb.OutBus_AllValues_Ready   }
+gui_marker_move -id  Wave.1 C1 350
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.queue_out[127:0]}   }
+gui_list_select -id Wave.1 -selected  { {packet_parser_top_tb.OutBus_Field_muxed[127:0]}   }
+gui_list_select -id Wave.1 -selected  { packet_parser_top_tb.OutBus_AllValues_Ready   }
+gui_wv_zoom_timerange -id  Wave.1 52 624
+gui_wv_zoom_timerange -id  Wave.1 52 642
+gui_marker_move -id  Wave.1 C1 594
+gui_save_session -reload -default_file
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
+gui_zoom -window Wave.1 -full
+gui_list_select -id Wave.1 -selected  { packet_parser_top_tb.InBus_DataEop   }
+#gui_exit
+

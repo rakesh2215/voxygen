@@ -1,0 +1,123 @@
+The file '/ws/rakeshku-bgl/fpga/vcdplus.vpd' was opened successfully.
+The file '/ws/rakeshku-bgl/fpga/vcdplus.vpd' was opened successfully.
+The file '/ws/rakeshku-bgl/fpga/vcdplus.vpd' was opened successfully.
+The file '/ws/rakeshku-bgl/fpga/vcdplus.vpd' was opened successfully.
+The file '/ws/rakeshku-bgl/fpga/vcdplus.vpd' was opened successfully.
+The file '/ws/rakeshku-bgl/fpga/vcdplus.vpd' was opened successfully.
+The file '/ws/rakeshku-bgl/fpga/vcdplus.vpd' was opened successfully.
+Warning: [DVDP402] 
+None of the children of the object 'binary_search_tb.mem[1023:0][31:0]' were dumped.
+Warning: [DVDP402] 
+None of the children of the object 'binary_search_tb.mem[1023:0][31:0]' were dumped.
+Warning: [DVDP402] 
+None of the children of the object 'binary_search_tb.mem[1023:0][31:0]' were dumped.
+Warning: [DVDP402] 
+None of the children of the object 'binary_search_tb.mem[1023:0][31:0]' were dumped.
+The file '/ws/rakeshku-bgl/fpga/vcdplus.vpd' was opened successfully.
+Warning: [DVDP402] 
+None of the children of the object 'binary_search_tb.mem[0:1023][31:0]' were dumped.
+Warning: [DVDP402] 
+None of the children of the object 'binary_search_tb.mem[0:1023][31:0]' were dumped.
+Warning: [DVDP402] 
+None of the children of the object 'binary_search_tb.mem[0:1023][31:0]' were dumped.
+The file '/ws/rakeshku-bgl/fpga/vcdplus.vpd' was opened successfully.
+The file '/ws/rakeshku-bgl/fpga/vcdplus.vpd' was opened successfully.
+The file '/ws/rakeshku-bgl/fpga/vcdplus.vpd' was opened successfully.
+The file '/ws/rakeshku-bgl/fpga/vcdplus.vpd' was opened successfully.
+With selected criteria, DVE has found 'results at time 88534950
+    binary_search_tb.cpu_addr[9:0]'.
+The file '/ws/rakeshku-bgl/fpga/vcdplus.vpd' was opened successfully.
+The file '/ws/rakeshku-bgl/fpga/vcdplus.vpd' was opened successfully.
+The file '/ws/rakeshku-bgl/fpga/vcdplus.vpd' was opened successfully.
+The file '/ws/rakeshku-bgl/fpga/vcdplus.vpd' was opened successfully.
+The file '/ws/rakeshku-bgl/fpga/vcdplus.vpd' was opened successfully.
+The file '/ws/rakeshku-bgl/fpga/vcdplus.vpd' was opened successfully.
+The file '/ws/rakeshku-bgl/fpga/vcdplus.vpd' was opened successfully.
+Error: [DVAP037] 
+Errors while sourcing the file '/ws/rakeshku-bgl/fpga/DVEfiles/session.tcl':
+
+ Line 106: [DVSG007] 
+Signal ' "binary_search_tb.test_done"' cannot be found..
+The file '/ws/rakeshku-bgl/fpga/vcdplus.vpd' was opened successfully.
+The file '/ws/rakeshku-bgl/fpga/vcdplus.vpd' was opened successfully.
+The file '/ws/rakeshku-bgl/fpga/vcdplus.vpd' was opened successfully.
+With selected criteria, DVE has found 'results at time 5930
+    binary_search_tb.cpu_data[31:0]'.
+The file '/ws/rakeshku-bgl/fpga/vcdplus.vpd' was opened successfully.
+The file '/ws/rakeshku-bgl/fpga/vcdplus.vpd' was opened successfully.
+The file '/ws/rakeshku-bgl/fpga/vcdplus.vpd' was opened successfully.
+The file '/ws/rakeshku-bgl/fpga/vcdplus.vpd' was opened successfully.
+The file '/ws/rakeshku-bgl/fpga/vcdplus.vpd' was opened successfully.
+The file '/ws/rakeshku-bgl/fpga/vcdplus.vpd' was opened successfully.
+The file '/ws/rakeshku-bgl/fpga/vcdplus.vpd' was opened successfully.
+The file '/ws/rakeshku-bgl/fpga/vcdplus.vpd' was opened successfully.
+With selected criteria, DVE has found 'results at time 30690
+    binary_search_tb.DUT.dp_ram_DEPTHxDATA_WIDTH.addr_a[15:0]'.
+The file '/ws/rakeshku-bgl/fpga/vcdplus.vpd' was opened successfully.
+The file '/ws/rakeshku-bgl/fpga/vcdplus.vpd' was opened successfully.
+Error: [DVAP037] 
+Errors while sourcing the file '/ws/rakeshku-bgl/fpga/DVEfiles/session.tcl':
+
+ Line 120: [DVSG007] 
+Signal ' "binary_search_tb.DUT.dp_ram_DEPTHxDATA_WIDTH.Clk" "binary_search_tb.DUT.dp_ram_DEPTHxDATA_WIDTH.Rst" "binary_search_tb.DUT.dp_ram_DEPTHxDATA_WIDTH.write_ena" "binary_search_tb.DUT.dp_ram_DEPTHxDATA_WIDTH.addr_a" "binary_search_tb.DUT.dp_ram_DEPTHxDATA_WIDTH.addr_b" "binary_search_tb.DUT.dp_ram_DEPTHxDATA_WIDTH.din_a" "binary_search_tb.DUT.dp_ram_DEPTHxDATA_WIDTH.dout_b" "binary_search_tb.DUT.dp_ram_DEPTHxDATA_WIDTH.mem"' cannot be found.
+ Line 126: [DVSG007] 
+Signal ' "binary_search_tb.DUT.dp_ram_DEPTHxDATA_WIDTH.write_ena" "binary_search_tb.DUT.dp_ram_DEPTHxDATA_WIDTH.addr_a" "binary_search_tb.DUT.dp_ram_DEPTHxDATA_WIDTH.din_a" "binary_search_tb.DUT.dp_ram_DEPTHxDATA_WIDTH.write_ena" "binary_search_tb.DUT.dp_ram_DEPTHxDATA_WIDTH.dout_b" "binary_search_tb.DUT.dp_ram_DEPTHxDATA_WIDTH.addr_b" "binary_search_tb.DUT.dp_ram_DEPTHxDATA_WIDTH.din_a"' cannot be found.
+ Line 196: gui_list_select: List item(s) given by "binary_search_tb.DUT.dp_ram_DEPTHxDATA_WIDTH.din_a"  were not found.
+ Line 212: gui_list_set_insertion_bar: Cannot set the insertion bar, "binary_search_tb.DUT.dp_ram_DEPTHxDATA_WIDTH.din_a[31:0]" was not found..
+The file '/ws/rakeshku-bgl/fpga/vcdplus.vpd' was opened successfully.
+The file '/ws/rakeshku-bgl/fpga/vcdplus.vpd' was opened successfully.
+The file '/ws/rakeshku-bgl/fpga/vcdplus.vpd' was opened successfully.
+Error: [DVAP037] 
+Errors while sourcing the file '/ws/rakeshku-bgl/fpga/DVEfiles/session.tcl':
+
+ Line 92: [DVSG007] 
+Signal ' "binary_search_tb.Clk" "binary_search_tb.Rst" "binary_search_tb.sw_state" "binary_search_tb.cpu_data" "binary_search_tb.cpu_addr" "binary_search_tb.cpu_wr" "binary_search_tb.cpu_rd" "binary_search_tb.cpu_access_done" "binary_search_tb.DEPTH" "binary_search_tb.cpu_wr" "binary_search_tb.i" "binary_search_tb.mem" "binary_search_tb.j" "binary_search_tb.test_index" "binary_search_tb.test_index_latched" "binary_search_tb.init_done" "binary_search_tb.response_index" "binary_search_tb.response_valid" "binary_search_tb.req_state" "binary_search_tb.request_key_valid" "binary_search_tb.request_key"' cannot be found.
+ Line 93: Specified signals (V1:binary_search_tb.cpu_addr) not found.
+ Line 94: Specified signals (V1:binary_search_tb.cpu_addr) not found.
+ Line 95: Specified signals (V1:binary_search_tb.DEPTH) not found.
+ Line 96: Specified signals (V1:binary_search_tb.DEPTH) not found.
+ Line 102: [DVSG007] 
+Signal ' "binary_search_tb.DUT.state"' cannot be found.
+ Line 108: [DVSG007] 
+Signal ' "binary_search_tb.DUT.state" "binary_search_tb.DUT.request_key" "binary_search_tb.DUT.request_key_valid" "binary_search_tb.DUT.response_index" "binary_search_tb.DUT.response_valid" "binary_search_tb.DUT.no_match_found" "binary_search_tb.DUT.high_index" "binary_search_tb.DUT.low_index" "binary_search_tb.DUT.middle_index" "binary_search_tb.DUT.Clk" "binary_search_tb.DUT.current_value"' cannot be found..
+The file '/ws/rakeshku-bgl/fpga/vcdplus.vpd' was opened successfully.
+The file '/ws/rakeshku-bgl/fpga/vcdplus.vpd' was opened successfully.
+The file '/ws/rakeshku-bgl/fpga/vcdplus.vpd' was opened successfully.
+The file '/ws/rakeshku-bgl/fpga/vcdplus.vpd' was opened successfully.
+The file '/ws/rakeshku-bgl/fpga/vcdplus.vpd' was opened successfully.
+The file '/ws/rakeshku-bgl/fpga/vcdplus.vpd' was opened successfully.
+The file '/ws/rakeshku-bgl/fpga/vcdplus.vpd' was opened successfully.
+The file '/ws/rakeshku-bgl/fpga/vcdplus.vpd' was opened successfully.
+The file '/ws/rakeshku-bgl/fpga/vcdplus.vpd' was opened successfully.
+The file '/ws/rakeshku-bgl/fpga/vcdplus.vpd' was opened successfully.
+The file '/ws/rakeshku-bgl/fpga/vcdplus.vpd' was opened successfully.
+The file '/ws/rakeshku-bgl/fpga/vcdplus.vpd' was opened successfully.
+The file '/ws/rakeshku-bgl/fpga/vcdplus.vpd' was opened successfully.
+Error: [DVAP037] 
+Errors while sourcing the file '/ws/rakeshku-bgl/fpga/DVEfiles/session.tcl':
+
+ Line 124: [DVSG007] 
+Signal ' "packet_parser_top_tb.lvar"' cannot be found..
+The file '/ws/rakeshku-bgl/fpga/vcdplus.vpd' was opened successfully.
+The file '/ws/rakeshku-bgl/fpga/vcdplus.vpd' was opened successfully.
+The file '/ws/rakeshku-bgl/fpga/vcdplus.vpd' was opened successfully.
+The file '/ws/rakeshku-bgl/fpga/vcdplus.vpd' was opened successfully.
+The file '/ws/rakeshku-bgl/fpga/vcdplus.vpd' was opened successfully.
+The file '/ws/rakeshku-bgl/fpga/vcdplus.vpd' was opened successfully.
+The file '/ws/rakeshku-bgl/fpga/vcdplus.vpd' was opened successfully.
+The file '/ws/rakeshku-bgl/fpga/vcdplus.vpd' was opened successfully.
+The file '/ws/rakeshku-bgl/fpga/vcdplus.vpd' was opened successfully.
+The file '/ws/rakeshku-bgl/fpga/vcdplus.vpd' was opened successfully.
+The file '/ws/rakeshku-bgl/fpga/vcdplus.vpd' was opened successfully.
+The file '/ws/rakeshku-bgl/fpga/vcdplus.vpd' was opened successfully.
+Warning: [DVDB146] 
+The internal static design database from "/ws/rakeshku-bgl/fpga/simv.daidir" cannot be loaded.
+Your current VCS version setting  differs from the VCS version used to compile the design.
+Static debug features like schematics and driver/load tracing will not be functional.
+Simulator version 'K-2015.09-SP2-1' mismatch with VCS installation 'N-2017.12-SP2'.
+Simulator version file: '/ws/rakeshku-bgl/fpga/simv.daidir/debug_dump/.version'.
+
+Please recompile the design with the current '$VCS_HOME', or change '$VCS_HOME' to point to the VCS installation used for compilation.
+Warning: [DVSW307] 
+Could not find any driver for signal: 'packet_parser_top_tb.InBus_DataEop'.
+The file '/ws/rakeshku-bgl/fpga/vcdplus.vpd' was opened successfully.
