@@ -186,6 +186,32 @@ verilogparser/fast:
 	$(MAKE) -f src/verilog-parser/src/CMakeFiles/verilogparser.dir/build.make src/verilog-parser/src/CMakeFiles/verilogparser.dir/build
 .PHONY : verilogparser/fast
 
+#=============================================================================
+# Target rules for targets named verilogparser-docs
+
+# Build rule for target.
+verilogparser-docs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 verilogparser-docs
+.PHONY : verilogparser-docs
+
+# fast build rule for target.
+verilogparser-docs/fast:
+	$(MAKE) -f src/verilog-parser/docs/CMakeFiles/verilogparser-docs.dir/build.make src/verilog-parser/docs/CMakeFiles/verilogparser-docs.dir/build
+.PHONY : verilogparser-docs/fast
+
+#=============================================================================
+# Target rules for targets named veridoc-docs
+
+# Build rule for target.
+veridoc-docs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 veridoc-docs
+.PHONY : veridoc-docs
+
+# fast build rule for target.
+veridoc-docs/fast:
+	$(MAKE) -f docs/CMakeFiles/veridoc-docs.dir/build.make docs/CMakeFiles/veridoc-docs.dir/build
+.PHONY : veridoc-docs/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -200,6 +226,8 @@ help:
 	@echo "... verilogparser-test"
 	@echo "... parser"
 	@echo "... verilogparser"
+	@echo "... verilogparser-docs"
+	@echo "... veridoc-docs"
 .PHONY : help
 
 

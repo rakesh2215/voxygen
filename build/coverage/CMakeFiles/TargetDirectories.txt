@@ -18,6 +18,8 @@
 /home/ubuntu/voxygen/verilog-doc/build/coverage/src/verilog-parser/docs/CMakeFiles/rebuild_cache.dir
 /home/ubuntu/voxygen/verilog-doc/build/coverage/src/verilog-parser/docs/CMakeFiles/edit_cache.dir
 /home/ubuntu/voxygen/verilog-doc/build/coverage/src/verilog-parser/docs/CMakeFiles/test.dir
-/home/ubuntu/voxygen/verilog-doc/build/coverage/docs/CMakeFiles/rebuild_cache.dir
+/home/ubuntu/voxygen/verilog-doc/build/coverage/src/verilog-parser/docs/CMakeFiles/verilogparser-docs.dir
 /home/ubuntu/voxygen/verilog-doc/build/coverage/docs/CMakeFiles/edit_cache.dir
 /home/ubuntu/voxygen/verilog-doc/build/coverage/docs/CMakeFiles/test.dir
+/home/ubuntu/voxygen/verilog-doc/build/coverage/docs/CMakeFiles/rebuild_cache.dir
+/home/ubuntu/voxygen/verilog-doc/build/coverage/docs/CMakeFiles/veridoc-docs.dir

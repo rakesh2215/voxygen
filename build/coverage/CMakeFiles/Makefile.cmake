@@ -142,4 +142,6 @@ set(CMAKE_DEPEND_INFO_FILES
   "src/verilog-parser/CMakeFiles/verilogparser-test.dir/DependInfo.cmake"
   "src/verilog-parser/src/CMakeFiles/parser.dir/DependInfo.cmake"
   "src/verilog-parser/src/CMakeFiles/verilogparser.dir/DependInfo.cmake"
+  "src/verilog-parser/docs/CMakeFiles/verilogparser-docs.dir/DependInfo.cmake"
+  "docs/CMakeFiles/veridoc-docs.dir/DependInfo.cmake"
   )

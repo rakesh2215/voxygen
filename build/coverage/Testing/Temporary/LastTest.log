@@ -1,10 +1,10 @@
-Start testing: Feb 21 15:34 UTC
+Start testing: Mar 05 21:47 UTC
 ----------------------------------------------------------
 1/1 Testing: veridoc_coverage
 1/1 Test: veridoc_coverage
 Command: "/home/ubuntu/voxygen/verilog-doc/build/coverage/bin/veridoc" "-c" "./build/debug/bin/assets/veridoc.cfg" "-F" "./build/debug/bin/assets/test_manifest.txt" "-v"
 Directory: ../
-"veridoc_coverage" start time: Feb 21 15:34 UTC
+"veridoc_coverage" start time: Mar 05 21:47 UTC
 Output:
 ----------------------------------------------------------
 ERROR: Could not open config file path: ./build/debug/bin/assets/veridoc.cfg
@@ -18,8 +18,8 @@ Options:
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"veridoc_coverage" end time: Feb 21 15:34 UTC
+"veridoc_coverage" end time: Mar 05 21:47 UTC
 "veridoc_coverage" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Feb 21 15:34 UTC
+End testing: Mar 05 21:47 UTC

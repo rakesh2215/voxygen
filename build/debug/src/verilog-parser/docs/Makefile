@@ -121,6 +121,21 @@ depend:
 	cd /home/ubuntu/voxygen/verilog-doc/build/debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
+# Convenience name for target.
+src/verilog-parser/docs/CMakeFiles/verilogparser-docs.dir/rule:
+	cd /home/ubuntu/voxygen/verilog-doc/build/debug && $(MAKE) -f CMakeFiles/Makefile2 src/verilog-parser/docs/CMakeFiles/verilogparser-docs.dir/rule
+.PHONY : src/verilog-parser/docs/CMakeFiles/verilogparser-docs.dir/rule
+
+# Convenience name for target.
+verilogparser-docs: src/verilog-parser/docs/CMakeFiles/verilogparser-docs.dir/rule
+
+.PHONY : verilogparser-docs
+
+# fast build rule for target.
+verilogparser-docs/fast:
+	cd /home/ubuntu/voxygen/verilog-doc/build/debug && $(MAKE) -f src/verilog-parser/docs/CMakeFiles/verilogparser-docs.dir/build.make src/verilog-parser/docs/CMakeFiles/verilogparser-docs.dir/build
+.PHONY : verilogparser-docs/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -130,6 +145,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... test"
+	@echo "... verilogparser-docs"
 .PHONY : help
 
 

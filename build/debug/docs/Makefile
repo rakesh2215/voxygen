@@ -56,17 +56,6 @@ CMAKE_BINARY_DIR = /home/ubuntu/voxygen/verilog-doc/build/debug
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -88,6 +77,17 @@ test:
 test/fast: test
 
 .PHONY : test/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -121,15 +121,31 @@ depend:
 	cd /home/ubuntu/voxygen/verilog-doc/build/debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
+# Convenience name for target.
+docs/CMakeFiles/veridoc-docs.dir/rule:
+	cd /home/ubuntu/voxygen/verilog-doc/build/debug && $(MAKE) -f CMakeFiles/Makefile2 docs/CMakeFiles/veridoc-docs.dir/rule
+.PHONY : docs/CMakeFiles/veridoc-docs.dir/rule
+
+# Convenience name for target.
+veridoc-docs: docs/CMakeFiles/veridoc-docs.dir/rule
+
+.PHONY : veridoc-docs
+
+# fast build rule for target.
+veridoc-docs/fast:
+	cd /home/ubuntu/voxygen/verilog-doc/build/debug && $(MAKE) -f docs/CMakeFiles/veridoc-docs.dir/build.make docs/CMakeFiles/veridoc-docs.dir/build
+.PHONY : veridoc-docs/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... test"
+	@echo "... rebuild_cache"
+	@echo "... veridoc-docs"
 .PHONY : help
 
 
